@@ -4,7 +4,7 @@
 import React, { Component } from 'react';
 import ReactDOM from 'react-dom';
 
-class Main extends Component {
+class Tables extends Component {
     constructor(props) {
         super(props);
     }
@@ -12,10 +12,9 @@ class Main extends Component {
         return(
             <div>
                 123
-                {this.props.children}
             </div>
         )
     }
 }
 
-export default Main;
+export default Tables;

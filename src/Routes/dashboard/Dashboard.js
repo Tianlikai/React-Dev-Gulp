@@ -4,17 +4,17 @@
 import React, { Component } from 'react';
 import ReactDOM from 'react-dom';
 
-class Register extends Component {
+class Dashboard extends Component {
     constructor(props) {
         super(props);
     }
     render(){
         return(
             <div>
-                Register
+                Dashboard
             </div>
         )
     }
 }
 
-export default Register;
+export default Dashboard;
