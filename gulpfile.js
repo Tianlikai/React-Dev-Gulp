@@ -10,6 +10,18 @@ const eslint = require('gulp-eslint');
 const livereload = require('gulp-livereload');
 const autoprefixer = require("gulp-autoprefixer");
 const rename = require('gulp-rename');
+
+const AUTOPREFIXER_BROWSERS = [
+    'ie >= 10',
+    'ie_mob >= 10',
+    'ff >= 30',
+    'chrome >= 34',
+    'safari >= 7',
+    'opera >= 23',
+    'ios >= 7',
+    'android >= 4.4',
+    'bb >= 10'
+];
 // gulp.task('lint', () => {
 //     // ESLint ignores files with "node_modules" paths. 
 //     // So, it's best to have gulp ignore the directory as well. 
@@ -38,8 +50,8 @@ gulp.task('webpack', function (callback) {
 gulp.task('css', function () {
     // 1. 找到 css 文件
     gulp.src('src/styles/**.css')
-        .pipe(autoprefixer('last 2 version', 'safari 5', 'ie8', 'ie9', 'opera12.1'))
-        .pipe(rename({suffix:'.min'}))        
+        .pipe(autoprefixer(AUTOPREFIXER_BROWSERS)
+        .pipe(rename({ suffix: '.min' }))
         // 2\. 压缩文件
         .pipe(minifyCSS())
         // 3. 另存文件
