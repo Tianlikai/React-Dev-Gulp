@@ -1,18 +1,15 @@
 // 获取 gulp
-var gulp = require('gulp')
+const gulp = require('gulp')
 // 获取 gulp-less 模块
 // var less = require('gulp-less')
 // 获取 minify-css 模块（用于压缩 CSS）
-var minifyCSS = require('gulp-minify-css');
-
-var gutil = require('gulp-util')
-
-var webpack = require('gulp-webpack');
-
-var eslint = require('gulp-eslint');
-
-var livereload = require('gulp-livereload');
-
+const minifyCSS = require('gulp-minify-css');
+const gutil = require('gulp-util')
+const webpack = require('gulp-webpack');
+const eslint = require('gulp-eslint');
+const livereload = require('gulp-livereload');
+const autoprefixer = require("gulp-autoprefixer");
+const rename = require('gulp-rename');
 // gulp.task('lint', () => {
 //     // ESLint ignores files with "node_modules" paths. 
 //     // So, it's best to have gulp ignore the directory as well. 
@@ -38,13 +35,11 @@ gulp.task('webpack', function (callback) {
         .pipe(gulp.dest('dist/js'));
 });
 
-// 编译less
-// 在命令行输入 gulp images 启动此任务
 gulp.task('css', function () {
-    // 1. 找到 less 文件
-    gulp.src('src/css/**.css')
-        // 2. 编译为css
-        // .pipe(less())
+    // 1. 找到 css 文件
+    gulp.src('src/styles/**.css')
+        .pipe(autoprefixer('last 2 version', 'safari 5', 'ie8', 'ie9', 'opera12.1'))
+        .pipe(rename({suffix:'.min'}))        
         // 2\. 压缩文件
         .pipe(minifyCSS())
         // 3. 另存文件
@@ -58,7 +53,7 @@ gulp.task("images", function () {
 
 // 在命令行使用 gulp auto 启动此任务
 gulp.task('autoless', function () {
-    gulp.watch('src/css/**.css', ['css'])
+    gulp.watch('src/**/**.css', ['css'])
 })
 
 gulp.task('autojs', function () {
