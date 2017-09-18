@@ -50,7 +50,7 @@ gulp.task('webpack', function (callback) {
 gulp.task('css', function () {
     // 1. 找到 css 文件
     gulp.src('src/styles/**.css')
-        .pipe(autoprefixer(AUTOPREFIXER_BROWSERS)
+        .pipe(autoprefixer(AUTOPREFIXER_BROWSERS))
         .pipe(rename({ suffix: '.min' }))
         // 2\. 压缩文件
         .pipe(minifyCSS())
