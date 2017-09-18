@@ -2,11 +2,11 @@
  * @Author: jason.tian 
  * @Date: 2017-09-17 20:52:37 
  * @Last Modified by: jason.tian
- * @Last Modified time: 2017-09-17 21:26:57
+ * @Last Modified time: 2017-09-17 21:49:11
  */
 
-var webpack = require('webpack');
-var path = require('path');
+const webpack = require('webpack');
+const path = require('path');
 
 module.exports = {
   entry: {
