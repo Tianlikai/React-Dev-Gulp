@@ -2,7 +2,7 @@
  * @Author: jason.tian 
  * @Date: 2017-09-17 11:58:07 
  * @Last Modified by: jason.tian
- * @Last Modified time: 2017-09-17 11:59:24
+ * @Last Modified time: 2017-09-19 23:22:11
  */
 
 import React, { Component } from 'react';
@@ -18,11 +18,11 @@ import Tables from "./routes/tables/Tables";
 const routes = (
     <Router history={hashHistory}>
         <Route path="/">
-            <IndexRedirect to='app' />
+            <IndexRedirect to='/app/table' />
             <Route component={App} path="app">
-                <IndexRoute component={Dashboard} />
+                <IndexRoute component={Tables} />
                 <Route component={Dashboard} path="dashboard"></Route>
-                <Route component={Tables} path="tables"></Route>
+                <Route component={Tables} path="table"></Route>
                 <Redirect from='/app/*' to='/app/dashboard' />
             </Route>
             <Route component={Login} path="login"></Route>

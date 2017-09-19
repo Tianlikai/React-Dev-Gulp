@@ -9,8 +9,9 @@ class Dashboard extends Component {
         super(props);
     }
     render(){
+        let styHeight = window.innerHeight - 48;
         return(
-            <div>
+            <div style={{height:styHeight}}>
                 Dashboard
             </div>
         )

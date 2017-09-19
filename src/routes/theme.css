@@ -2,7 +2,7 @@
  * @Author: jason.tian 
  * @Date: 2017-09-17 21:27:34 
  * @Last Modified by: jason.tian
- * @Last Modified time: 2017-09-17 22:20:09
+ * @Last Modified time: 2017-09-19 23:20:47
  */
 
 body,h1,h2,h3,h4,h5,h6,dl,dt,dd,ul,ol,li,th,td,p,blockquote,pre,form,fieldset,legend,input,button,textarea,hr{margin:0;padding:0}
@@ -11,17 +11,33 @@ body{
     font-size: 14px;
 }
 .Container{
+    position: relative;
     height: 100%;
 }
 .SideMenu{
-
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    bottom: 0px;
+    width: 180px;
 }
 .HeaderAndMainContent{
-
+    position: relative;
+    margin-left: 180px;
 }
 .HeaderContainer{
-
+    height: 48px;
 }
 .MainContentContainer{
 
+}
+
+@media screen and (max-width: 768px) {
+    .SideMenu{
+       display: none;
+    }
+    .HeaderAndMainContent{
+        position: relative;
+        margin-left: 0px;
+    }
 }
