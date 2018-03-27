@@ -1,0 +1,66 @@
+.JTBtn{
+    display: inline-block;
+    line-height: 1.15;
+    border-radius: 4px;
+    font-size: 12px;
+    padding: 7px 15px;
+    border: 1px solid transparent;
+    text-align: center;
+    font-weight: 500;
+    cursor:pointer;
+    white-space: nowrap;
+    background-image: none;
+}
+.JTBtn.default{
+    background-color: #fff;
+    border-color: #979797;
+    color: #333;
+}
+.JTBtn.tablePageBtnShare.disabled{
+    background-color: rgb(221, 221, 221);
+    color: rgb(155, 155, 155);
+    pointer-events: none;
+}
+/* 左浮动 */
+.JTBtn.left{
+    float: left;
+}
+/* 左浮动 */
+
+/* 右浮动 */
+.JTBtn.right{
+    float: right;
+}
+/* 右浮动 */
+
+/* 按钮 primary */
+.JTBtn.primary{
+    background-color: #333333;
+    border-color: #adadad;
+    color: white;
+}
+/* 按钮 primary */
+
+/* 添加约束条件按钮 */
+.JTBtn.default.addConstraintCond{
+    border:  none;
+    outline: none;
+    padding: 0px;
+    color: #4990E2;
+    font-size: 13px;
+}
+.JTBtn.default.addConstraintCond.disable{
+    display: block;
+    color: rgb(155, 155, 155);
+    pointer-events: none;
+}
+/* 添加约束条件按钮 */
+
+/* 下钻 添加约束条件按钮 */
+.JTBtn.default.addConstraintCond.drill{
+    margin-bottom: 7px;
+}
+.JTBtn.default.addConstraintCond.disable.drill{
+    display: none;
+}
+/* 下钻 添加约束条件按钮 */

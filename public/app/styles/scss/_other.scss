@@ -1,0 +1,36 @@
+/*
+其它的一些页面，对应的js页面为 Other.js
+*/
+
+/* DashboardDownload.js  start */
+.dashboardDownloadBtn{
+    position: fixed;
+    height: 55px;
+    bottom:0px;
+    left: 0px;
+    right: 0px; 
+    background: #333333;
+}
+.dashboardDownloadBtn div{
+     position: relative;
+    height: 60px;
+    width: 300px;
+    margin: 0 auto;
+    color: white;
+    font-size: 24px;
+    text-align: center;
+    cursor: pointer;
+}
+.dashboardDownloadBtn div i{
+    display: inline-block;
+    height: 60px;
+    line-height: 60px;
+    padding: 2px 0px 0px 40px;
+    background: url('../images/dashboardOut.svg') no-repeat;
+    background-size: 25px 25px;
+    background-position: center left;
+    font-style: normal;
+}
+
+
+/* DashboardDownload.js  end */

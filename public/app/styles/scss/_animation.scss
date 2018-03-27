@@ -1,0 +1,337 @@
+@keyframes open
+{
+from {
+  left: 100%;
+}
+to {
+  left: 30%;
+}
+}
+
+@-moz-keyframes open /* Firefox */
+{
+  from {
+    left: 100%;
+  }
+  to {
+    left: 30%;
+  }
+}
+
+@-webkit-keyframes open /* Safari 和 Chrome */
+{
+  from {
+    left: 100%;
+  }
+  to {
+    left: 30%;
+  }
+}
+
+@-o-keyframes open /* Opera */
+{
+  from {
+    left: 100%;
+  }
+  to {
+    left: 30%;
+  }
+}
+
+@keyframes openCRSide
+{
+from {
+  left: 100%;
+}
+to {
+  left: 20%;
+}
+}
+
+@-moz-keyframes openCRSide /* Firefox */
+{
+  from {
+    left: 100%;
+  }
+  to {
+    left: 20%;
+  }
+}
+
+@-webkit-keyframes openCRSide /* Safari 和 Chrome */
+{
+  from {
+    left: 100%;
+  }
+  to {
+    left: 20%;
+  }
+}
+
+@-o-keyframes openCRSide /* Opera */
+{
+  from {
+    left: 100%;
+  }
+  to {
+    left: 20%;
+  }
+}
+
+@keyframes close
+{
+from {
+  left: 30%;
+}
+to {
+  left: 100%;
+}
+}
+
+@-moz-keyframes close /* Firefox */
+{
+  from {
+    left: 30%;
+  }
+  to {
+    left: 100%;
+  }
+}
+
+@-webkit-keyframes close /* Safari 和 Chrome */
+{
+  from {
+    left: 30%;
+  }
+  to {
+    left: 100%;
+  }
+}
+
+@-o-keyframes close /* Opera */
+{
+  from {
+    left: 30%;
+  }
+  to {
+    left: 100%;
+  }
+}
+
+.addModal .modal-content {
+    min-width: 760px;
+    top: 0;
+    left: 30%;
+    right: 0;
+    bottom: 0;
+    height: 100%;
+    width: 70%;
+    margin: 0;
+
+    animation: open 0.4s;
+    -moz-animation: open 0.4s;	/* Firefox */
+    -webkit-animation: open 0.4s;	/* Safari 和 Chrome */
+    -o-animation: open 0.4s;	/* Opera */
+}
+.addModal.close .modal-content {
+  left: 100%;
+
+  animation: close 0.3s;
+  -moz-animation: close 0.3s;	/* Firefox */
+  -webkit-animation: close 0.3s;	/* Safari 和 Chrome */
+  -o-animation: close 0.3s;	/* Opera */
+}
+
+@keyframes open1
+{
+from {
+
+    transform: translateX(100%);
+    -moz-transform: translateX(100%);
+    -webkit-transform: translateX(100%);
+    -o-transform: translateX(100%);
+}
+to {
+
+  transform: translateX(0);
+  -moz-transform: translateX(0);
+  -webkit-transform: translateX(0);
+  -o-transform: translateX(0);
+}
+}
+
+@-moz-keyframes open1 /* Firefox */
+{
+  from {
+
+    transform: translateX(100%);
+    -moz-transform: translateX(100%);
+    -webkit-transform: translateX(100%);
+    -o-transform: translateX(100%);
+  }
+  to {
+
+  transform: translateX(0);
+  -moz-transform: translateX(0);
+  -webkit-transform: translateX(0);
+  -o-transform: translateX(0);
+  }
+}
+
+@-webkit-keyframes open1 /* Safari 和 Chrome */
+{
+  from {
+
+    transform: translateX(100%);
+    -moz-transform: translateX(100%);
+    -webkit-transform: translateX(100%);
+    -o-transform: translateX(100%);
+  }
+  to {
+
+  transform: translateX(0);
+  -moz-transform: translateX(0);
+  -webkit-transform: translateX(0);
+  -o-transform: translateX(0);
+  }
+}
+
+@-o-keyframes open1 /* Opera */
+{
+  from {
+
+    transform: translateX(100%);
+    -moz-transform: translateX(100%);
+    -webkit-transform: translateX(100%);
+    -o-transform: translateX(100%);
+  }
+  to {
+
+  transform: translateX(0);
+  -moz-transform: translateX(0);
+  -webkit-transform: translateX(0);
+  -o-transform: translateX(0);
+  }
+}
+
+@keyframes close1
+{
+from {
+
+  transform: translateX(0);
+  -moz-transform: translateX(0);
+  -webkit-transform: translateX(0);
+  -o-transform: translateX(0);
+}
+to {
+
+  transform: translateX(100%);
+  -moz-transform: translateX(100%);
+  -webkit-transform: translateX(100%);
+  -o-transform: translateX(100%);
+}
+}
+
+@-moz-keyframes close1 /* Firefox */
+{
+  from {
+
+  transform: translateX(0);
+  -moz-transform: translateX(0);
+  -webkit-transform: translateX(0);
+  -o-transform: translateX(0);
+  }
+  to {
+
+    transform: translateX(100%);
+    -moz-transform: translateX(100%);
+    -webkit-transform: translateX(100%);
+    -o-transform: translateX(100%);
+  }
+}
+
+@-webkit-keyframes close1 /* Safari 和 Chrome */
+{
+  from {
+
+  transform: translateX(0);
+  -moz-transform: translateX(0);
+  -webkit-transform: translateX(0);
+  -o-transform: translateX(0);
+  }
+  to {
+
+    transform: translateX(100%);
+    -moz-transform: translateX(100%);
+    -webkit-transform: translateX(100%);
+    -o-transform: translateX(100%);
+  }
+}
+
+@-o-keyframes close1 /* Opera */
+{
+  from {
+
+  transform: translateX(0);
+  -moz-transform: translateX(0);
+  -webkit-transform: translateX(0);
+  -o-transform: translateX(0);
+  }
+  to {
+
+    transform: translateX(100%);
+    -moz-transform: translateX(100%);
+    -webkit-transform: translateX(100%);
+    -o-transform: translateX(100%);
+  }
+}
+.addModal1 .modal-content {
+    min-width: 760px;
+    top: 0;
+    bottom: 0;
+    left: 25%;
+    right: 0;
+    height: 100%;
+    width: 75%;
+    margin: 0;
+
+    transform-origin: 100%;
+    -ms-transform-origin: 100%;
+    -webkit-transform-origin: 100%;
+    -moz-transform-origin: 100%;
+    -o-transform-origin: 100%;
+
+    transform: translateX(0) 0.3s;
+    -moz-transform: translateX(0) 0.3s;
+    -webkit-transform: translateX(0) 0.3s;
+    -o-transform: translateX(0) 0.3s;
+
+    // animation: open1 0.4s;
+    // -moz-animation: open1 0.4s;	/* Firefox */
+    // -webkit-animation: open1 0.4s;	/* Safari 和 Chrome */
+    // -o-animation: open1 0.4s;	/* Opera */
+
+    transition: all 0.3s;
+    -moz-transition: all 0.3s;	/* Firefox */
+    -webkit-transition: all 0.3s;	/* Safari 和 Chrome */
+    -o-transition: all 0.3s;	/* Opera */
+}
+.addModal1.close .modal-content {
+  // left: 100%;
+
+  // animation: close1 0.3s;
+  // -moz-animation: close1 0.3s;	/* Firefox */
+  // -webkit-animation: close1 0.3s;	/* Safari 和 Chrome */
+  // -o-animation: close1 0.3s;	/* Opera */
+
+
+
+  transform: translateX(100%) 0.3s;
+  -moz-transform: translateX(100%) 0.3s;
+  -webkit-transform: translateX(100%) 0.3s;
+  -o-transform: translateX(100%) 0.3s;
+}
+
+
+
+

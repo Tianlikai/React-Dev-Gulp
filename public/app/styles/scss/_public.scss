@@ -1,0 +1,146 @@
+/*
+好多页面共有的一些样式
+*/
+.dash-tablePage table th,
+.dash-tablePage table td,
+.chartDetail-page .tableWrap th,
+.chartDetail-page .tableWrap td,
+.saleCluesChild .detailPage .part2 th,
+.saleCluesChild .detailPage .part2 td {
+    min-width: 100px;
+    width: 100px;
+    max-width: 250px;
+}
+.dash-graphPage .chart-wrap table th,
+.dash-graphPage .chart-wrap table td{
+    min-width: 100px;
+    width: 100px;
+    max-width: 150px;
+}
+.content-wrap>.member-wrap {
+    // overflow-y: auto; // 页面布局修改 DESK-336 页眉等装饰性版块不固定在浏览器显示
+    padding-bottom: 10px;
+}
+
+.showNumber-wrap {
+    height: 20px;
+}
+
+.showNumber-wrap>div {
+    display: inline-block;
+    float: right;
+}
+
+.showNumber-wrap .titleName {
+    margin-right: 5px;
+    line-height: 20px;
+    font-size: 13px;
+}
+
+.line>.btn-group>button {
+    width: 122px;
+    height: 30px;
+    font-size: 13px;
+}
+
+.line>.btn-group>button.active,
+.line>.btn-group>button:active {
+    box-shadow: none;
+    -moz-box-shadow: none;
+    -webkit-box-shadow: none;
+}
+
+.line>.btn-group>button:hover,
+.line>.btn-group>button:focus,
+.line>.btn-group>button:active {
+    background-color: #fff;
+    border-color: #ccc;
+}
+
+.line>.btn-group>.active,
+.line>.btn-group>.active:active,
+.line>.btn-group>.active:focus,
+.line>.btn-group>.active:hover {
+    color: #E20024;
+    background-color: #FEE8EA;
+    border: 1px solid #FEDCDE;
+    outline: 0;
+}
+
+
+/* 链接 点击 样式 */
+
+.link-title-wrap {
+    color: #4990E2;
+    font-size: 13px;
+    cursor: pointer;
+}
+
+.link-title-wrap.specialBytian {
+    height: 32px;
+    line-height: 32px;
+    color: #4990E2;
+    font-size: 13px;
+    cursor: pointer;
+}
+
+
+/* Dashboard modal  start */
+
+.dashboard-addModal .modal-content,
+.dashboard-editModal .modal-content,
+.dashboard-filterModal .modal-content {
+    top: 15%;
+    left: 20%;
+    height: 554px;
+    width: 820px;
+}
+
+.dashboard-addModal .modal-content {
+    top: 10%;
+    height: 600px;
+}
+
+
+/* Dashboard modal  end */
+
+
+/*
+多个分组方式
+1.Dashboard 新建、编辑模态框；
+2.销售线索详情页-图表配置
+*/
+// .selectWithHint {
+//     margin-right: 10px;
+// }
+.multi-group-wrap {
+    display: inline-block;
+}
+
+.multi-group-wrap .link-title-wrap {
+    margin-bottom: 5px;
+}
+
+.multi-group-wrap .group-item-page {
+    margin-bottom: 10px;
+}
+
+.group-item-page>.rct-form-control {
+    width: 150px;
+    line-height: 20px;
+    margin-right: 10px;
+}
+
+.group-item-page .selectWithHint>.itemValue {
+    width: 150px;
+}
+
+.group-item-page .rct-form-control+.selectWithHint>.itemValue {
+    width: 186px;
+}
+
+.group-item-page .del {
+    font-size: 16px;
+    margin-left: 5px;
+    cursor: pointer;
+}

@@ -1,0 +1,37 @@
+.selectedList-wrap {
+    height: 200px;
+    overflow-y: auto;
+}
+.selected-item {
+    min-width: 40px;
+    height: 32px;
+    line-height: 32px;
+    border-radius: 5px;
+    display: inline-block;
+    margin-right: 5px;
+    margin-bottom: 5px;
+    padding: 0px 5px;
+    background-color: #fff;
+    border-width: 1px;
+    border-style: solid;
+    color: $item-default;
+    border-color: $item-default;
+}
+.selectedItem-close {
+   display: inline-block;
+   height: 10px;
+   width: 10px;
+   background-image: url('../images/close-gray.png');
+   background-position: center;
+   background-repeat: no-repeat;
+   background-size: cover;
+   margin-left: 15px;
+   cursor: pointer;
+}
+.selected-item:hover {
+    color: $item-selected;
+    border-color: $item-selected;
+}
+.selected-item:hover .selectedItem-close {
+    background-image: url('../images/close-red.png');
+}

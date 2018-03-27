@@ -1,0 +1,122 @@
+/* 模态框默认大小位置 */
+.default-modal .modal-content{
+    top: 15%;
+    width: 650px;
+}
+.default-modal .modal-content .modal-body{
+    padding-top: 15px;
+    margin-bottom:44px; 
+}
+
+/* DataPermission 新建权限 */
+.default-modal.addpermissionsModal .modal-content{
+    height: 420px;
+}
+/* DataPermission 新建权限 */
+
+/* 仪表盘分享模态框 */
+.default-modal.shareDashboardModal .modal-content{
+    top: 12%;
+    width: 720px;
+}
+.default-modal.shareDashboardModal .title-wrap{
+   font-size: 18px;
+    height: 30px;
+}
+.default-modal.shareDashboardModal .title-wrap img{
+    display: inline-block;
+    margin-right: 8px;
+    width: 18px;
+    height: 18px;
+}
+.default-modal.shareDashboardModal .title-wrap span{
+    margin-left: 10px;
+    color: #4990E2;
+    font-size: 13px;
+    cursor: pointer;
+}
+.default-modal.shareDashboardModal .selected-item-page {
+    height: 140px;
+    overflow-y: auto;
+}
+/* 仪表盘分享模态框 */
+
+/* 添加切片器模态框 */
+.default-modal.AddSliceUpModal .modal-content{
+    height: 420px;
+}
+/* 添加切片器模态框 */
+
+/* DrillModal */
+.DrillModal.default-modal .modal-content{
+    top: 15%;
+    left: 50%;
+    margin-left: -353px;
+    width: 707px;
+    height: 350px;
+}
+.drill-selected {
+    width: 133px;
+    height: 24px;
+    line-height: 24px;
+    padding-left: 10px;
+    color: #dcdcdc;
+    border: 1px solid #dcdcdc;
+    margin-bottom: 8px;
+    outline: 0;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+    font-size: 13px;
+}
+.drill-body {
+    padding-left: 65px;
+}
+.drill-select .group-item-page .rct-form-control{
+    width: 133px;
+    min-width: 133px;
+    padding: 0;
+    border-radius: 0;
+    border-color: #dcdcdc;    
+    height: 24px;
+    line-height: 24px;
+    padding-left: 10px;
+    font-size: 13px;
+}
+.drill-select .group-item-page .rct-form-control.itemValue {
+    width: 133px;
+    min-width: 133px;
+}
+.drill-select .group-item-page .selectWithHint .rct-select.single::before{
+    width: 0;
+    height: 0;
+    border-top: 6px solid #666;
+    border-right: 6px solid transparent;
+    border-left: 6px solid transparent;
+    content: "";
+    position: absolute;
+    right: .7em;
+    top: .6em;
+    z-index: 0;
+    transition: .3s;
+}
+.drill-body-span{
+    float: left;
+    color: #9b9b9b;
+    margin-right: 10px;
+}
+.drill-body-right{
+    float: right;
+}
+.group-item-page .drill.del{
+    font-size: 13px;
+    top: 3px;
+}
+/* DrillModal */
+
+/* DelWithHintModal */
+.delHintModal .modal-content{
+    top: 18%;
+    min-width: 650px;
+    height: 230px;
+}

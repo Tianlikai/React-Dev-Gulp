@@ -1,0 +1,157 @@
+/* ConfigurationColumnBox start */
+.ConfigurationColumnBox{
+    height: 378px;
+    margin-top: 8px;
+}
+.ConfigurationColumnBoxLeft{
+    float: left;
+}
+.ConfigurationColumnBoxCenter{
+    float: left;
+    margin: 140px 18px;
+}
+.ConfigurationColumnBoxCenter button{
+    display: block;
+    height: 24px;
+    width: 42px;
+}
+.ConfigurationColumnBoxRight{
+    float: right;
+}
+/* ConfigurationColumnBox end */
+/* ColumnsList start */
+.ConfigurationColumnBoxLeft,.ConfigurationColumnBoxRight{
+    height: 310px;
+    width:260px;
+}
+.ConfigurationColumnBoxLeft .ConfigurationColumnBoxLeftTitle,.ConfigurationColumnBoxRight .ConfigurationColumnBoxRightTitle{
+    height: 25px;
+    font-size: 15px;
+}
+.ConfigurationColumnBoxLeft div ,.ConfigurationColumnBoxRight div{
+    height: 30px;
+    line-height: 30px;
+    cursor: pointer;
+}
+.ConfigurationColumnBoxLeft div input ,.ConfigurationColumnBoxRight div input{
+    vertical-align: middle;
+    margin-top: 0px;    
+    margin-left: 10px;
+    margin-right: 14px;
+    cursor: pointer;
+}
+.ConfigurationColumnBoxLeft div span ,.ConfigurationColumnBoxRight div span{
+    display: inline-block;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    width: 160px;
+    vertical-align: middle;
+}
+.ConfigurationColumnBoxLeftitem,.ConfigurationColumnBoxRightitem{
+    overflow-y: auto;
+    float: left;
+    width: 235px;
+    border: 1px solid #ccc;    
+}
+.ConfigurationColumnBoxLeftitem div:hover{
+    background: #E8E8E8;
+}
+.ConfigurationColumnBoxRightitem div:hover{
+    background: #E8E8E8;
+}
+
+.ConfigurationColumnBoxLeftmethod,.ConfigurationColumnBoxRightmethod{
+    float: right;
+    display: inline-block;
+    margin-top: 147px;
+    margin-bottom: 147px;
+}
+.ConfigurationColumnBoxLeftmethod button,.ConfigurationColumnBoxRightmethod button{
+   display: block;
+}
+.ConfigurationColumnBoxHint{
+    vertical-align: middle;
+}
+.ConfigurationColumnBoxHint img{
+    margin-top: -2px;
+    height: 11px;
+    width: 11px;
+}
+.ConfigurationColumnBoxHint span{
+    display: inline-block;
+    font-size: 11px;
+    color: lightgray;
+    margin-left: 8px;
+    letter-spacing: 1px;
+}
+
+.disableButton:hover{
+    background:none;
+}
+.disableButton:active{
+    background:none;
+    border: none;
+    box-shadow: none;
+}
+.disableButton:focus{
+    background:none;
+    border: none;
+    box-shadow: none;
+}
+/* ColumnsList start */
+
+/* DetailPage 配置可现实列  start */
+.configurationColumns-chart-modal .modal-content{
+    top: 12%;
+    width: 636px;
+    height: 559px;
+    border-radius: none;
+}
+.configurationColumns-chart-modal .modal-body {
+    padding: 10px 15px;
+}
+.configurationColumns-chart-modal .title-wrap {
+    height: 30px;
+}
+.configurationColumns-chart-modal .title-wrap img {
+    width: 18px;
+    height: 18px;
+}
+.configurationColumns-chart-modal .title-wrap span {
+    margin-left: 10px;
+    color: #4990E2;
+    font-size: 13px;
+    cursor: pointer;
+}
+.configurationColumns-chart-modal .selected-item-page {
+    height: 140px;
+    overflow-y: auto;
+}
+.configurationColumns-chart-modal .titleDiv {
+    height: 34px;
+}
+.configurationColumns-chart-modal .titleDiv .title {
+    float: left;
+    line-height: 32px;
+}
+.configurationColumns-chart-modal .titleDiv .input-group-after {
+    float: right;
+    margin: 0;
+}
+.configurationColumns-chart-modal .tbodyWrap {
+    height: 175px;
+}
+.configurationColumns-chart-modal .tbodyWrap tr {
+    cursor: pointer;
+}
+.configurationColumns-chart-modal .title-wrap,
+.publishToUser-page .titleDiv .title {
+    font-size: 18px;
+}
+.configurationColumns-chart-modal .title-wrap img,
+.publishToUser-page .title img {
+    display: inline-block;
+    margin-right: 8px;
+}
+/* DetailPage 配置可现实列  end */

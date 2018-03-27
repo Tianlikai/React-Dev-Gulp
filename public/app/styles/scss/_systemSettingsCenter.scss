@@ -1,0 +1,123 @@
+.systemSettingsCenter {
+  position: relative;
+  height: 100%;
+  border-bottom: 1px solid #ddd;
+}
+.systemSettingsCenter .tab_labels,
+.systemSettingsCenter .tab_content {
+  height: 100%;
+  padding: 0;
+}
+.systemSettingsCenter .tab_labels {
+    display: flex;
+    flex-direction: column;
+    background-color: #F8F8F8;
+    border-right: 1px solid #ddd;
+}
+.systemSettingsCenter .tab_labels > .home {
+  flex-grow: 0;
+  flex-shrink: 0;
+  flex-basis: auto;
+  height: 62px;
+  line-height: 62px;
+  padding-left: 22px;
+  font-size: 15px;
+  border-bottom: 1px solid #E5E5E5;
+}
+.systemSettingsCenter .tab_labels > .home > span,
+.systemSettingsCenter .tab_labels > .home > div {
+  display: inline-block;
+}
+.systemSettingsCenter .tab_labels > .home > div {
+  margin-left: 10px;
+  font-weight: bold;
+}
+.systemSettingsCenter .tab_labels > ul {
+    flex-grow: 1;
+    flex-shrink: 1;
+    flex-basis: auto;
+  padding: 12px 15px;
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+.systemSettingsCenter .tab_labels li {
+  width: 100%;
+  height: 25px;
+  line-height: 25px;
+  text-align: center;
+  cursor: pointer;
+  margin-bottom: 5px;
+}
+.systemSettingsCenter .tab_labels li:hover,
+.systemSettingsCenter .tab_labels li.active {
+  background-color: #ECECEC;
+}
+
+/* DataWarehouse  start */
+.dataWarehouse > .titleDiv {
+  height: 86px;
+  line-height: 86px;
+  background-color: #F8F8F8;
+  padding-left: 32px;
+  padding-right: 26px;
+  border-bottom: 1px solid #E5E5E5;
+  text-align: right;
+}
+.dataWarehouse > .titleDiv > div {
+  display: inline-block;
+  float: left;
+  font-size: 22px;
+  font-weight: bold;
+}
+.dataWarehouse > .titleDiv button.btn-disabled {
+  background-color: #CCCCCC;
+  color: #FFF;
+}
+.dataWarehouse > .titleDiv > .add {
+  background-color: #333;
+  border-radius: 5px;
+  color: #fff;
+  border: 0.5px solid #979797;
+}
+.dataWarehouse .configuration-wrap {
+  overflow-x: hidden;
+  overflow-y: auto;
+  padding: 24px 20px 14px 32px;
+}
+.dataWarehouse .configuration-wrap li {
+  min-height: 110px;
+  border-bottom: 1px solid #E5E5E5;
+  margin-bottom: 24px;
+}
+.configuration-wrap li .emptyDw {
+  font-size: 22px;
+  color: #2D435C;
+}
+.configuration-wrap li .title-bg {
+  font-size: 22px;
+  color: #2D435C;
+  margin-bottom: 14px;
+}
+.configuration-wrap .title-bg .btnGroup {
+  margin: 0;
+  width: 20%;
+}
+.configuration-wrap li .title-sm {
+  font-size: 13px;
+  color: #7F7979;
+  margin-bottom: 14px;
+}
+
+
+.addDwModal .line {
+  margin-bottom: 16px;
+}
+.addDwModal .line .itemName {
+  float: left;
+}
+.editDwModal .modal-content {
+  width: 700px;
+  height: 400px;
+  top: 15%;
+}
+/* DataWarehouse  end */

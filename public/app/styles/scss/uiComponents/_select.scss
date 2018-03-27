@@ -1,0 +1,287 @@
+.rct-form-control{
+  position:relative;
+  padding:7px 9px;
+  display:inline-block;
+  border:1px solid #ccc;
+  box-shadow:inset 0 1px 3px #e3e3e3;
+  border-radius:4px;
+  line-height:normal;
+  box-sizing:border-box;
+  background-color:#fff;
+  vertical-align:middle;
+  outline:0
+}
+.correlate-select .rct-form-control{
+  vertical-align:top;
+}
+.correlate-select input{
+  height: 35px;
+}
+.rct-form-control-top{
+  // vertical-align:top;
+}
+.rct-form-control-middleP{
+  vertical-align:middle;
+}
+.rct-form-control .placeholder{
+  color:#aaa
+}
+
+.rct-form-control.readonly{
+  background-color:#eee;
+  color:#777;
+  border-color:#ccc
+}
+
+.rct-has-error .rct-form-control{
+  border-color:#ca3c3c
+}
+
+/*ui Select start*/
+.rct-select {
+  position: relative;
+  min-width: 150px;
+  cursor: pointer
+}
+
+.rct-select.single:before {
+  width: 0;
+  height: 0;
+  border-top: 6px solid #666;
+  border-right: 6px solid transparent;
+  border-left: 6px solid transparent;
+  content: "";
+  position: absolute;
+  right: .7em;
+  top: .8em;
+  z-index: 0;
+  -webkit-transition: .3s;
+  transition: .3s
+}
+.rct-select.single.supportDelInInputgroup:before {
+  display: none;
+}
+.multiselect-toggle-btn{
+  position: absolute;
+  right: 0px;
+  top: 0px;
+  bottom: 0px;
+  width: 30px;
+}
+.rct-select.single span.smallTrangle {
+  width: 0;
+  height: 0;
+  border-top: 6px solid #666;
+  border-right: 6px solid transparent;
+  border-left: 6px solid transparent;
+  content: "";
+  position: absolute;
+  right: 9px;
+  top: 50%;
+  margin-top: -3px;
+  z-index: 0;
+  -webkit-transition: .3s;
+  transition: .3s
+}
+.rct-select.active.single span.smallTrangle {
+  -webkit-transform: rotate(180deg);
+  transform: rotate(180deg);
+}
+.rct-select.active.single:before {
+  -webkit-transform: rotate(180deg);
+  transform: rotate(180deg);
+}
+
+.rct-select .rct-select-result {
+  position: relative;
+  cursor: pointer;
+  display: inline-block;
+  margin-right: 16px
+}
+
+.rct-select .rct-select-result:after {
+  position: absolute;
+  right: -12px;
+  content: '\D7';
+  font-weight: 700;
+  color: #ddd
+}
+
+.rct-select .rct-select-result:hover,.rct-select .rct-select-result:hover:after {
+  color: #ca3c3c
+}
+
+.rct-select.readonly .result:after {
+  content: ''
+}
+
+.rct-select .rct-select-options-wrap {
+  top: 100%;
+  z-index: 1050;
+  position: absolute;
+  overflow: hidden;
+  left: -13px;
+  right: -13px
+}
+
+.rct-select .rct-select-options {
+  display: none;
+  border: 1px solid #ccc;
+  border-radius: 0 0 4px 4px;
+  border-top-width: 0;
+  background-color: #fff;
+  margin: 0 12px 20px;
+  -webkit-transition: .45s;
+  transition: .45s;
+  -webkit-transform: translateY(-100%);
+  transform: translateY(-100%)
+}
+
+.rct-select .rct-select-options .filter {
+  position: relative;
+  padding: .4em .6em;
+  box-sizing: border-box
+}
+
+.rct-select .rct-select-options .filter .search {
+  position: absolute;
+  top: .8em;
+  right: 1em;
+  width: 15px;
+  height: 14px;
+  background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAA8AAAAOCAMAAAGwU4ZLAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAxhpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMC1jMDYwIDYxLjEzNDM0MiwgMjAxMC8wMS8xMC0xODowNjo0MyAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENTNSIgeG1wTU06SW5zdGFuY2VJRD0ieG1wLmlpZDpERjMwODQ3QjE4OTMxMUU1OTYzMkEyMzdFQkVCMjMxMCIgeG1wTU06RG9jdW1lbnRJRD0ieG1wLmRpZDpERjMwODQ3QzE4OTMxMUU1OTYzMkEyMzdFQkVCMjMxMCI+IDx4bXBNTTpEZXJpdmVkRnJvbSBzdFJlZjppbnN0YW5jZUlEPSJ4bXAuaWlkOkRGMzA4NDc5MTg5MzExRTU5NjMyQTIzN0VCRUIyMzEwIiBzdFJlZjpkb2N1bWVudElEPSJ4bXAuZGlkOkRGMzA4NDdBMTg5MzExRTU5NjMyQTIzN0VCRUIyMzEwIi8+IDwvcmRmOkRlc2NyaXB0aW9uPiA8L3JkZjpSREY+IDwveDp4bXBtZXRhPiA8P3hwYWNrZXQgZW5kPSJyIj8+MeKeZQAAANhQTFRFS0tL3t7eSkpKxMTEm5ubT09PX19fXFxcWlpaV1dXe3t7Tk5O2dnZvb29oaGh19fXmZmZurq6d3d3oqKiWVlZUVFRvLy8mpqaXV1dVFRUY2NjwcHBwsLCpaWlkJCQyMjIioqKVlZW29vbrKysc3NzXl5eaGhosrKyy8vLb29v09PTa2tr0tLShYWF3NzcUFBQ1NTUk5OTTExMf39/SUlJz8/PW1tbzMzMnp6eZ2dnfn5+hISEdXV1wMDAtra2aWlp0dHRampqu7u7n5+f3d3dbW1tq6ur4+PjZDfasQAAAEh0Uk5T//////////////////////////////////////////////////////////////////////////////////////////////8AnOzyYAAAAMtJREFUeNpicBdgcLcDCCAGIXcGHneAAGJgdnd3ZwBidoAAYnBnArLE3c3cGZjcOcBi5gABxOAOlOdzBYpLs4DUgJQyKupbsTm5AwQQg7sYKxs/UEBZxZ1RlNGdAaRBg8udwQhIO9i4M1goADXoATWwcHOrs4LNc3eXkQAIMCDNwiRirKvJoGYKEmHgd1TVAcsZMriB+IKsfGCuO6OUPYivxabNA+bLMgmD3epizWApJ8AlacIpCHW7O6O8rYG7OzMHJy/UHijgdVYCAMp4KGPLgTOrAAAAAElFTkSuQmCC);
+}
+
+.rct-select .rct-select-options .filter input {
+  width: 100%;
+  padding: .3em;
+  border: none;
+  background-color: #f2f2f2;
+  border-radius: 4px;
+  box-sizing: border-box
+}
+
+.rct-select.active {
+  border-radius: 4px 4px 0 0
+}
+
+.rct-select.active hr {
+  display: block
+}
+
+.rct-select.active .rct-select-options {
+  -webkit-transform: translate(0);
+  transform: translate(0)
+}
+
+.rct-select.dropup hr {
+  display: none
+}
+
+.rct-select.dropup .rct-select-options-wrap {
+  top: auto;
+  bottom: 100%
+}
+
+.rct-select.dropup .rct-select-options {
+  margin: 0 12px;
+  border-top-width: 1px;
+  box-shadow: 0 2px 12px rgba(0,0,0,.175);
+  -webkit-transform: translateY(100%);
+  transform: translateY(100%)
+}
+
+.rct-select.dropup.active {
+  border-radius: 0 0 4px 4px
+}
+
+.rct-select.dropup.active .rct-select-options {
+  border-radius: 4px 4px 0 0;
+  -webkit-transform: translate(0);
+  transform: translate(0)
+}
+
+.rct-select hr {
+  position: relative;
+  display: none;
+  z-index: 1060;
+  margin: 0 12px;
+  border-width: 0;
+  border-top: 1px solid #ccc;
+  border-bottom: 1px solid #e3e3e3
+}
+
+.rct-select ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  max-height: 180px;
+  overflow: auto
+}
+
+.rct-select ul li {
+  padding: .4em .6em;
+  cursor: pointer;
+  display: none;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.rct-select ul li.show {
+  display: block
+}
+
+.rct-select ul li.active {
+  color: #000;
+  background-color: #ddd
+}
+
+.rct-select ul li:hover {
+  color: #fff;
+  background-color: #0078e7
+}
+
+.rct-select ul .group {
+  display: block;
+  font-weight: 700;
+  background-color: #fff;
+  padding: .4em .6em
+}
+
+/* 下拉多选Multiselect 可删除inputGroup项 */
+.SelectItemWithDel{
+  width: 87px;
+  position: relative;
+  // text-align: center;
+  display: inline-block;
+  margin: 0 0 2px 5px;
+  // padding: 0 25px 0 9px;
+  // margin-right: 10px;
+  height: 26px;
+  line-height: 26px;
+  border-radius: 4px;
+  background: #F3F2F3;
+}
+.SelectItemWithDel-labelName{
+  margin-bottom: 0;
+  padding-left: 7px;
+  font-weight: normal;
+  width: 76px;
+  font-size: 12px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.JTimg.delSelectItem{
+  position: absolute;
+  top: 50%;
+  margin-top: -7px;
+  right: 3px;
+  height: 12px;
+  width: 12px;
+  background-image: url(../images/delCustomerArea.png);
+}
+/* 下拉多选Multiselect 可删除inputGroup项 */
+
+/*ui Select end*/

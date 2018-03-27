@@ -1,0 +1,283 @@
+.tab_labels li {
+    position: relative;
+    display: block;
+    float: left;
+}
+
+.tab_labels li>div {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.tab-content-item {
+    display: none;
+}
+
+.tab-content-item.active {
+    display: block;
+}
+
+
+/* 右侧内容区域-tabsParents start */
+
+.tabsParents>.tab_labels {
+    // position: fixed; // 页面布局修改 DESK-336 页眉等装饰性版块不固定在浏览器显示
+    left: $mainSidebarWidth;
+    top: 0;
+    right: $helpUserWidth;
+    z-index: 100;
+    height: $headerHeight;
+    color: #515151;
+    border-bottom: 1px solid #ddd;
+    background-color: #fff;
+}
+
+.tabsParents>.tab_labels>ul {
+    height: $headerHeight;
+    overflow: hidden;
+}
+
+.tabsParents>.tab_labels>ul>li {
+    width: 150px;
+    height: $headerHeight;
+    padding-left: 20px;
+    padding-right: 20px;
+    margin-bottom: -1px;
+    font-size: 13px;
+    line-height: $headerHeight;
+    border-right: 1px solid #ddd;
+}
+
+.tabsParents>.tab_labels>ul>li.active {
+    background-color: #F8F8F8;
+    border: 1px solid #ddd;
+    border-bottom-color: transparent;
+}
+
+.tabsParents .tabClose {
+    display: inline-block;
+    position: absolute;
+    top: 18px;
+    right: 5px;
+    width: 15px;
+    height: 15px;
+    background-image: url('../images/redDot.png');
+    cursor: pointer;
+}
+
+.tabsParents .tabClose:hover {
+    background-image: url('../images/close.png');
+}
+
+
+/* 右侧内容区域-tabsParents end */
+
+
+/* 右侧内容区域-tabsChild start */
+
+.tabsChild {
+    height: 100%; // padding-top: $tabChildHeight;  // 页面布局修改 DESK-336 页眉等装饰性版块不固定在浏览器显示
+}
+
+.tabsChild>.tab_labels {
+    // position: fixed; // 页面布局修改 DESK-336 页眉等装饰性版块不固定在浏览器显示
+    // left: $mainSidebarWidth;
+    // top: $headerHeight;
+    // right: 0;
+    position: relative;
+    z-index: 50;
+    height: $tabChildHeight;
+    color: #515151;
+    background-color: #F8F8F8;
+    padding-left: 22px;
+    padding-right: 16px;
+}
+
+.tabsChild>.tab_labels>.help {
+    // float: right;
+    // height: $tabChildHeight;
+    // line-height: $tabChildHeight;
+    // text-decoration: underline;
+    // color: #004EA8;
+    // font-size: 13px;
+    position: absolute;
+    right: 0px;
+}
+
+.tabsChild>.tab_labels>.help li {
+    // float: right;
+    // height: $tabChildHeight;
+    // line-height: $tabChildHeight;
+    // text-decoration: underline;
+    // color: #004EA8;
+    // font-size: 13px;
+    border: none;
+    background: none;
+}
+
+.tabsChild>.tab_labels>.help:focus,
+.tabsChild>.tab_labels>.help:hover {
+    text-decoration: underline;
+    color: #004EA8;
+}
+
+.tabsChild>.tab_labels>ul {
+    float: left;
+    height: $tabChildHeight;
+    overflow: hidden;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.tabsChild>.tab_labels>ul>li {
+    width: 116px;
+    height: 26px;
+    font-size: 13px;
+    line-height: 26px;
+    border: 1px solid #ddd;
+    text-align: center;
+    background-color: #FFFFFF;
+    cursor: pointer;
+}
+
+.tabsChild>.tab_labels>ul>li:first-child {
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+}
+
+.tabsChild>.tab_labels>ul>li:last-child {
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+}
+
+.tabsChild>.tab_labels>ul>li.active {
+    background-color: #FB6271;
+    color: #FFFFFF;
+}
+
+.tabsChild>.tab_content>.tab-content-item {
+    padding-left: 22px;
+    padding-right: 16px;
+}
+
+.titleDiv {
+    height: 60px;
+    position: inherit;
+}
+
+.fixedTitleDiv {
+    height: 60px;
+    position: fixed;
+    top: 0px;
+    width: 100%;
+    background: white;
+    z-index: 12;
+    border-bottom: 1px solid #ddd;
+}
+
+
+/* DataPermission TableWrapManagement special */
+
+.titleDiv.TableWrapManagement {
+    margin-top: 20px;
+    height: 40px;
+}
+
+.titleDiv.TableWrapManagement span {
+    font-size: 26px;
+}
+
+.titleDiv.TableWrapManagement .change-a {
+    font-size: 14px;
+    margin-left: 20px;
+    color: #4A90E2;
+    cursor: pointer;
+}
+
+.titleDiv.TableWrapManagement button {
+    float: right;
+    padding: 6px 20px;
+    background-color: #fff;
+    border: 1px solid #979797;
+    height: 32px;
+}
+
+
+/* DataPermission TableWrapManagement special */
+
+.titleDiv h2,
+.fixedTitleDiv h2 {
+    float: left;
+    height: 100%;
+    line-height: 60px;
+    margin: 0;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    font-size: 22px;
+}
+
+.titleDiv h2 img,
+.fixedTitleDiv h2 img {
+    margin-right: 10px;
+}
+
+.titleDiv h2 .img,
+.fixedTitleDiv h2 .img {
+    display: inline-block;
+    vertical-align: middle;
+    width: 24px;
+    height: 22px;
+    margin-right: 10px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+.titleDiv>.input-group-after ,
+.fixedTitleDiv>.input-group-after {
+    float: left;
+    margin-left: 20px;
+    margin-top: 13px;
+}
+
+.DashBoardManagementNoOverflowY .titleDiv>.input-group-after {
+    margin-left: 10px;
+}
+
+.titleDiv>.titleDivimg ,
+.fixedTitleDiv>.titleDivimg {
+    float: left;
+    display: inline-block;
+    height: 27px;
+    width: 27px;
+    margin: 15px 0px 0px 13px;
+    cursor: pointer;
+}
+
+.tabsChild .btnGroup {
+    float: right;
+}
+
+.detailPage .content .titleDiv ,
+.detailPage .content .fixedTitleDiv {
+    line-height: 60px
+}
+
+
+/* 右侧内容区域-tabsChild end */
+
+.tab_labels .tab-title-item {
+    cursor: pointer;
+}
+
+.content>.tabsChild>.tab_content,
+.content>.tabsChild>.tab_content>.tab-content-item,
+.content>.tabsChild>.tab_content>.tab-content-item>div {
+    height: 100%;
+}
+
+.content>.tabsChild>.tab_content>.tab-content-item>div {
+    // overflow-y: auto; // 页面布局修改 DESK-336 页眉等装饰性版块不固定在浏览器显示
+}

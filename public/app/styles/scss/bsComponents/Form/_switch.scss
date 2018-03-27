@@ -1,0 +1,145 @@
+.has-switch {
+  -moz-border-bottom-colors: none;
+  -moz-border-left-colors: none;
+  -moz-border-right-colors: none;
+  -moz-border-top-colors: none;
+  -moz-user-select: none;
+  border-color: rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.25);
+  border-image: none;
+  border-radius: 5px;
+  border-style: solid;
+  border-width: 1px;
+  cursor: pointer;
+  display: inline-block;
+  line-height: 8px;
+  min-width: 100px;
+  overflow: hidden;
+  position: relative;
+  text-align: left;
+}
+
+.has-switch.deactivate {
+  cursor: default !important;
+  opacity: 0.5;
+}
+
+.has-switch.deactivate label, .has-switch.deactivate span {
+  cursor: default !important;
+}
+
+.has-switch > div {
+  display: inline-block;
+  position: relative;
+  top: 0;
+  width: 150%;
+}
+
+.has-switch > div.switch-animate {
+  transition: left 0.5s ease 0s;
+}
+
+.has-switch > div.switch-off {
+  left: -50%;
+}
+
+.has-switch > div.switch-on {
+  left: 0;
+}
+
+.has-switch input[type="checkbox"] {
+  display: none;
+}
+
+.has-switch span, .has-switch label {
+  box-sizing: border-box;
+  cursor: pointer;
+  display: inline-block;
+  font-size: 14px;
+  height: 100%;
+  line-height: 20px;
+  padding-bottom: 4px;
+  padding-top: 4px;
+  position: relative;
+}
+
+.has-switch label {
+  background-color: #f5f5f5;
+  background-image: linear-gradient(to bottom, #ffffff, #e6e6e6);
+  background-repeat: repeat-x;
+  border-color: rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.25);
+  border-left: 1px solid rgba(0, 0, 0, 0.1);
+  border-right: 1px solid rgba(0, 0, 0, 0.1);
+  color: #ffffff;
+  margin-bottom: -1px;
+  margin-top: -1px;
+  text-align: center;
+  text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25);
+  width: 34%;
+  z-index: 100;
+}
+
+.has-switch label:hover,
+.has-switch label:focus,
+.has-switch label:active,
+.has-switch label.active,
+.has-switch label.disabled,
+.has-switch label[disabled] {
+  background-color: #e6e6e6;
+  color: #ffffff;
+}
+
+.has-switch label i {
+  color: #000;
+  line-height: 18px;
+  pointer-events: none;
+  text-shadow: 0 1px 0 #fff;
+}
+
+.has-switch span {
+  text-align: center;
+  width: 33%;
+  z-index: 1;
+}
+
+.has-switch span.switch-left {
+  border-bottom-left-radius: 4px;
+  border-top-left-radius: 4px;
+}
+
+.has-switch span.switch-right {
+  background-color: #f0f0f0;
+  background-image: linear-gradient(to bottom, #e6e6e6, #ffffff);
+  background-repeat: repeat-x;
+  border-color: rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.25);
+  color: #333333;
+  text-shadow: 0 1px 1px rgba(255, 255, 255, 0.75);
+}
+
+.has-switch span.switch-right:hover,
+.has-switch span.switch-right:focus,
+.has-switch span.switch-right:active,
+.has-switch span.switch-right.active,
+.has-switch span.switch-right.disabled,
+.has-switch span.switch-right[disabled] {
+  background-color: #ffffff;
+  color: #333333;
+}
+
+.has-switch span.switch-success {
+  background-color: #58b058;
+  background-image: linear-gradient(to bottom, #51a351, #62c462);
+  background-repeat: repeat-x;
+  border-color: rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.25);
+  color: #ffffff;
+  text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25);
+}
+
+.has-switch span.switch-success:hover,
+.has-switch span.switch-success:focus,
+.has-switch span.switch-success:active,
+.has-switch span.switch-success.active,
+.has-switch span.switch-success.disabled,
+.has-switch span.switch-success[disabled] {
+  background-color: #62c462;
+  color: #ffffff;
+}

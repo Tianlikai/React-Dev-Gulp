@@ -1,0 +1,13 @@
+{
+    "parser":"babel-eslint",
+    "extends": [
+        "eslint:recommended",
+        "plugin:react/recommended"
+    ],
+    "settings": {
+        "react": {
+          "pragma": "React",
+          "version": "15.2.0"
+        }
+    }
+}

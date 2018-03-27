@@ -1,0 +1,41 @@
+/* SelectList 下拉框是否有名称 在此处只定义了禁用状态 */
+.itemName.disable{
+    display: none;
+}
+/* SelectList 下拉框是否有名称 */
+
+/* SelectList 切片器超出指定范围时 提示信息样式 特殊定义 */
+.whole.hint.err.noLableName{
+    padding: 0px;
+}
+/* SelectList 切片器超出指定范围时 提示信息样式 特殊定义 */
+
+/* 下拉框组 默认样式 */
+.JTSelectG{
+    position: relative;
+    width: 100%;
+    height: 48px;
+    font-size: 12px;
+}
+.JTSelectG.float-left{
+    clear: left;
+}
+.JTSelectG.float-left .specialwid .specialwid .titleName{
+    line-height: 18px;
+}
+.JTSelectG.float-left::after{
+    clear: both;
+}
+.multiselect.specialwid{
+    width: 18%;
+    margin-right: 2%;
+}
+.rct-select.specialwid{
+    display: block;
+    padding: 4px 9px;
+    font-size: 12px;
+}
+.thdropbox.specialwid .wrap-search .input-group-after{
+    min-width: 100px;
+}
+/* 下拉框组 默认样式 */

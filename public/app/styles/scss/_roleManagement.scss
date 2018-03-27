@@ -1,0 +1,398 @@
+.roleManageChild-page {
+    .content-wrap {
+        border-top: 1px solid #ddd;
+    }
+}
+.roleList-item {
+    position: relative;
+    min-height: 20px;
+    padding: 10px 50px 10px 14px;
+    cursor: pointer;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+    color: #7f7979;
+    margin-right: 8px;
+}
+.roleList-item-isAdmin{
+    padding: 10px 70px 10px 14px;
+}
+.roleList-item:hover,
+.roleList-item:focus,
+.roleList-item.selected {
+    background-color: #F6F6F6;
+    color: #4990E2;
+}
+.roleList-item.selected{
+    font-size: 15px;    
+}
+.roleList-item .btn-wrap{
+    position: absolute;
+    top: 12px;
+    right: 10px;
+    display: none;
+    float: right;
+}
+.roleList-item .glyphicon {
+    margin-left: 5px;
+}
+.roleList-item .fromSharingDashboard{
+    margin-right: 3px;
+}
+.roleList-item:hover .btn-wrap,
+.roleList-item:active .btn-wrap,
+.roleList-item:focus .btn-wrap,
+.roleList-item.selected .btn-wrap {
+    display: inline-block;
+}
+.member-wrap > div > div {
+    padding-left: 20px;
+    padding-right: 20px;
+}
+.full > div > div {
+    padding-left: 0px;
+    padding-right: 0px;
+}
+.member-wrap {
+    .roleDesc {
+        width: 100%;
+        height: 40px;
+        line-height: 40px;
+        border-bottom: 1px solid #ddd;
+        text-overflow: ellipsis;
+        overflow: hidden;
+        white-space: nowrap;
+    }
+}
+.member-wrap .titleDiv .add {
+    color: #333;
+    background-color: #fff;
+}
+.roleUser-detail-modal .modal-content {
+    top: 15%;
+    width: 550px;
+    height: 400px;
+}
+.roleUser-detail-modal .line {
+    min-height: 20px;
+}
+.addRoleUser-modal .modal-body {
+    padding: 15px;
+    overflow: auto;
+}
+.addRoleUser-modal .modal-body > .title {
+    margin-bottom: 10px;
+}
+.addRoleUser-modal .depList-wrap,
+.addRoleUser-modal .depUserList-wrap {
+    min-height: 510px;
+    padding: 0;
+    border-top: 1px solid #ddd;
+}
+.addRoleUser-modal .depList-wrap {
+    border-right: 1px solid #ddd;
+}
+.addRoleUser-modal .depUserList-wrap {
+    padding-top: 10px;
+    padding-left: 10px;
+}
+.roleManagement-tabs .tab_labels {
+    height: 36px;
+    line-height: 35px;
+    border-bottom: 1px solid #ddd;
+}
+.roleManagement-tabs .tab-title-item {
+    width: 100px;
+    text-align: center;
+}
+.roleManagement-tabs .tab-title-item:hover,
+.roleManagement-tabs .tab-title-item.active {
+    background-color: #eee;
+}
+.roleManagement-tabs .tab_content {
+
+}
+.rolePermission-config-wrap {
+    border-top: 1px solid #ddd;
+    overflow-y: auto;
+}
+.rolePermission-config-wrap li {
+    border-bottom: 1px solid #ddd;
+}
+.rolePermission-config-wrap li .titleName {
+    line-height: 46px;
+    font-size: 16px;
+    font-weight: bold;
+}
+.rolePermission-config-wrap li .content {
+    line-height: 30px;
+}
+
+/*  角色权限配置模态框   start   */
+.rolePermissionModal .modal-body {
+    padding: 0;
+}
+.modal-recommend-title {
+    height: 36px;
+    line-height: 36px;
+    font-weight: bold;
+}
+.modal-recommend-title span {
+    cursor: pointer;
+    color: #4A90E2;
+    margin-left: 10px;
+    font-size: 13px;
+}
+.strategy-modal {
+  min-width: 950px;
+}
+.strategy-modal .leftSide {
+  height: 100%;
+  border-right: 1px solid #e5e5e5;
+  padding: 15px 0 5px 15px;
+}
+.strategy-modal .rightSide {
+  height: 100%;
+  padding: 15px 15px 5px 10px;
+}
+.strategy-modal .leftSide .item {
+  margin-bottom: 20px;
+  position: relative;
+}
+.leftSide .item .arrow-left {
+    position: absolute;
+    right: 0;
+    top: 5px;
+    width: 0;
+    height: 0;
+    border-top: 10px solid transparent;
+    border-bottom: 10px solid transparent;
+    border-right: 15px solid #CFCED6;
+}
+.strategy-modal .leftSide .itemName {
+  display: inline-block;
+  width: 83px;
+  min-height: 30px;
+  line-height: 30px;
+  font-size: 17px;
+  font-weight: bold;
+}
+.strategy-modal .leftSide .itemComponent {
+  float: left;
+  width: 75%;
+  position: relative;
+  min-height: 60px;
+}
+.strategy-modal .leftSide .err {
+  color: red;
+  width: 232px;
+  margin-left: 83px;
+  font-size: 12px;
+}
+.input-readOnly {
+  display: inline-block;
+}
+.input-readOnly .rct-form-control {
+
+  width: 200px;
+  height: 32px;
+  border-radius: 4px 0 0 4px;
+  border-right: none;
+  font-family: inherit;
+  font-size: inherit;
+  margin: 0;
+  font: inherit;
+  color: inherit;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.input-readOnly > span {
+    height: 32px;
+    width: 28px;
+    line-height: initial;
+    border-left: none;
+    margin: 0;
+    background-color: #00B295;
+    color: #FFFFFF;
+    padding: 6px;
+}
+.input-readOnly .btn {
+  margin: 0;
+}
+.input-readOnly .btn .glyphicon {
+  color: #FFFFFF;
+}
+.input-readOnly .btn-default,
+.input-readOnly .btn-default:active,
+.input-readOnly .btn-default:focus,
+.input-readOnly .btn-default:hover {
+    background-color: #9497A1;
+    border-color: #9497A1;
+}
+.areaItem {
+  height: auto;
+}
+.areaItem .parent {
+    font-weight: bold;
+    height: inherit;
+    text-align: center;
+}
+.areaItem .child,
+.areaItem .child-selected {
+    display: inline-block;
+    width: 125px;
+    min-height: 25px;
+    margin-right: 7px;
+    margin-bottom: 3px;
+    text-align: center;
+    cursor: pointer;
+    overflow: hidden;
+    background-color: #fff;
+    border-width: 1px;
+    border-style: solid;
+    border-radius: 4px;
+}
+.areaItem .child {
+  border-color: $item-default;
+  color: $item-default;
+}
+.areaItem .child:hover {
+  background-color: $item-hover;
+  color: $item-selected;
+  border-color: $item-selected;
+}
+.areaItem .child-selected {
+  color: $item-selected;
+  border-color: $item-selected;
+}
+.child.country {
+  background-color: white;
+  color: black;
+  border: 1px solid #ddd;
+}
+.child.country:hover {
+    background-color: #CCC;
+    color: #FFF;
+    border-color: #CCC;
+}
+.leftSide .information {
+  border: 1px solid #e5e5e5;
+  border-radius: 5px;
+  background-color: #FFFFFF;
+  margin-right: 15px;
+  margin-top: 3px;
+  box-shadow: 8px 8px 4px #E4E4E4;
+  padding: 10px 5px 10px 10px;
+}
+.leftSide .information .lastRule {
+  margin-bottom: 0;
+}
+/*  角色权限配置模态框   end   */
+.content-wrap .role-wrap {
+    display: flex;
+    flex-direction: column;
+    overflow-y: auto;
+}
+.content-wrap .header-wrap {
+    flex-grow: 0;
+    /* ie11浏览器 兼容性问题 */
+    flex-shrink: 0;
+    flex-basis: auto;
+    height: auto;
+}
+.role-wrap .groups-wrap , .DashboardGroupSide-nocontent {
+    flex-grow: 1;
+    flex-shrink: 1;
+    flex-basis: auto;
+    overflow-y: auto;
+}
+.DashboardGroupSide-nocontent{
+    position: relative;
+    height: 100%;
+    font-size: 1.17em;
+    text-align: center;
+    color: #BEC2C3;
+    border-top: 1px solid #ddd;
+    margin-right: 8px;
+}
+.DashboardGroupSide-nocontent-lead{
+    position: relative;
+    height: 74px;
+    text-align: right;
+    right: 8px;
+    top: 22px;
+}
+.DashboardGroupSide-nocontent-hint{
+    position: relative;
+    top: 25%;
+    padding: 0px 20px 0px;
+}
+.DashboardGroupSide-nocontent img{
+    height: 74px;
+    width: 75px;
+}
+.role-wrap .title-wrap ,.dashboard-title-wrap{
+    margin-right: 8px;
+    font-size: 13px;
+    font-weight: bold;
+    padding: 12px 0 12px 3px;
+    border-bottom: 1px solid #ddd;
+    color: #4A4A4A;
+}
+.dashboard-title-wrap span, .title-wrap2 span{
+    height: 14px;
+    float: left;
+}
+.dashboard-title-wrap .DashboardGroupSide-addDashboard,.title-wrap2 .DashboardGroupSide-addDashboard{
+    display: inline-block;
+    position: relative;
+    width: 14px;
+    float: right;
+    margin-right: 1px;
+    margin-top: 2px; 
+    margin-bottom: -3px;
+    cursor: pointer;
+    background: url('../images/Create_Dashboard.svg');
+}
+
+.dashboard-title-wrap,.title-wrap2{
+    border: none;
+}
+.dashboard-letters-wrap{
+    padding: 0 0 5px 0;
+    border-top: 1px solid #ddd;
+    margin-right: 8px;
+}
+.letters-wrap .letter , .dashboard-letters-wrap .letter{
+    display: inline-block;
+    font-size: 10px;
+    color: #ddd;
+    padding: 2px 4px;
+}
+.letters-wrap .letter.active , .dashboard-letters-wrap .letter.active{
+    color: #4990E2;
+    cursor: pointer;
+}
+.group-wrap .group-by-name {
+    margin-right: 8px;
+    padding-left: 5px;
+    font-size: 10px;
+    background-color: #EEE;
+}
+.dashboardSideToggleButton button{
+    float: right;
+}
+.dashboradScroolTop{
+    position: fixed;
+    height: 50px;
+    width: 50px;
+    right: 16px;
+    bottom: 100px;
+    cursor: pointer;
+    z-index: 12;
+}
+.dashboradScroolTopDisable{
+    display: none;
+}
+

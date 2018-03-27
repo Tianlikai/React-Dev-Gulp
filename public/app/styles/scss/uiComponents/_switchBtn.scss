@@ -1,0 +1,29 @@
+/* 样式1  start */
+.switch-btn1 {
+    position: relative;
+    width: 36px;
+    height: 20px;
+    border-radius: 10px;
+    cursor: pointer;
+}
+.switch-btn1 > div {
+    position: absolute;
+    top: 1px;
+    width: 18px;
+    height: 18px;
+    border-radius: 9px;
+    background-color: #fff;
+}
+.switch-btn1.open1 {
+    background-color: #1BB691;
+}
+.switch-btn1.open1 > div {
+    right: 1px;
+}
+.switch-btn1.close1 {
+    background-color: #BEC2C3;
+}
+.switch-btn1.close1 > div {
+    left: 1px;
+}
+/* 样式1  end */

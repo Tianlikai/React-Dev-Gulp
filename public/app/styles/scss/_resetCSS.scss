@@ -1,0 +1,49 @@
+
+a {
+  outline: none;
+  -moz-outline: none;
+}
+a:focus, a:hover {
+  text-decoration: none;
+  -moz-outline: none;
+  outline: none;
+}
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+ul li {
+  margin: 0;
+  padding: 0;
+}
+.fullHeight {
+  height: 100%;
+}
+.text-overflow {
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+}
+.tableWrap > table th,
+.tableWrap > table td {
+    min-width: 100px;
+    max-width: 250px;
+}
+
+input::-webkit-input-placeholder { /* WebKit, Blink, Edge */
+    font-size: 12px;
+    color: #919191;
+}
+input:-ms-input-placeholder { /* Internet Explorer 10-11 */
+    font-size: 12px;
+    color: #919191;
+}
+input::-moz-placeholder { /* Mozilla Firefox 19+ */
+    font-size: 12px;
+    color: #919191;
+}
+input:-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+    font-size: 12px;
+    color: #919191;
+}

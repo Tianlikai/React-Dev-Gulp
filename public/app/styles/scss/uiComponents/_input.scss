@@ -1,0 +1,82 @@
+
+.rct-checkbox,.rct-radio {
+	display: inline-block;
+	margin-right: 10px;
+	vertical-align: middle;
+}
+
+.rct-checkbox *,.rct-radio * {
+	vertical-align: middle;
+}
+
+.rct-checkbox input,.rct-radio input {
+	margin-right: 5px;
+}
+
+.rct-checkbox-group.rct-inline .rct-checkbox,
+.rct-checkbox-group.rct-inline .rct-radio,
+.rct-radio-group.rct-inline .rct-checkbox,
+.rct-radio-group.rct-inline .rct-radio {
+	display: inline-block;
+	margin-right: 10px;
+}
+/* 客户检索 选着行业 特殊样式 */
+.rct-radio-group.rct-inline .rct-radio.special{
+	margin-right: 30px;
+}
+/* 客户检索 选着行业 特殊样式 */
+.rct-checkbox-group.rct-block .rct-checkbox,
+.rct-checkbox-group.rct-block .rct-radio,
+.rct-radio-group.rct-block .rct-checkbox,
+.rct-radio-group.rct-block .rct-radio {
+	display: block;
+	margin-right: 0;
+}
+/*radio group start*/
+.rct-checkbox,
+.rct-radio {
+  display: block;
+  vertical-align: middle
+}
+.rct-checkbox * ,
+.rct-radio * {
+  vertical-align: middle
+}
+.rct-checkbox input,
+.rct-radio input {
+  margin-right: 5px;
+  margin-top: 0;
+}
+.rct-checkbox-group.rct-inline .rct-checkbox,
+.rct-checkbox-group.rct-inline .rct-radio,
+.rct-radio-group.rct-inline .rct-checkbox,
+.rct-radio-group.rct-inline .rct-radio {
+  display: inline-block;
+  margin-right: 10px
+}
+/*radio group end*/
+/* TextArea输入框  start */
+.textarea-page .textarea-content {
+	position: relative;
+	padding: 15px;
+	border: 1px solid #ccc;
+}
+.textarea-page textarea {
+	display: block;
+	width: 100%;
+	height: 80px;
+	border: 0;
+	padding: 0;
+	background-color: #fff;
+	outline: 0;
+	word-break: break-all;
+	resize: none; // 去掉右下角的三角
+	overflow-y: auto;
+}
+.textarea-page .title-count {
+	position: absolute;
+	right: 15px;
+	font-size: 10px;
+	color: #9B9B9B;
+}
+/* TextArea输入框  end */

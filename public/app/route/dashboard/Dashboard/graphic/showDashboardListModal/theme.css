@@ -1,0 +1,61 @@
+/* showDashboardListModal 画布移动到、复制到  start */
+ .showDashboardListModal-chart-modal .modal-content{
+    top: 28%;
+    width: 584px;
+    height: 337px;
+    border-radius: none;
+} 
+.noData .modal-content{
+    height: 200px;    
+    min-height: 200px;
+}
+.showDashboardListModal-chart-modal .modal-body{
+    padding: 0;
+}
+.showDashboardListModal-chart-modal .modal-body .showDashboardListWrapper{
+    width: 100%;
+    height: 220px;
+    overflow-y: auto;
+}
+.noData .modal-body .showDashboardListWrapper{
+    height: 83px;
+}
+.showDashboardListModal-chart-modal .modal-body .showDashboardListWrapper li{    
+    padding-left: 40px;
+    height: 30px;
+    vertical-align: middle;
+    cursor: pointer;
+} 
+.showDashboardListModal-chart-modal .modal-body .showDashboardListWrapper li:first-child{    
+   margin-top: 5px;
+} 
+.showDashboardListModal-chart-modal .modal-body .showDashboardListWrapper li:last-child{    
+    margin-bottom: 5px;
+} 
+.noData .modal-body .showDashboardListWrapper li:first-child{    
+    line-height: 30px;
+    font-size: 15px;
+    color: #9A9595;
+    margin-top: 26px;
+}
+.showDashboardListModal-chart-modal .modal-body .showDashboardListWrapper li:hover{    
+   background: #E8E8E8;
+}
+.noData .modal-body .showDashboardListWrapper li:hover{    
+   background: none;
+}
+.showDashboardListModal-chart-modal .modal-body .showDashboardListWrapper li img{
+    vertical-align: middle;
+    display: inline-block;
+    height: 15px;
+    width: 15px;
+    margin: 0;
+}
+.showDashboardListModal-chart-modal .modal-body .showDashboardListWrapper li span{
+    vertical-align: middle;
+    margin-left: 5px;
+    line-height: 30px;
+    display: inline-block;
+    font-size: 14px;
+}
+/* showDashboardListModal 画布移动到、复制到  end */

@@ -1,21 +1,26 @@
-var webpack = require("webpack");
+let webpack = require("webpack");
 
 const vendors = [
     'react',
     'react-dom',
     'reflux',
     'react-router',
+    'rc-tooltip',
     'react-modal-bootstrap',
     'classnames',
-    'react-table'
+    'echarts',
+    'fecha',
+    'object.omit',
+    'react-table',
+    'prop-types'
 ];
 
 module.exports = {
     resolve: {
-		extensions: ['', '.js', '.jsx']
-	},
+        extensions: ['', '.js', '.jsx']
+    },
     output: {
-        path: __dirname + '/dist/js',
+        path: __dirname + '/public/dist',
         filename: 'app.[name].js',
         library: '[name]_[hash]'
     },

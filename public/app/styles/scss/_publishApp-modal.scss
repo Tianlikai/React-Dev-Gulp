@@ -1,0 +1,138 @@
+
+/* 发布APP-modal  start */
+.publishApp-modal .modal-content {
+  width: 630px;
+  height: 540px;
+  top: 15%;
+}
+.publishApp-modal .modal-body {
+  padding-left: 32px;
+  padding-right: 32px;
+}
+.publishApp-modal .modal-body .published,
+.publishApp-modal .modal-body .publish-content {
+  margin-bottom: 14px;
+}
+.publishApp-modal .modal-body .published {
+  height: 22px;
+  line-height: 22px;
+}
+.publishApp-modal .published > img {
+  float: left;
+}
+.publishApp-modal .published > .title {
+  display: inline-block;
+  color: #666666;
+  font-size: 18px;
+  margin-left: 15px;
+}
+.publishApp-modal .publish-content {
+  color: #999999;
+  font-size: 13px;
+  line-height: 20px;
+  min-height: 100px;
+}
+.publishApp-modal .publish-content > p {
+  margin-bottom: 0;
+}
+.publishApp-modal .publish-content > ul {
+  list-style-type: disc;
+  margin-left: 20px;
+}
+.publishApp-modal .publish-content > .iPhone,
+.publishApp-modal .publish-content > .android {
+  display: inline-block;
+  font-size: 13px;
+  color: #666666;
+}
+.publishApp-modal .publish-content > .iPhone {
+  margin-left: 62px;
+}
+.publishApp-modal .publish-content > .android {
+  margin-left: 75px;
+}
+
+.publishApp-modal .titleDiv {
+    height: 34px;
+    line-height: 34px;
+    margin-bottom: 4px;
+}
+.publishApp-modal .titleDiv .title {
+    float: left;
+}
+.publishApp-modal .titleDiv .title img {
+    margin-right: 10px;
+}
+.publishApp-modal .titleDiv .input-group-after {
+    float: right;
+}
+.publishApp-modal .input-group-after .glyphicon {
+    top: 0;
+    font-size: 17px;
+}
+.publishApp-modal .tbodyWrap {
+    border-bottom: none;
+}
+.publishApp-modal .tbodyWrap tr {
+    cursor: pointer;
+}
+.publishApp-modal .tbodyWrap tr > td:first-child {
+    width: 30px;
+}
+/* 发布APP-modal  end */
+
+/* Dashboard 分享画布  start */
+.share-chart-modal .modal-content {
+    top: 12%;
+    width: 720px;
+    height: 560px;
+}
+.share-chart-modal .modal-body {
+    padding: 10px 15px;
+}
+.share-chart-modal .title-wrap {
+    height: 30px;
+}
+.share-chart-modal .title-wrap img {
+    width: 18px;
+    height: 18px;
+}
+.share-chart-modal .title-wrap span {
+    margin-left: 10px;
+    color: #4990E2;
+    font-size: 13px;
+    cursor: pointer;
+}
+.share-chart-modal .selected-item-page {
+    height: 140px;
+    overflow-y: auto;
+}
+.publishToUser-page .titleDiv {
+    height: 34px;
+}
+.publishToUser-page .titleDiv .title {
+    float: left;
+    line-height: 32px;
+}
+.publishToUser-page .titleDiv .input-group-after {
+    float: right;
+    margin: 0;
+}
+.publishToUser-page .tbodyWrap {
+    height: 175px;
+}
+.publishToUser-page .tbodyWrap tr {
+    cursor: pointer;
+}
+
+.share-chart-modal .title-wrap,
+.publishToUser-page .titleDiv .title {
+    font-size: 18px;
+}
+.share-chart-modal .title-wrap img,
+.publishToUser-page .title img {
+    display: inline-block;
+    margin-right: 8px;
+}
+/* Dashboard 分享画布  end */
+

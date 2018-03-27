@@ -1,0 +1,642 @@
+.saleConfigPage .config {
+  border-top: 1px solid #ddd;
+    padding-top: 32px;
+}
+.field-match {
+  width: 752px;
+  padding-left: 17px;
+}
+.field-match table {
+  table-layout: fixed;
+  border: 1px solid #ddd;
+}
+.field-match table td {
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.field-match table td .glyphicon {
+  cursor: pointer;
+}
+.field-match table td .glyphicon + .glyphicon {
+  margin-left: 15px;
+}
+.field-match .addColumn {
+  float: right;
+  background-color: #fff;
+  border: 1px solid #979797;
+}
+.field-match .addColumn:hover,
+.field-match .addColumn:focus,
+.field-match .addColumn:active {
+  background-color: #F2F2F2;
+}
+.field-match button.btn-disabled,
+.field-match button.btn-disabled:active,
+.field-match button.btn-disabled:focus,
+.field-match button.btn-disabled:hover {
+  background-color: #ccc;
+  border: 0;
+}
+.field-match > .title-wrap {
+  height: 36px;
+  line-height: 36px;
+}
+
+.addColumnModal .modal-content {
+    width: 660px;
+    height: 400px;
+}
+.addColumnModal .modal-body {
+    padding-top: 15px;
+}
+.addColumnModal .modal-body .title {
+  margin-bottom: 16px;
+}
+
+/* orientSlideModal  start */
+.orientSlideModal .page1 > .area > div {
+  display: inline-block;
+  width: 50%;
+  height: 100%;
+  float: left;
+}
+.span-to-a {
+    color: #4aaae5;
+    cursor: pointer;
+    text-decoration: underline;
+}
+/* orientSlideModal  end */
+
+/* editClueModal  start */
+.editClueModal .modal-content {
+    height: 330px;
+    width: 680px;
+}
+/* editClueModal  end */
+
+/* editShowRowModal  start */
+.editShowRowModal .modal-content {
+    min-height: 530px;
+    min-width: 650px;
+}
+.editShowRowModal .modal-body > div,
+.editShowRowModal .hideRow,
+.editShowRowModal .moveBtn,
+.editShowRowModal .showRow {
+    height: 100%;
+}
+.editShowRowModal .hideRow .title,
+.editShowRowModal .showRow .title {
+    height: 32px;
+}
+.editShowRowModal .box {
+    overflow: auto;
+    height: 320px;
+    border: 1px solid #ddd;
+}
+.editShowRowModal .moveBtn {
+    height: 320px;
+    margin-top: 32px;
+    display: table;
+}
+.editShowRowModal .moveBtn > div {
+    display: table-cell;
+    vertical-align: middle;
+    text-align: center;
+}
+.editShowRowModal .moveBtn .right,
+.editShowRowModal .moveBtn .left {
+    display: block;
+    width: 32px;
+    height: 22px;
+    background-color: #fff;
+    border: 1px solid #DCDCDC;
+    border-radius: 2px;
+    margin-left: auto;
+    margin-right: auto;
+}
+.editShowRowModal .moveBtn .right {
+    margin-bottom: 24px;
+}
+/* editShowRowModal  end */
+/* detailPage  start */
+.saleCluesChild .detailPage > .content {
+    overflow-y: auto;
+    border-top: 1px solid #ddd;
+    padding: 15px;
+}
+.saleCluesChild .content > .titleName {
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+.saleCluesChild .detailPage .part1 .title {
+    margin-bottom: 10px;
+}
+.saleCluesChild .detailPage .part1 table {
+    width: 80%;
+}
+.saleCluesChild .detailPage .part1 td {
+    white-space: normal;
+}
+.saleCluesChild .detailPage .part1 td:first-child {
+    background-color: rgb(238, 238, 238);
+    width: 150px;
+}
+.saleCluesChild .detailPage .part2 {
+    margin-bottom: 20px;
+}
+.saleCluesChild .detailPage .part2 .line {
+    float: right;
+    display: inline-block;
+    margin-bottom: 0;
+}
+.saleCluesChild .detailPage .part2 .line .itemValue {
+    width: 300px;
+}
+.saleCluesChild .detailPage .part2 .selectWithHint {
+    width: 300px;
+}
+.saleCluesChild .detailPage .part2 .tableWrap {
+    width: 100%;
+    overflow-x: auto;
+}
+.saleCluesChild .detailPage .part2 table {
+    table-layout: fixed;
+    margin-bottom: 0;
+}
+
+.saleCluesChild .detailPage .title-wrap {
+    height: 40px;
+    line-height: 40px;
+}
+.saleCluesChild .title-wrap > span {
+    display: inline-block;
+}
+.saleCluesChild .title-wrap > .title {
+    display: inline-block;
+    margin-right: 5px;
+    font-size: 15px;
+    font-weight: bold;
+}
+.saleCluesChild .title-wrap > .config {
+    cursor: pointer;
+}
+.keywords-part-page .keywords-wrap {
+    padding: 5px 10px 10px 20px;
+}
+.keywords-modal .modal-content {
+    height: 300px;
+    width: 730px;
+}
+/* detailPage  end */
+
+/* detailChartConfigModal  start */
+.detailChartConfigModal .modal-content {
+    height: 554px;
+    width: 820px;
+    top: 15%;
+    left: 20%;
+}
+.detailChartConfigModal .modal-body {
+    padding: 1px;
+    height: 350px;
+}
+.detailChartConfigModal .tab_labels {
+    height: 38px;
+}
+.detailChartConfigModal .tab_labels li {
+    width: 50%;
+    text-align: center;
+    height: 38px;
+    line-height: 38px;
+    cursor: pointer;
+    font-size: 14px;
+    color: #2D435C;
+    background-color: #F5F5F5;
+}
+.detailChartConfigModal .tab_labels li.active {
+    background-color: #fff;
+}
+.detailChartConfigModal .tab_content {
+    height: 460px;
+    overflow: auto;
+    padding: 20px 15px 10px;
+}
+.graphSetup-page .line .itemName {
+    font-size: 13px;
+    color: #9B9B9B;
+    width: 120px;
+}
+.graphSetup-page .line > .chart {
+    display: inline-block;
+    height: 30px;
+    line-height: 30px;
+    width: 74px;
+    text-align: center;
+    margin-right: 1px;
+    background-color: #F1F0EE;
+    cursor: pointer;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.graphSetup-page .line > .chart.active {
+    border: 1px solid #B8B8B8;
+    box-shadow: 0 0 3px #B8B8B8 inset;
+}
+.graphSetup-page .line > .chart.disable {
+    cursor: default;
+}
+.graphSetup-page .chart.tableType {
+    background-image: url(../images/table_chart.png);
+}
+.graphSetup-page .chart.tableType.active {
+    background-image: url(../images/table_chart_selected.png);
+}
+.graphSetup-page .line > .selectWithHint:nth-child(2) {
+    margin-right: 10px;
+}
+.graphSetup-page .line > .selectWithHint:nth-child(2) .itemValue {
+    width: 130px;
+}
+.graphSetup-page .line > .selectWithHint:nth-child(3) .itemValue {
+    width: 186px;
+}
+.dataFilter-page .addCondition {
+    display: inline-block;
+    margin-bottom: 2px;
+    color: #4990E2;
+    font-size: 13px;
+    cursor: pointer;
+}
+.dataFilter-page .ConditionInfo {
+    width: 747px;
+    color: #FFF;
+    background: #BEC2C3;
+    padding: 5px 5px 4px 5px;
+    border: none;
+    box-shadow: none;
+    font-size: 14px;
+    position: absolute;
+    z-index: 999;
+    top: 47px;
+}
+.dataFilter-page .ConditionInfo span{
+    float: right;
+    margin-right: 5px;
+    cursor: pointer;
+}
+/* detailChartConfigModal   end */
+/*  correlate-select   start */
+.correlate-select {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+.correlate-select .colSelect-module1,
+.correlate-select .cond-module2,
+.correlate-select  .condValue-module3 {
+    margin-left: 2px;
+    margin-right: 2px;
+}
+.correlate-select .colSelect-module1 {
+    width: 175px;
+}
+.correlate-select .cond-module2 {
+    display: inline-block;
+    width: 140px;
+    min-width: 100px;
+    text-align: center;
+}
+.correlate-select .numberInput span {
+    display: inline-block;
+    margin-left: 2px;
+    margin-right: 2px;
+}
+.correlate-select  .condValue-module3 {
+    display: inline-block;
+    width: 420px;
+}
+.correlate-select  .condValue-module3 {
+    vertical-align: top;
+}
+.rct-select.supportDelInInputgroup{
+    // margin-top: -6.4px;
+    margin-top: 0;
+    padding: 0;
+}
+.rct-select.supportDelInInputgroup.supportDelInInputgroupWidth{
+    margin-top: -2px;
+    padding: 0;
+}
+.correlate-select .numberInput input,
+.correlate-select  .dateTimeWrap .dateWrap {
+    width: 200px;
+    margin: 0;
+}
+.correlate-select > .del {
+    display: inline-block;
+    font-size: 16px;
+    margin-left: 5px;
+    cursor: pointer;
+}
+.correlate-select .module-wrap .colSelect-module1 {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+/*  correlate-select   end */
+
+/* 新建、编辑  start */
+.sc-edit-page {
+    padding-top: 15px;
+    border-top: 1px solid #ddd;
+    overflow-y: auto;
+}
+.sc-edit-page > .titleName {
+
+    font-size: 16px;
+    font-weight: 600;
+    margin-bottom: 14px;
+}
+.sc-edit-page > .titleName span {
+    display: inline-block;
+    width: 100px;
+    text-align: right;
+    padding-right: 12px;
+}
+.sc-edit-page > .titleName > .hint {
+    width: auto;
+}
+.sc-edit1-page {
+    margin-bottom: 20px;
+}
+.desk51-edit-page .rct-form-control.condValue-module3 {
+    // width: 514px;
+    height: 34px;
+    padding-right: 15px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    cursor: pointer;
+}
+.desk51-edit-page .rct-form-control.condValue-module3::before,
+.desk51-edit-page .rct-form-control.condValue-module3::after {
+    content: '';
+    position: absolute;
+    top: 9px;
+    right: 0;
+    width: 0;
+    height: 0;
+    border: 7px solid transparent;
+    border-left-color: #fff;
+}
+.desk51-edit-page .rct-form-control.condValue-module3::before {
+    right: -1px;
+    border-left-color: black;
+}
+.desk51-edit-page.industry-page .rct-form-control {
+    width: 514px;
+}
+.industry-page .hint.err {
+    padding-left: 100px;
+}
+.sc-edit-page .dataFilter-page {
+    min-width: 768px;
+    padding-left: 5px;
+}
+.areaModal .area > div {
+    display: inline-block;
+    width: 50%;
+    height: 100%;
+    float: left;
+}
+.span-reset {
+    cursor: pointer;
+    color: #4aaae5;
+    text-decoration: underline;
+    margin-left: 10px;
+}
+/* 新建、编辑  end */
+
+/* 销售热点  start */
+.noPermission-wrap {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+}
+.sellingPoint-main-page .content-wrap,
+.sellingPoint-detail-page .content-wrap {
+    overflow-y: auto;
+}
+.hotspot-chart-wrap .title-wrap {
+    height: 40px;
+    line-height: 40px;
+}
+.hotspot-chart-wrap .title-wrap > div {
+    display: inline-block;
+    width: 50%;
+}
+.hotspot-chart-wrap .title-wrap .titleName {
+    font-size: 18px;
+    padding-left: 16px;
+}
+.hotspot-chart-wrap .title-wrap .date {
+    font-size: 14px;
+    padding-right: 20px;
+    text-align: right;
+}
+.hotspot-chart-wrap .showNumber-wrap {
+    padding-right: 20px;
+}
+.sellingPoint-detail-page .content-wrap {
+    padding: 5px;
+}
+.sellingPoint-detail-page .content-wrap .titleName {
+    height: 40px;
+    line-height: 40px;
+    padding-left: 16px;
+    font-size: 18px;
+}
+.sellingPoint-detail-page .tableWrap {
+    width: 100%;
+    overflow-x: auto;
+}
+.sellingPoint-main-page .dashboard-null {
+    width: 100%;
+    height: 100%;
+}
+.sellingPoint-main-page .dashboard-null img {
+    width: 72px;
+    height: 72px;
+}
+.pushRule-configModal .modal-content {
+    width: 670px;
+    height: 370px;
+}
+.pushRule-configModal .modal-body {
+    height: 235px;
+    padding-top: 30px;
+    overflow-y: auto;
+}
+.pushRule-configModal .status-wrap li {
+    display: inline-block;
+    padding: 6px 8px;
+    border: 1px solid #ddd;
+    border-radius: 3px;
+    background-color: #fff;
+    cursor: pointer;
+}
+.pushRule-configModal .status-wrap li:first-child {
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+    border-right: none;
+}
+.pushRule-configModal .status-wrap li:last-child {
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+    border-left: none;
+}
+.pushRule-configModal .status-wrap .active {
+    background-color: $FB4154;
+    color: #fff;
+}
+.pushRule-configModal .pushDays-page button {
+    width: 122px;
+    height: 30px;
+    font-size: 13px;
+}
+.pushRule-configModal .pushDays-page button,
+.pushRule-configModal .pushDays-page button:active,
+.pushRule-configModal .pushDays-page button:focus,
+.pushRule-configModal .pushDays-page button:hover {
+    background-color: #fff;
+    border-color: #ccc;
+    outline: 0;
+}
+.pushRule-configModal .pushDays-page>.active,
+.pushRule-configModal .pushDays-page>.active:active,
+.pushRule-configModal .pushDays-page>.active:focus,
+.pushRule-configModal .pushDays-page>.active:hover {
+    color: #E20024;
+    background-color: #FEE8EA;
+    border-color: #FEDCDE;
+}
+.pushRule-configModal .pushDays-page>button.active,
+.pushRule-configModal .pushDays-page>button:active {
+    box-shadow: none;
+}
+.pushRule-configModal .rules-page .module-wrap {
+    display: flex;
+    align-items: center;
+}
+.pushRule-configModal .rules-page .module-wrap1,
+.pushRule-configModal .rules-page .module-wrap2,
+.pushRule-configModal .rules-page .module-wrap3 {
+    width: 165px;
+    margin-right: 3px;
+}
+.pushRule-configModal .rules-page .module-wrap3 {
+    display: inline-block;
+    height: 35px;
+}
+.pushRule-configModal .rules-page .percent-wrap {
+    font-weight: 600;
+    font-size: 16px;
+}
+/* 销售热点  end */
+.keywords-page {
+    margin-bottom: 10px;
+}
+.keywords-page .line {
+    margin-bottom: 6px;
+}
+.keywords-page .line > div {
+    float: left;
+}
+.keywords-page .limit-wrap {
+    display: inline-block;
+    margin-left: 5px;
+    margin-top: 8px;
+    font-size: 10px;
+    color: #999999;
+}
+.keywords-page .keywords-wrap {
+    padding-left: 100px;
+}
+.saleClues-import-modal .modal-content {
+    top: 15%;
+    width: 700px;
+    height: 500px;
+}
+.saleClues-import-modal .textarea-page textarea {
+    height: 150px;
+}
+.titleDiv > .import-status-wrap {
+    display: inline-block;
+    margin-top: 10px;
+}
+.titleDiv > .import-status-wrap > div {
+    display: inline-block;
+}
+.titleDiv > .import-status-wrap > .titleName {
+    padding-left: 20px;
+    padding-right: 10px;
+}
+.titleDiv > .import-status-wrap .rct-form-control {
+    width: 160px;
+}
+.import-condition-page {
+    margin-bottom: 20px;
+}
+.import-condition-page .title-wrap .seeAll {
+    padding-left: 10px;
+    color: #4A90E2;
+    cursor: pointer;
+    font-size: 13px;
+}
+.import-condition-modal .modal-content {
+    height: 550px;
+    width: 820px;
+    top: 8%;
+    left: 20%;
+}
+.import-condition-modal .modal-body {
+    height: 430px;
+    padding: 0;
+}
+.import-condition-modal .modal-body > div {
+    height: 100%;
+    width: 100%;
+    padding: 15px;
+    overflow-y: auto;
+}
+.import-condition-modal .title-wrap {
+    margin-bottom: 5px;
+}
+.import-condition-modal .input-group-after {
+    display: inline-block;
+    width: 350px;
+}
+.import-condition-modal .import-status-wrap {
+    display: inline-block;
+}
+.import-condition-modal .import-status-wrap > .titleName {
+    display: inline-block;
+    padding-left: 20px;
+    padding-right: 10px;
+}
+.import-condition-modal .import-status-wrap .rct-form-control {
+    width: 160px;
+}
+.import-condition-modal .table {
+    margin-bottom: 0;
+}
+.chartPart .title-wrap .showNumber-wrap {
+    display: inline-block;
+    float: right;
+    position: relative;
+    top: 20px;
+}

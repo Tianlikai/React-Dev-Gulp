@@ -1,0 +1,21 @@
+.JTDrilledNavigation {
+    clear: both;
+    font-size: 13px;
+}
+.JTDrilledNavigationTitle{
+    margin-right: 10px;
+    color: #7F7979;
+}
+.JTDrilledNavigation .JTDrillNav-nav{
+    color: #4a90e2;
+    margin-right: 5px;
+    cursor: pointer;
+}
+.JTDrilledNavigation .JTDrillNav-nav.active{
+    color: #7F7979;
+    cursor: default;
+    pointer-events: none;
+}
+.JTDrilledNavigationNavPoint{
+    color: #7f7979;
+}

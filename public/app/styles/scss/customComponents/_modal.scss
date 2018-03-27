@@ -1,0 +1,61 @@
+
+/* modal  start */
+.modal-content {
+  position: fixed;
+  top: 20%;
+  min-height: 230px;
+}
+.modal-content > button.close {
+    position: relative;
+    top: 20px !important;
+    right: 8px;
+}
+.modal-content button .glyphicon.glyphicon-remove {
+  font-size: 19px;
+  // top: 15px;
+}
+.modal-header .title {
+  font-size: 22px;
+  color: #2D435C;
+  margin: 0 20px 0 0;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+}
+.modal-footer {
+    padding: 10px;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    background-color: #F8F8F8;
+    border-radius: 0 0 6px 6px;
+    padding-left: 28px;
+    padding-right: 28px;
+}
+.modal-footer button {
+  font-size: 13px;
+  border-radius: 2px;
+  margin-left: 5px;
+  margin-right: 5px;
+  min-width: 72px;
+}
+.modal-footer .confirm {
+  background-color: #333333;
+  color: #ffffff;
+  float: right;
+}
+.modal-footer .cancel {
+  background-color: #ffffff;
+  border: 1px solid #979797;
+}
+.modal-body {
+  padding-top: 32px;
+}
+/* modal  end */
+
+.addModal .modal-footer .cancel {
+  float: left;
+}
+.deleteModal .modal-content {
+  width: 560px;
+}

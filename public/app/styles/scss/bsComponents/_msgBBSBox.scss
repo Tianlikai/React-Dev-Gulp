@@ -1,0 +1,22 @@
+
+.msg-bbs-box {
+  margin: 0 auto;
+  text-align: center;
+}
+.msg-bbs-icon {
+    height: 60px;
+    width: 60px;
+}
+
+.msg-bbs-icon-success {
+    background: url(../images/success_msg_icon.png) no-repeat center center;
+}
+
+.msg-bbs-icon-fail {
+    background: url(../images/fail_msg_icon.png) no-repeat center center;
+}
+
+.msg-bbs-icon-content {
+    line-height: 60px;
+    margin-left: 5px;
+}

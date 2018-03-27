@@ -1,0 +1,67 @@
+/* Checkbox */
+.araeNameList label.JTCheckBox {
+    cursor: pointer;
+    font-size: 12px;
+    font-weight: 500;
+    margin-right: 20px;
+    margin-bottom: 0px;
+}
+.JTCheckBox img{
+    height: 12px;
+    width: 12px;
+    margin-right: 4px;
+}
+/* Checkbox */
+/* Checkbox 禁用 */
+label.JTCheckBox.disabled  {
+    cursor: pointer;
+    pointer-events: none;      
+}
+/* Checkbox 禁用 */
+
+/* 自定义区域标题 */
+.indusSectionName{
+    font-family: PingFangSC-Semibold;
+    font-size: 14px;
+    font-weight: bold;
+    color: #4a4a4a;
+    letter-spacing: -0.14px;
+    text-align: left;
+    display: inline-block;
+    margin-bottom: 10px;
+}
+/* 自定义区域标题 */
+
+/* CheckboxGroup */
+.CheckboxGroup.JTCheckBoxGroup{
+    border-bottom: 2px dashed #E4E4E4;
+    padding-bottom: 8px;
+    padding-top: 8px;
+}
+.JTCheckBoxGroup label.JTCheckBoxGroupName{
+    font-family: PingFangSC-Regular;
+    font-size:13px;
+    color:#7f7979;
+    letter-spacing:-0.14px;
+    text-align:left;
+    margin-right: 20px;
+    margin-bottom: 0px;
+}
+/* CheckboxGroup */
+
+/* CheckboxGroup 自定义行业 */
+.CheckboxGroupIndus.JTCheckBoxGroup{
+    padding-bottom: 18px;
+    padding-top: 8px;
+}
+.CheckboxGroupIndus.JTCheckBoxGroup label.JTCheckBox{
+    font-family:PingFangSC-Medium;    
+    cursor: pointer;
+    font-size: 12px;
+    margin-right: 20px;
+    margin-bottom: 0px;
+    color:#4a4a4a;
+    letter-spacing:-0.13px;
+    text-align:left;
+}
+/* CheckboxGroup 自定义行业 */

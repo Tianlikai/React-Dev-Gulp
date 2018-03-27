@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="75px" height="74px" viewBox="0 0 75 74" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 43.1 (39012) - http://www.bohemiancoding.com/sketch -->
+    <title>Group 2@3x</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="仪表盘" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" stroke-linecap="square">
+        <g id="仪表盘-来自分享-copy" transform="translate(-334.000000, -271.000000)" stroke="#D8D8D8">
+            <g id="图表" transform="translate(120.000000, 102.000000)">
+                <g id="Group-2" transform="translate(252.063720, 207.076786) rotate(12.000000) translate(-252.063720, -207.076786) translate(220.563720, 162.576786)">
+                    <polygon id="Combined-Shape" fill="#D8D8D8" transform="translate(53.775232, 7.832823) rotate(-4.000000) translate(-53.775232, -7.832823) " points="54.3328757 0.938947379 61.8119255 14.7266994 54.3328757 10.4180269 45.7385394 14.7266994"></polygon>
+                    <path d="M52.4572562,9.96214182 C52.4572562,9.96214182 58.2047518,41.9055303 41.9332725,62.1138104 C25.6617932,82.3220905 2.97501711,87.0899406 2.97501711,87.0899406" id="Line" stroke-width="2" stroke-dasharray="4,4,4,4" transform="translate(28.208657, 48.526041) rotate(3.000000) translate(-28.208657, -48.526041) "></path>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

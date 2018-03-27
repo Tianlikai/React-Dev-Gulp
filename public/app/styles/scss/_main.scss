@@ -1,0 +1,168 @@
+.userMain,
+.adminMain {
+    height: 100%;
+}
+/* 左侧边栏 start */
+.main-sidebar {
+  position: fixed;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  z-index: 100;
+  min-height: $minHeight;
+  width: $mainSidebarWidth;
+  background-color: #253137;
+}
+.main-sidebar .main-logo {
+  background-color: #30393E;
+  height: $headerHeight;
+  width: $mainSidebarWidth;
+  line-height: $headerHeight;
+  text-align: center;
+  background: url(../images/51DESK.svg) no-repeat;
+  background-position: center;
+  background-size: 82px 43px;
+}
+.main-sidebar .sidebar-menu {
+    overflow-y: auto;
+    margin-top: 6px;
+}
+.sidebar-menu li {
+  height: 78px;
+  text-align: center;
+  padding-top: 16px;
+  cursor: pointer;
+}
+.sidebar-menu li.active {
+    background-color: #131A1E;
+}
+.sidebar-menu li:hover {
+  background-color: #4F3B43;
+}
+.sidebar-menu li div {
+  padding-top: 10px;
+}
+.sidebar-menu .menu-title {
+  color: #BEC2C3;
+}
+.sidebar-menu .active .menu-title {
+    color: #FB6271;
+}
+/* 左侧边栏 end */
+
+/* 右侧内容区域 start */
+.content-wrapper {
+  margin-left: $mainSidebarWidth;
+  min-height: $minHeight;
+  height: 100%;
+  /* 页面顶部-高度 + 1 */
+  // padding-top: 53px; // 页面布局修改 DESK-336 页眉等装饰性版块不固定在浏览器显示
+  /* 页面底部-高度 + 1 */
+  padding-bottom: 43px;
+  background-color: #fff;
+}
+.content-wrapper .main-footer {
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    left: $mainSidebarWidth;
+    z-index: 100;
+  height: $footerHeight;
+  line-height: 42px;
+  padding-left: 25px;
+  padding-right: 25px;
+  font-size: 14px;
+  color: #666666;
+  background-color: #FFFFFF;
+  border-top: 1px solid #ddd;
+}
+.content-wrapper .tabsParents {
+  padding-top: $headerHeight;
+}
+.content-wrapper .main-header {
+  // position: fixed; // 页面布局修改 DESK-336 页眉等装饰性版块不固定在浏览器显示
+  top: 0;
+  right: 0;
+  left: $mainSidebarWidth;
+  z-index: 100;
+  height: $headerHeight;
+  border-bottom: 1px solid #ddd;
+  background-color: #fff;
+}
+/* 右侧内容区域 end */
+/* 右侧内容区域-header start */
+.main-header .activePageName {
+    display: inline-block;
+    width: 200px;
+    height: 52px;
+    line-height: 52px;
+    padding-left: 20px;
+    padding-right: 20px;
+    margin-bottom: -1px;
+    font-size: 13px;
+    background-color: #F8F8F8;
+    border: 1px solid #ddd;
+    border-bottom-color: transparent;
+}
+.main-header .navbar {
+  float: right;
+    margin-bottom: 0;
+    padding-right: 10px;
+}
+.main-header .navbar-custom-help,
+.main-header .navbar-custom-menu {
+  display: inline-block;
+  height: $headerHeight;
+  float: left;
+}
+.main-header .navbar-custom-help {
+  width: 55px;
+  text-align: center;
+  line-height: $headerHeight;
+  margin-right: 10px;
+  padding: 0 5px;
+  cursor: pointer;
+}
+.main-header .navbar-custom-help:hover {
+    background-color: #eee;
+}
+.main-header .navbar-custom-help span {
+  color: #D6D3D3;
+  display: inline-block;
+  font-size: 18px;
+}
+.main-header .userWrap {
+  height: $headerHeight;
+  cursor: pointer;
+}
+
+.main-header .userWrap > a {
+  height: $headerHeight;
+  padding: 8px 14px;
+}
+.main-header .userWrap .dropdown-menu {
+    left: auto;
+    right: 0;
+}
+.main-header .userWrap .dropdown-menu li {
+  border-bottom: 1px solid #DDDDDD;
+}
+.main-header .userWrap .dropdown-menu li:last-child {
+  border-bottom: none;
+}
+.main-header .userWrap .dropdown-menu li:first-child a {
+  cursor: auto;
+  background-color: #fff;
+}
+/* 右侧内容区域-header end */
+.content-wrapper > .content {
+    // padding-top: $headerHeight;
+    // height: 100%;
+}
+.content-wrapper > .content { // 页面布局修改 DESK-336 页眉等装饰性版块不固定在浏览器显示
+   margin-bottom:42px; 
+}
+.content .notfound {
+    width: 100%;
+    overflow: auto;
+}

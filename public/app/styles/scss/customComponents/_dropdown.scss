@@ -1,0 +1,157 @@
+.thdropbox {
+    position: absolute;
+    top: 40px;
+    min-width: 125px;
+    width: auto;
+    margin-left: -8px;
+    padding-top: 3px;
+    z-index: 2;
+    background-color: #ffffff;
+    box-shadow: 4px 4px 4px #ddd;
+    border: 1px solid #DDDDDD;
+    border-radius: 2px;
+    color: #333;
+}
+.thdropboxContent {
+    max-height: 180px;
+    overflow-y: auto;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+.thdropboxContent > span {
+    display: inline-block;
+    margin: 0 5px;
+}
+.thdropboxContent input[type='text'],
+.thdropboxContent input[type='number'] {
+    width: 94px;
+    height: 24px;
+}
+.thdropboxContent label {
+    display: block;
+    height: 32px;
+    line-height: 32px;
+    color: black;
+    margin-bottom: 0;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+.thdropboxContent label:hover {
+  background-color: #f8f8f8;
+}
+.thdropboxContent label,
+.thdropboxFooter {
+  padding-left: 10px;
+  padding-right: 10px;
+}
+.thdropboxFooter {
+    width: 100%;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    margin-top: 10px;
+    border-top: 1px solid #ddd;
+    background-color: #f5f5f5;
+    text-align: right;
+}
+.thdropboxFooter button {
+    padding: 3px 10px;
+    margin-left: 5px;
+    margin-right: 5px;
+}
+.thdropboxFooter .cancel {
+  background-color: #ffffff;
+  color: #979797;
+}
+.thdropboxFooter .confirm {
+  background-color: #333333;
+  color: #ffffff;
+}
+/*  多选下拉选择框  start */
+.multiselect {
+    display: inline-block;
+}
+.multiselect .rct-select .titleName {
+    min-height: 18px;
+    padding-right: 15px;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+.multiselect .supportDelInInputgroup.rct-select .titleName {
+    width: 388px;
+    height: auto !important;
+    height: 33px;
+    min-height: 33px;
+    padding-right: 0;
+    padding-top: 4px;
+    overflow: auto;
+    max-height: 91px;
+    white-space: normal;
+    text-overflow: initial;
+    border-right: 1px solid #ccc;
+}
+.multiselect .supportDelInInputgroupWidth.rct-select .titleName {
+   width: 480px;
+}
+.multiselect .thdropbox {
+    top: 100%;
+    width: 100%;
+    margin-left: 0;
+}
+.multiselect .wrap-search {
+    padding: 5px 10px 5px 10px;
+}
+/*  多选下拉框  end */
+
+.dropdown-wrap .headline {
+    position: relative;
+    padding-right: 15px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    cursor: pointer;
+}
+.dropdown-wrap .headline .glyphicon-menu-down {
+    position: absolute;
+    top: 4px;
+    right: 0;
+}
+
+/*  table表格中 下拉选择日期 start  */
+.dropdown-wrap.dropDate .thdropbox {
+    right: 0;
+}
+.dropDate .time-show {
+    display: inline-block;
+    width: 244px;
+    vertical-align: top;
+}
+.dropDate .time-show .rct-form-control {
+    width: 100%;
+    height: 32px;
+}
+.dropDate .thdropboxContent .titleName {
+    margin: 10px 0;
+    font-size: 13px;
+    font-weight: bold;
+    color: #111111;
+}
+.dropDate .separator {
+    display: inline-block;
+    vertical-align: top;
+    position: relative;
+    top: 7px;
+    margin: 0 20px;
+}
+.dropDate .thdropboxContent {
+    max-height: inherit;
+}
+.dropDate .rct-form-control .fa-calendar {
+    margin-right: 7px;
+}
+.dropDate .rct-form-control .glyphicon-remove {
+    float: right;
+    cursor: pointer;
+}
+/*  table表格中 下拉选择日期 end  */

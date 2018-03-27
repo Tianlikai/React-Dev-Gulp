@@ -1,0 +1,16 @@
+.label-close-page {
+    display: inline-block;
+    padding: 4px 8px;
+    background-color: #EEEEEE;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    margin-right: 5px;
+    margin-bottom: 6px;
+}
+.label-close-page .title {
+    display: inline-block;
+}
+.label-close-page .close-red {
+    margin-left: 3px;
+    background-image: url('../images/close-gray.png');
+}

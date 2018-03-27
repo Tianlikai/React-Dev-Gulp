@@ -1,0 +1,80 @@
+table {
+    position: relative;
+}
+table th {
+  height: 40px;
+  background-color: #9497A1;
+  color: #FFFFFF;
+  border-bottom: 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+table td {
+  height: 38px;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+/* Table  start */
+.theadWrap {
+  width: 100%;
+  font-size: 13px;
+  border-top: 1px solid #ddd;
+  padding: 0;
+}
+.theadWrap > table {
+  margin-bottom: 0;
+  border-top: 0;
+  border-bottom: 0;
+  position: relative;
+}
+.tbodyWrap {
+  overflow-x: hidden;
+  overflow-y: auto;
+  width: 100%;
+  border-bottom: 1px solid #ddd;
+  padding: 0;
+  // margin-bottom: 42px; // 分页被挤掉修改
+}
+.tbodyWrap > table {
+	margin-bottom: 0;
+  border-bottom: 0;
+  table-layout: fixed;
+}
+.tbodyWrap > table > tbody {
+   overflow-x: hidden;
+   overflow-y: auto;
+}
+.trSelected {
+    background-color: #CCC;
+}
+table td .see-detail {
+  cursor: pointer;
+  color: #4A90E2;
+}
+.tableWrap table {
+    margin-bottom: 0;
+}
+.table-hover>tbody>tr:hover {
+    background-color: #e8e8e8;
+}
+/* Table  end */
+.null-tbody-page {
+    height: 60px;
+    line-height: 60px;
+    font-size: 16px;
+    font-weight: bold;
+    border: 1px solid #ddd;
+    text-align: center;
+}
+.tableWrap .null-tbody-page {
+    border-top: 0;
+}
+.tableWrap.auto-col-table {
+  width: 100%;
+  overflow-x: auto
+}
+.tableWrap.auto-col-table table {
+  table-layout: fixed;
+}

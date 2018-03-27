@@ -1,0 +1,30 @@
+/* 图标默认样式 */
+.JTimg{
+    display: inline-block;
+    height:18px;
+    width: 18px;
+    background-repeat: no-repeat;
+    background-size:100% 100%;
+}
+.JTimg.del{
+    background-image: url('../images/moreTools_del.svg');
+}
+.JTimg.edit{
+    background-image: url('../images/moreTools_edit.svg');
+}
+.JTimg.download{
+    background-image: url('../images/moreTools_outDashboard.svg');
+}
+.JTimg.CustomerRetrievalBtn{
+    background-image: url('../images/CustomerRetrievalBtn.png');
+}
+.JTimg.CRShare{
+    background-image: url('../images/CRShare.png');
+}
+.JTimg.CRShareDisable{
+    background-image: url('../images/CRShareDisable.png');
+}
+.jasonc{
+    height: 50px;
+    width: 50px;
+}

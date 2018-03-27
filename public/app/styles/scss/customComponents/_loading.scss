@@ -1,0 +1,16 @@
+.loading-wrap {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 9;
+    opacity: 0.6;
+    background-color: #ddd;
+
+    text-align: center;
+}
+.loading-wrap .spinner {
+    display: inline-block;
+    margin: 0;
+}

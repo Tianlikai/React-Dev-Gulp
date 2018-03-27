@@ -1,0 +1,43 @@
+.spConfigPage .config {
+  border-top: 1px solid #ddd;
+  padding-top: 32px;
+}
+.spConfigPage .btnGroup {
+  text-align: right;
+}
+.spConfigPage .line-itemValue-bottom label {
+  font-weight: normal;
+  font-size: 13px;
+}
+
+
+.tablePage .btnGroup > div .config,
+.tablePage .btnGroup > div .config:hover,
+.tablePage .btnGroup > div .config:focus,
+.tablePage .btnGroup > div .config:active {
+  border-radius: 5px;
+  background-color: #333333;
+  color: #fff;
+  border: 0.5px solid #ccc;
+}
+.tablePage td .predicted-value {
+  color: #00CFC2;
+}
+
+
+.tablePage .btnGroup .goBack,
+.tablePage .btnGroup .goBack:hover,
+.tablePage .btnGroup .goBack:focus,
+.tablePage .btnGroup .goBack:active,
+.detailPage .btnGroup .goBack,
+.detailPage .btnGroup .goBack:hover,
+.detailPage .btnGroup .goBack:focus,
+.detailPage .btnGroup .goBack:active {
+  float: right;
+  border-radius: 5px;
+  margin-left: 5px;
+  margin-right: 5px;
+  background-color: #333333;
+  color: #fff;
+  border: 0.5px solid #ccc;
+}

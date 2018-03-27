@@ -1,0 +1,29 @@
+/* IsShowCanvasModal */
+.default-modal.IsShowCanvasModal .modal-content{
+    top: 18%;
+    height: 320px;
+    width: 530px;
+} 
+.IsShowCanvasModal .IsShowCanvasModalHint{
+    text-align: center;
+    margin-top: 54px;
+    margin-bottom: 35px;
+    font-size: 16px;
+    color: #54677B;
+}
+.JTBtn.IsShowCanvasModalBtn{
+    display: block;
+    width: 350px;
+    margin: 0 auto;
+    margin-bottom: 10px;
+    height: 33px;
+    font-size: 13px;
+    border-radius: initial;
+}
+.dashboard-addModal.dashboard-addModal-none .modal-content{
+    display: none;
+}
+.dashboard-editModal.dashboard-editModal-none .modal-content{
+    display: none;
+}
+/* IsShowCanvasModal */

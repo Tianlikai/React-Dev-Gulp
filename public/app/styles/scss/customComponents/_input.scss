@@ -1,0 +1,70 @@
+
+.line {
+  margin-bottom: 16px;
+}
+.line::before,
+.line::after {
+    display: table;
+    content: " ";
+}
+.line::after {
+    clear: both;
+}
+.line .itemName {
+  display: inline-block;
+  padding-right: 12px;
+  text-align: right;
+  width: 100px;
+  float: left;
+}
+.line .itemName span{
+  display: inline-block;
+  height: 32px;
+  line-height: 32px;
+}
+.line .itemValue,
+.line .textarea-page {
+  width: 514px;
+  display: inline-block;
+}
+.line .hint {
+  font-size: 10px;
+  color: #999;
+  margin-top: 3px;
+}
+.line .hint.err {
+  color: #FE3824;
+}
+.line .whole.hint {
+    padding-left: 100px;
+}
+.line .line-itemValue-bottom {
+  display: block;
+  padding-left: 100px;
+  margin-top: 12px;
+}
+
+.input-group-after {
+  min-width: 300px;
+}
+.input-group-after > span{
+  border-radius: 0 4px 4px 0;
+  // height: 32px;
+  line-height: initial;
+  border-left: none;
+}
+.input-group-after > input{
+  border-radius: 4px 0 0 4px;
+  width: 85%;
+  line-height: 16px;
+}
+.numberInput > div {
+    display: inline-block;
+    margin-left: 2px;
+    margin-right: 2px;
+}
+.hint.err {
+    font-size: 10px;
+    color: #FE3824;
+    margin-top: 3px;
+}

@@ -1,0 +1,67 @@
+/* -----部门树 start-------*/
+.tree{
+    display:inline-block;
+    width:auto;
+    min-width:100%;
+}
+
+.tree .item{
+    color: #000;
+    cursor: pointer;
+    padding: 10px;
+    display: inline-block;
+    width:auto;
+    min-width:100%;
+    white-space: nowrap;
+}
+
+.tree .active {
+    background-color: #FFF;
+    position: relative;
+}
+.tree .item .depName{
+    display:inline-block;
+    vertical-align:middle;
+    white-space: nowrap;
+}
+.tree .active .depName{
+    color: red;
+}
+.tree .item:hover{
+    background-color: #FFF;
+}
+.tree .icon{
+    display:inline-block;
+    vertical-align:middle;
+    margin-right:10px;
+
+}
+.tree .item .arrow{
+    width:12px;
+    height:12px;
+    background:url(../images/organization/arrowsNormal.png) no-repeat center;
+    background-size:8px 12px;
+}
+.tree .item .frame{
+    width:16px;
+    height:14px;
+    background:url(../images/organization/frameGray.png) no-repeat center;
+    background-size:contain;
+}
+.tree .active.open .arrow{
+    background:url(../images/organization/arrowsActiveOpen.png) no-repeat center;
+    background-size:10px 10px;
+}
+.tree .active .arrow{
+    background:url(../images/organization/arrowsActive.png) no-repeat center;
+    background-size:8px 12px;
+}
+.tree .open .arrow{
+    background:url(../images/organization/arrowsOpen.png) no-repeat center;
+    background-size:10px 10px;
+}
+.tree .active .frame{
+    background:url(../images/organization/frameRed.png) no-repeat center;
+    background-size:contain;
+}
+/* -----部门树 end-------*/

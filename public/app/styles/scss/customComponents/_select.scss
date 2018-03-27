@@ -1,0 +1,76 @@
+.selectWithHint {
+  display: inline-block;
+}
+.selectWithHint > div {
+  display: block;
+}
+.rct-form-control > .titleName {
+    min-height: 18px;
+    padding-right: 15px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+/*  SingleSelect单选下拉(有搜索框)   start  */
+.singleSelect {
+  display: inline-block;
+}
+.singleSelect .rct-select-options-wrap {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    z-index: 1050;
+    overflow: hidden;
+
+    display: none;
+    border: 1px solid #ccc;
+    border-radius: 0 0 4px 4px;
+    border-top-width: 0;
+    background-color: #fff;
+    -webkit-transition: 0.45s;
+    transition: 0.45s;
+    -webkit-transform: translateY(-100%);
+    transform: translateY(-100%);
+}
+.singleSelect.active .rct-select-options-wrap {
+    -webkit-transform: translate(0);
+    transform: translate(0);
+}
+.singleSelect .rct-select-options-wrap .wrap-search {
+    padding: 5px 10px 5px 10px;
+}
+.rct-select-options-wrap ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    max-height: 180px;
+    overflow: auto;
+}
+.rct-select-options-wrap ul li {
+    padding: 0.4em 0.6em;
+    cursor: pointer;
+
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+.rct-select-options-wrap ul li:hover {
+    color: #fff;
+    background-color: #0078e7;
+}
+/*  SingleSelect单选下拉(有搜索框)   end  */
+.singleSelect .wrap-search .input-group-after,
+.multiselect .wrap-search .input-group-after {
+    position: relative;
+    padding-right: 39px;
+}
+.singleSelect .wrap-search input[type='text'],
+.multiselect .wrap-search input[type='text'] {
+    width: 100%;
+}
+.singleSelect .wrap-search .btn,
+.multiselect .wrap-search .btn {
+    position: absolute;
+    right: 0;
+}

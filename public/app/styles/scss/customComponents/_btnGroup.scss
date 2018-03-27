@@ -1,0 +1,91 @@
+/* btnGroup  start */
+.btnGroup {
+  float: right;
+  margin-top: 13px;
+  text-align: right;
+}
+.btnGroup button {
+  height: 32px;
+}
+.btnGroup > .add {
+  background-color: #333333;
+  border-radius: 5px;
+  color: #fff;
+  margin-right: 5px;
+  border: 1px solid #979797;
+}
+.btnGroup > .refreshInDataClean{
+  background-color: #333333;
+  border-radius: 5px;
+  color: #fff;
+  margin-right: 5px;
+  border: 1px solid #979797;
+}
+.btnGroup > .cancel,
+.btnGroup > .confirm {
+  border-radius: 5px;
+  margin-left: 5px;
+  margin-right: 5px;
+}
+.btnGroup > .cancel {
+  background-color: #fff;
+  border: 1px solid #979797;
+}
+.btnGroup > .confirm {
+  background-color: #333333;
+  color: #fff;
+  border: 1px solid #ccc;
+}
+.btnGroup > div .btn,
+.btnGroup > div .btn:hover,
+.btnGroup > div .btn:focus {
+  background-color: #fff;
+  color: #979797;
+  border-radius: 5px;
+  border: 1px solid #979797;
+}
+.btnGroup button.btn-disabled {
+  background-color: #ddd;
+  color: #fff;
+  border-width: 1px;
+}
+.btnGroup button.btn-disabled2 {
+  background-color: #E8E8E8;
+  color: #fff;
+  border-width: 1px;
+}
+.btnGroup button.none {
+  display: none;
+}
+.btnGroup .publish {
+  margin-left: 5px;
+  padding: 5px 8px;
+  background-color: #fff;
+  border-radius: 5px;
+  border: 1px solid #979797;
+}
+
+.btnGroup .config,
+.btnGroup .config:hover,
+.btnGroup .config:focus,
+.btnGroup .config:active {
+  border-radius: 5px;
+  margin-left: 5px;
+  margin-right: 5px;
+  background-color: #333333;
+  color: #fff;
+  border: 1px solid #ccc;
+}
+.btnGroup .nohover:hover{
+  margin-left: 0px;
+}
+.btnGroup span.add1 {
+    display: inline-block;
+    position: relative;
+    top: 2px;
+    width: 14px;
+    height: 14px;
+    background-image: url(../images/add1.png);
+    background-size: cover;
+}
+/* btnGroup  end */

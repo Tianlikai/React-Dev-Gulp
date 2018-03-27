@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="99px" height="32px" viewBox="0 0 99 32" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 43.1 (39012) - http://www.bohemiancoding.com/sketch -->
+    <title>权限配置</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <rect id="path-1" x="0" y="0" width="99" height="31.271028" rx="5"></rect>
+    </defs>
+    <g id="仪表盘" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="仪表盘-来自分享-copy-2" transform="translate(-1161.000000, -201.000000)">
+            <g id="权限配置" transform="translate(1161.000000, 201.000000)">
+                <g id="Combined-Shape">
+                    <use fill="#FFFFFF" fill-rule="evenodd" xlink:href="#path-1"></use>
+                    <rect stroke="#979797" stroke-width="0.5" x="0.25" y="0.25" width="98.5" height="30.771028" rx="5"></rect>
+                </g>
+                <text id="新建画布" font-family="STHeitiSC-Light, Heiti SC" font-size="13" font-weight="300" letter-spacing="-0.139285728" fill="#979797">
+                    <tspan x="36" y="19.9345794">新建画布</tspan>
+                </text>
+                <g id="添加01" transform="translate(11.000000, 8.934579)">
+                    <path d="M7,7 L3.23076923,7 L3.23076923,7.53846154 L7,7.53846154 L7,11.3076923 L7.53846154,11.3076923 L7.53846154,7.53846154 L11.3076923,7.53846154 L11.3076923,7 L7.53846154,7 L7.53846154,3.23076923 L7,3.23076923 L7,7 Z" id="Combined-Shape" fill="#979797" fill-rule="evenodd"></path>
+                    <circle id="Oval-2" stroke="#979797" stroke-width="0.5" cx="7" cy="7" r="6.75"></circle>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

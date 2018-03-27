@@ -1,0 +1,61 @@
+.dataCleanChild .tdValue .retry {
+  cursor: pointer;
+  text-decoration: underline;
+  text-decoration-color: #417505;
+  color: #417505;
+}
+/* addDataTaskModal  start */
+.addDataTaskModal .modal-body {
+  padding-left: 20px;
+}
+.addDataTaskModal .page2 .identify {
+  height: 80px;
+  min-height: 80px;
+  max-height: 100px;
+}
+.addDataTaskModal .page2 .identify > div {
+  display: inline-block;
+}
+.addDataTaskModal .page2 .identify div:first-child {
+  float: left;
+  font-weight: bold;
+  font-size: 17px;
+}
+.addDataTaskModal .page2 .identify img {
+  margin-left: 3px;
+}
+.addDataTaskModal .page2 .identify .information {
+  width: 514px;
+  max-width: 514px;
+  border: 1px solid #e5e5e5;
+  border-radius: 5px;
+  background-color: #FFFFFF;
+  box-shadow: 8px 8px 4px #E4E4E4;
+  padding: 10px 5px 10px 10px;
+}
+.addDataTaskModal .page2 .line {
+  margin-bottom: 20px;
+}
+.addDataTaskModal .page2 .line input {
+  float: left;
+}
+.addDataTaskModal .page2 .line .itemName {
+  width: 60px;
+}
+.addDataTaskModal .page2 .line .hint {
+  padding-left: 73px;
+}
+/* addDataTaskModal  end */
+/* 数据整理应用-日志记录页面  start */
+.updateLog .titleDiv h2 {
+  width: 300px;
+}
+.updateLog .titleDiv .btnGroup {
+  width: 130px;
+}
+.updateLog .titleDiv .dateTimeWrap {
+  float: right;
+  margin-top: 13px;
+  height: 32px;
+}
+/* 数据整理应用-日志记录页面  end */

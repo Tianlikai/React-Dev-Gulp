@@ -1,0 +1,99 @@
+/* sortCanvasModal 画布排序  start */
+ .default-modal.showSortCanvasModal-chart-modal .modal-content{
+    top: 20%;
+    width: 580px;
+    height: 520px;
+    border-radius: none;
+} 
+.showSortCanvasModal-chart-modal .modal-body{
+    padding: 14px 28px 0px 28px;
+}
+.showSortCanvasModal-chart-modal .modal-body .showCanvasListTitle{
+    font-size: 16px;
+    color: #616161;
+}
+.showSortCanvasModal-chart-modal .modal-body .showCanvasListCenter{
+    height: 300px;
+}
+.showSortCanvasModal-chart-modal .modal-body .showCanvasListWrapper{
+    float: left;
+    width: 496px;
+    border: 1px solid lightgray;
+    border-radius: 5px;
+    height: 300px;
+    overflow-y: auto;
+}
+.showSortCanvasModal-chart-modal .modal-body .showSortCanvasModal-chart-modalmethod{
+    float: right;
+    padding: 123px 4px;
+}
+.showSortCanvasModal-chart-modal .modal-body .showSortCanvasModal-chart-modalmethod div{
+    margin-bottom: 10px;
+    cursor: pointer;
+}
+.showSortCanvasModal-chart-modal .modal-body .showSortCanvasModal-chart-modalmethod div img{
+    border-radius: 50%;
+    height: 17px;
+    width:17px;
+}
+.showSortCanvasModal-chart-modal .modal-body .showSortCanvasModal-chart-modalmethod div img:hover{
+    background: lightgray;
+}
+.showSortCanvasModal-chart-modal .modal-body .showCanvasListFotter{
+    vertical-align: middle;
+}
+.showSortCanvasModal-chart-modal .modal-body .showCanvasListFotter img{
+    margin-top: -2px;
+    height: 11px;
+    width: 11px;
+}
+.showSortCanvasModal-chart-modal .modal-body .showCanvasListFotter span{
+    display: inline-block;
+    font-size: 11px;
+    color: lightgray;
+    margin-left: 8px;
+    letter-spacing: 1px;
+}
+.showSortCanvasModal-chart-modal .modal-body .showCanvasListWrapper li{    
+    padding-left: 2px;
+    height: 30px;
+    vertical-align: middle;
+    cursor: pointer;
+} 
+.showSortCanvasModal-chart-modal .modal-body .showCanvasListWrapper .CanvasListItemImg{
+    background: url('../images/canvasSortImg.svg');
+    position: absolute;
+    top:7px;
+    right:15px;
+    width: 20px;
+    height: 16px;
+}
+.showSortCanvasModal-chart-modal .modal-body .showCanvasListWrapper .CanvasListItemImg{
+    background: url('../images/canvasSortImg.svg');
+    position: absolute;
+    top:7px;
+    right:15px;
+    width: 20px;
+    height: 16px;
+}
+.showSortCanvasModal-chart-modal .modal-body .showCanvasListWrapper li:hover{    
+   background: #E8E8E8;
+}
+.showSortCanvasModal-chart-modal .modal-body .showCanvasListWrapper .CanvasListItemChoosed{
+    background: #E8E8E8;
+}
+/* .showSortCanvasModal-chart-modal .modal-body .showCanvasListWrapper li img{
+    vertical-align: middle;
+    display: inline-block;
+    height: 15px;
+    width: 15px;
+    margin: 0;
+} */
+.showSortCanvasModal-chart-modal .modal-body .showCanvasListWrapper li span{
+    vertical-align: middle;
+    margin-left: 5px;
+    line-height: 30px;
+    display: inline-block;
+    font-size: 14px;
+}
+/* sortCanvasModal 画布排序  end */

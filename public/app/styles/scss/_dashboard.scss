@@ -1,0 +1,508 @@
+.dashboardPage {
+    height: 100%;
+}
+.dashboard-null {
+    text-align: center;
+    overflow-y: auto;
+}
+.dashboard-null > div {
+    display: inline-block;
+    margin-top: 230px;
+}
+.dashboard-null .title {
+    margin-top: 34px;
+    font-size: 26px;
+    color: #C8C8C8;
+}
+.dashboard {
+    // overflow-y: auto; //页面布局修改 DESK-336 页眉等装饰性版块不固定在浏览器显示
+}
+/* Modal   start */
+.dashboard-addModal .modal-body {
+    padding: 15px 5px 0 5px;
+
+}
+.dashboard-addModal .modal-body > div {
+    height: 460px;
+    overflow: auto;
+}
+.dashboard-addModal .line > .chart {
+    float: left;
+}
+.dashboard-filterModal .modal-body {
+    padding: 15px;
+}
+.dashboard-filterModal .dataFilter-page {
+    height: 406px;
+    overflow: auto;
+}
+.dashboard-editModal .modal-body {
+    padding: 1px;
+}
+.dashboard-editModal .tab_labels {
+    height: 38px;
+}
+.dashboard-editModal .tab_labels li {
+    width: 50%;
+    text-align: center;
+    height: 38px;
+    line-height: 38px;
+    cursor: pointer;
+    font-size: 14px;
+    color: #2D435C;
+    background-color: #F5F5F5;
+}
+.dashboard-editModal .tab_labels li.active {
+    background-color: #fff;
+}
+.dashboard-editModal .tab_content {
+    height: 460px;
+    overflow: auto;
+    padding: 20px 15px 10px;
+}
+/* Modal   end */
+.dash-tablePage,
+.dash-graphPage {
+    margin-bottom: 10px;
+    position: relative;
+    height: 620px; /* 570px  620px*/ 
+    padding: 0px;
+}
+.dash-tablePage.marBottom:last-child,
+.dash-graphPage.marBottom:last-child {
+    margin-bottom: 42px; 
+}
+.dash-tablePage .content-wrap,
+.dash-graphPage .content-wrap {
+    width: 100%;
+    height: 100%;
+    padding: 5px 15px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+.dash-tablePage .loading-wrap,
+.dash-graphPage .loading-wrap {
+    top: 5px;
+    right: 5px;
+    bottom: 5px;
+    left: 5px;
+    line-height: 564px;
+}
+.dash-tablePage .titleDiv,
+.dash-graphPage .titleDiv {
+    position: relative;
+    height: 40px;
+    padding-right: 172px;
+}
+.dash-tablePage .titleDiv-pointerNone.titleDiv .btnGroup div,
+.dash-graphPage .titleDiv-pointerNone.titleDiv .btnGroup div{
+    pointer-events: none;
+    cursor: default;
+}
+.titleDiv.fixed{
+    position: fixed;
+    top: 0px;
+    width: 100%;
+    background: white;
+    border-bottom: 1px solid #ddd;
+    z-index: 999;
+}
+.dash-tablePage .titleDiv .titleName,
+.dash-graphPage .titleDiv .titleName {
+    width: 100%;
+    line-height: 40px;
+    // padding-left: 10px;
+    color: #505458;
+    font-size: 20px;
+    font-weight: 500;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    cursor: default;
+}
+.dash-tablePage .titleDiv .btnGroup,
+.dash-graphPage .titleDiv .btnGroup {
+    position: absolute;
+    right: 0;
+    top: 3px;
+    margin-top: 0;
+    z-index: 10;
+}
+.dash-tablePage .btnGroup > div,
+.dash-graphPage .btnGroup > div {
+    position: relative;    
+    display: inline-block;
+    height: 30px;
+    margin-right: 4px;
+    cursor: pointer;
+}
+.dash-tablePage .btnGroup div.dropdown_wrap_dashboard,
+.dash-graphPage .btnGroup div.dropdown_wrap_dashboard {
+    top: -11px;
+    margin: 0 5px 0 -4px;
+    width: 29px;
+}
+.dropdown_wrap_dashboard .dropdown{
+    height: 100%;
+    width: 100%;
+    text-align: center;
+}
+.dropdown_wrap_dashboard .dropdown span {
+    display: inline-block;
+    height: 100%;
+    width: 100%;
+    text-align: center;
+    outline: none;
+}
+.dropdown_wrap_dashboard .dropdown span img {
+    display: inline-block;
+    width: 4px;
+    height: 18px;
+}
+.dropdown_wrap_dashboard .dropdown ul{
+    display: none;
+    position: absolute;
+    background: white;
+    width: 119px;
+    left: -89px;
+    border:1px solid #E4E4E4;
+    color: #7F7979;
+    font-size: 11px;
+    border-bottom: 1.5px solid #E4E4E4;
+    box-shadow:0 6px 12px rgba(0,0,0,.175);
+}
+.dropdown_wrap_dashboard .dropdown.active ul{
+    display: block;
+}
+.dropdown_wrap_dashboard .dropdown ul li:hover{
+    background: #F5F5F5;
+}
+ .dropdown_wrap_dashboard .dropdown ul .triangle_border_up {
+    width: 0;
+    height: 0;
+    margin: -6px 0px 0px 97px ;
+    border-width: 0 6px 6px;
+    border-style: solid;
+    border-color: transparent transparent #E4E4E4;
+    position: relative;
+}
+.dropdown_wrap_dashboard .dropdown ul .triangle_border_up span {
+    display: block;
+    width: 0;
+    height: 0;
+    border-width: 0 4px 4px;
+    border-style: solid;
+    border-color: transparent transparent white;
+    position: absolute;
+    top: 2px;
+    left: -4px;
+}
+
+.dropdown_wrap_dashboard .dropdown ul li{
+    height: 30px;
+    line-height: 30px;
+    width: 100%;
+    margin: 0 auto;
+    // border-bottom: 1px solid #E4E4E4;
+}
+.dropdown_wrap_dashboard .dropdown ul li img{
+    width: 17px;
+    height: 17px;
+    margin-left: 5px;
+}
+.dropdown_wrap_dashboard .dropdown ul li label{
+    display: inline-block;
+    max-width: 100%;
+    margin-bottom: 5px;
+    font-weight: 700;
+    width: 74px;
+    text-align: left;
+    margin-left: 12px;
+}
+.fgx_dashboard{
+    margin-left: 5%;
+    width: 90%;
+    height: 1px;
+    background: #E4E4E4
+}
+.dropdown_wrap_dashboard .dropdown ul li:hover .fgx_dashboard{
+    background: #F5F5F5;
+    width: 100%;
+}
+.fgx_dashboard:last-child{
+    display: none;
+}
+
+.dash-tablePage .btnGroup img,
+.dash-graphPage .btnGroup img {
+    /*
+CSS hack “\9″ IE6/IE7/IE8/IE9/IE10都生效
+bootstrap 响应式图片推荐使用
+    */
+    width: 100% \9;
+}
+// .dash-tablePage .condition-page,
+// .dash-graphPage .condition-page {
+//     padding-left: 10px;
+// }
+.dash-tablePage .condition-page {
+    margin-bottom: 8px;
+}
+.dash-graphPage .showNumber-wrap {
+    padding-right: 5px;
+}
+.GraphicComponent.condition-page{
+    font-size: 13px;
+    float: left;
+}
+.GraphicComponent.condition-page >div{
+    color: #7f7979;
+}
+.GraphicComponent.condition-page span.titleName{
+    font-size: 13px;
+    color: #505458;
+}
+.condition-page > div,
+.condition-page > div {
+    width: 100%;
+    color: #505458;
+    font-size: 13px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+.condition-page .titleName,
+.condition-page .titleName {
+    font-size: 15px;
+    margin-right: 10px;
+    color: #7F7979;
+}
+.dash-graphPage .chart-wrap {
+    height: 600px;
+    min-width: 500px;
+    width: 100%;
+    max-width: 100%;
+}
+.chart-page-null {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+}
+.chart-page-null .large-data-hint {
+    width: 100%;
+    padding: 40px 10px 10px;
+    background-image: url(../images/large_data.svg);
+    background-repeat: no-repeat;
+    background-size: 40px 30px;
+    background-position: top center;
+    text-align: center;
+    font-size: 16px;
+    color: #BEC2C3;
+}
+.dash-tablePage table {
+    table-layout: fixed;
+    margin-bottom: 0;
+}
+.detailPage > .content {
+    padding: 15px 10px 15px;
+    border-top: 1px solid #ddd;
+    overflow: auto;
+}
+.dash-tablePage .oTable {
+    width: 100%;
+    max-height: 435px;
+    overflow: auto;
+}
+.dash-graphPage .oTable{
+    width: 100%;
+    max-height: 500px;
+    overflow: auto;
+}
+/* 详情页  start */
+.chartDetail-page .content {
+    overflow-y: auto;
+    padding: 10px;
+    border: 1px solid #ddd;
+}
+.chartDetail-page .content > .titleName {
+    margin-bottom: 10px;
+    font-size: 16px;
+    font-weight: 500;
+}
+.chartDetail-page .content .condition-page {
+    margin-bottom: 15px;
+}
+.chartDetail-page .content .tableWrap {
+    width: 100%;
+    overflow-x: auto;
+}
+.chartDetail-page .content .tableWrap table {
+    table-layout: fixed;
+}
+
+/* 详情页  end */
+
+/* 全屏页 start */
+.full-screen-page {
+    height: 100%;
+    width: 100%;
+    // overflow-y: auto; // 全屏查看画布时 画布悬浮提示显示不全
+}
+.fullScreenAnimation-enter {
+    opacity: 0.01;
+    transform: scale(0.5);
+}
+.fullScreenAnimation-enter.fullScreenAnimation-enter-active {
+    opacity: 1;
+    transform: scale(1);
+    transition: all 800ms ease-in;
+}
+.fullScreenAnimation-leave {
+  opacity: 1;
+  transform: scale(1);
+  transition: all 800ms ease-out;
+}
+.fullScreenAnimation-leave.fullScreenAnimation-leave-active {
+  opacity: 0.01;
+  transform: scale(0.5);
+  
+}
+
+.full-screen-page > .dash-graphPage,
+.full-screen-page > .dash-tablePage {
+    width: 99%;
+    margin-bottom: 20px;
+}
+.full-screen-page .chart-detail-page{
+    margin-bottom: 42px;
+}
+.full-screen-page .chart-detail-page .titleName {
+    height: 40px;
+    line-height: 40px;
+    font-size: 20px;
+}
+.full-screen-page .chart-detail-page .tableWrap {
+    width: 99%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+/* 全屏页 end */
+.createdByMe-page,
+.fromSharing-page {
+    height: 100%;
+    overflow: hidden;
+}
+.createdByMe-page > div,
+.fromSharing-page > div {
+    overflow-y: auto;
+}
+.createdByMe-page .chartDetail-page,
+.fromSharing-page .chartDetail-page {
+    height: 100%;
+}
+.chartDetail-hint-modal .modal-content {
+    top: 10%;
+    height: 500px;
+    width: 700px;
+}
+.chartDetail-hint-modal .modal-body {
+    padding: 15px;
+}
+.chartDetail-hint-modal .tableWrap {
+    height: 350px;
+    overflow-y: auto;
+}
+
+// dashboardpage1 start
+.noDashBoard-show{
+    position: relative;
+    top: 50%;
+    text-align: center;
+    color: #BEC2C3;
+    font-size: 1.17em;
+}
+.dashboardHeader-title-addcanvas{
+    height: 60px;
+}
+.dashboardHeader-title-addcanvas .dashboardHeader-title{
+    display: inline-block;
+    height: 60px;
+    float: left;
+}
+.dashboardHeader-title-addcanvas .dashboardHeader-title div{
+    display: block;
+    height: 36px;
+    font-size: 22px;
+    padding-top:12px; 
+}
+.dashboardHeader-title-addcanvas .dashboardHeader-title span{
+    color: #7f7979;
+    font-size: 12px;
+}
+.dashboardHeader-title-addcanvas .dashboardHeader-addcanvas{
+    display: inline-block;
+    height: 32px;
+    width: 99px;
+    text-align: center;
+    margin-top: 15px;
+    cursor: pointer;
+    float: right;
+    background: url('../images/Create_Canvas.svg');
+}
+.dashboardHeader-title-addcanvas .dashboardHeader-sortcanvas{
+    display: inline-block;
+    height: 32px;
+    width: 99px;
+    text-align: center;
+    margin-top: 15px;
+    margin-left: 10px;
+    cursor: pointer;
+    float: right;
+    background: url('../images/canvasSort.svg');
+}
+.dbp-nocanvas-fromSharing{
+    position: relative;
+    height: 21px;
+    line-height: 21px;
+    font-size: 1.17em;
+    text-align: center;
+    color: #BEC2C3;
+    top:50%;
+    margin-top: 10px;
+}
+.dbp-nocanvas-createByMe{
+    height: 100%;
+    width:100%;
+}
+.dbp-nocanvas-createByMe .navigation_CreateCanvas{
+    position: absolute;
+    width: 75px;
+    height: 74px;
+    right: 80px;
+}
+.dbp-nocanvas-createByMe div{
+    position: relative;
+    height: 40px;
+    top: 45%;
+    text-align: center;
+    font-size: 1.17em;
+    color: #BEC2C3;
+}
+.dbp-nocanvas-createByMe div span{
+    display: inline-block;
+    height: 40px;
+    line-height: 40px;
+    font-size: 1.17em;
+}
+.dbp-nocanvas-createByMe div img{
+    height: 32px;
+    width: 99px;
+    margin: -7px 5px 0 5px;
+}
+.content>.tabsChild>.tab_content>.tab-content-item>.DashBoardManagementNoOverflowY{
+    overflow-y: visible;
+}
+// dashboardpage1 end

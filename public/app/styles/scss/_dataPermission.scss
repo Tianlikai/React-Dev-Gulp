@@ -1,0 +1,139 @@
+.permission-page1,
+.permission-page2 {
+    border-top: 1px solid #ddd;
+    padding-top: 32px;
+    overflow-y: auto;
+}
+
+
+/* DataPermission TableWrapManagement special */
+
+.permission-page1.TableWrapManagement {
+    border-top: none;
+    padding-top: 0px;
+    overflow-y: auto;
+}
+
+
+/* DataPermission TableWrapManagement special */
+
+.permission-page1 .roleUser-wrap li {
+    margin-bottom: 5px;
+}
+
+.permission-columnModal .modal-content {
+    top: 15%;
+    height: 554px;
+    width: 780px;
+}
+
+.permission-columnModal .modal-body {
+    padding: 15px;
+}
+
+.permission-columnModal .numberInput .inputWithErrMsg {
+    width: 244px;
+}
+
+.permission-columnModal .multiselect .thdropboxContent {
+    max-height: 150px;
+    overflow: auto;
+}
+
+.dataPermission-fieldConfig .titleDiv {
+    height: 36px;
+    line-height: 36px;
+}
+
+.dataPermission-fieldConfig .titleDiv .change-a {
+    margin-left: 20px;
+    cursor: pointer;
+    color: #4A90E2;
+}
+
+.dataPermission-fieldConfig .titleDiv .addColumn {
+    float: right;
+    background-color: #fff;
+    border: 1px solid #979797;
+}
+
+.dataPermission-fieldConfig .addColumn.btn-disabled {
+    background-color: #ccc;
+    border: 0;
+}
+
+.field-table-wrap,
+.dataPermission-fieldConfig .titleDiv {
+    width: 752px;
+    margin-left: 30px;
+}
+
+.field-table-wrap,
+.dataField-table-wrap {
+    overflow-y: auto;
+}
+
+.field-table-wrap table {
+    table-layout: fixed;
+    border: 1px solid #ddd;
+}
+
+.dataField-table-wrap {
+    padding-left: 30px;
+}
+
+
+/* DataPermission TableWrapManagement special */
+
+.dataField-table-wrap.TableWrapManagement {
+    padding-left: 0px;
+}
+
+
+/* DataPermission TableWrapManagement special */
+
+.dataField-table-wrap .tableWrap {
+    overflow: auto;
+    border: 1px solid #ddd;
+}
+
+.dataField-table-wrap table th,
+.dataField-table-wrap table td {
+    min-width: 200px;
+    max-width: 250px;
+}
+
+.content-wrap {
+    border-top: 1px solid #ddd;
+}
+
+.content-wrap .role-wrap,
+.content-wrap .member-wrap {
+    height: 100%;
+    padding: 0;
+}
+
+.content-wrap .disable {
+    display: none;
+}
+
+.content-wrap .role-wrap {
+    border-right: 1px solid #ddd;
+    position: inherit;
+}
+
+.user-field-wrap table {
+    border-bottom: 1px solid #ddd;
+}
+
+.tdValue.btn-wrap>span {
+    cursor: pointer;
+}
+
+.tdValue.btn-wrap .glyphicon-pencil {
+    margin-right: 8px;
+}
+
+.dataPermission-page>.titleDiv .cancel {
+    padding: 6px 20px;
+}
