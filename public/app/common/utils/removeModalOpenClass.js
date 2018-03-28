@@ -3,4 +3,4 @@ const removeModalOpenClass = () => {
     mBody.setAttribute('class', '');
 }
 
-export default removeModalOpenClass;
+export { removeModalOpenClass };

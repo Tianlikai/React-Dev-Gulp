@@ -43,13 +43,14 @@ class ChartDetail extends PureComponent {
     }
     componentWillUnmount() {
         this.unsubscribe();
-        this.unsubscribe2();
     }
     pubsub(type, data, from) {
+        debugger
         switch (type) {
             case 'getChartDetailDataSuccess':
                 if (from.fromPage === this.props.name) {
                     // this.refs.content.scrollTop = 0; // 把tbody父div的滑动条移到最上面
+                    const array = [];
                     let screeningList = this.getScreeningFromData(from.postData);
                     this.setState({
                         urlData: from.urlData,
@@ -57,7 +58,7 @@ class ChartDetail extends PureComponent {
                         screeningList: screeningList,
                         name: from.postData.filter_value.join(','),
                         constraintList: data.condition,
-                        title: data.title,
+                        title: data.title || array,
                         list: data.list,
                         totalItems: data.total,
                         app_id: data.app_id,

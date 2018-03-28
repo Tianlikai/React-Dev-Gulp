@@ -3,7 +3,7 @@
  * 所有模态框通用方法
  */
 import React, { Component } from 'react';
-import removeModalOpenClass from '../../common/utils/removeModalOpenClass';
+import { removeModalOpenClass } from '../../common/utils/removeModalOpenClass';
 
 function getDisplayName(component) {
     return component.displayName || component.name || 'Component';

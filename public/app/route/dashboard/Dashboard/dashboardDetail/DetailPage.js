@@ -1,5 +1,5 @@
 import React, { PureComponent } from 'react';
-import updateHeight from '../../../../common/utils/updateHeight';
+import ReactDOM from 'react-dom'
 import PageMethod from '../../../../common/PageMethod';
 import UtilStore from '../../../../stores/UtilStore';
 import ChartDetail from '../ChartDetail';
@@ -18,7 +18,10 @@ class DetailPage extends PureComponent {
     }
     pubsub(type, data, from) {
         if (type === 'updateHeight') {
-            updateHeight(this.refs.content, PageMethod.getInnerHeight2());
+            let pageContent = ReactDOM.findDOMNode(this.refs.content);
+            if (pageContent) {
+                pageContent.style.height = PageMethod.getInnerHeight2() + 'px';
+            }
         }
     }
     // 返回Main页面

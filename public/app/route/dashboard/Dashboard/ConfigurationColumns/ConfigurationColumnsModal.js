@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 const RModal = require('react-modal-bootstrap');
 import handleConfigColumns from '../../../../common/utils/handleConfigColumns';
-import removeModalOpenClass from '../../../../common/utils/removeModalOpenClass';
+import {removeModalOpenClass} from '../../../../common/utils/removeModalOpenClass';
 import actions from '../../../../actions/actions';
 // import SaleCluesStore from '../../../../stores/SaleCluesStore';
 

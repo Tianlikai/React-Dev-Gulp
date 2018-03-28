@@ -5,8 +5,7 @@ import React, { Component } from 'react';
 const ReactDOM = require('react-dom');
 const Reflux = require('reflux');
 const RModal = require('react-modal-bootstrap');
-const updateHeight = require('../../../../common/utils/updateHeight');
-const removeModalOpenClass = require('../../../../common/utils/removeModalOpenClass')
+const {removeModalOpenClass} = require('../../../../common/utils/removeModalOpenClass')
 const arrayDereplication = require('../../../../common/utils/arrayDereplication')
 const actions = require('../../../../actions/actions');
 const Config = require('../../../../common/Config');
@@ -109,8 +108,8 @@ class AreaModal extends Component {
     }
     pubsub(type, data) {
         if (type === 'updateHeight') {
-            updateHeight(this.refs.modalBody, PageMethod.getInnerHeight5());
-            updateHeight(this.refs.pageWrap, PageMethod.getInnerHeight5() - 48);
+            this.updateHeight(this.refs.modalBody, PageMethod.getInnerHeight5());
+            this.updateHeight(this.refs.pageWrap, PageMethod.getInnerHeight5() - 48);
         }
         if (type === 'getAreaListSuccess') {
             // 补充全国选项
@@ -131,6 +130,12 @@ class AreaModal extends Component {
                 areaList: data,
                 country: country
             });
+        }
+    }
+    updateHeight(obj, height) {
+        let pageContent = ReactDOM.findDOMNode(obj);
+        if (pageContent) {
+            pageContent.style.height = height + 'px';
         }
     }
     // 打开模态框时

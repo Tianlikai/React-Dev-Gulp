@@ -4,7 +4,7 @@ var FooterLayout = React.createClass({
     render: function () {
         return (
             <div className="footer_login">
-                <p>Author 1024998526@qq.com</p>
+                <a href='https://github.com/Tianlikai'>github @TianliKai</a>
             </div>
         );
     }

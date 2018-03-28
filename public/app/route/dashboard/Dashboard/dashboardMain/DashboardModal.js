@@ -6,7 +6,7 @@ import InputWithErrMsg from '../../../../component/InputWithErrMsg';
 import Button from '../../../../component/form/Button';
 import Close from '../../../../component/form/Close';
 import FormValidateData from '../../../../data/FormValidateData';
-import removeModalOpenClass from '../../../../common/utils/removeModalOpenClass';
+import {removeModalOpenClass} from '../../../../common/utils/removeModalOpenClass';
 import validationIputStrType1 from '../../../../common/utils/validationIputStrType1';
 
 const RModal = require('react-modal-bootstrap');

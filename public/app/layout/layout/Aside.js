@@ -1,10 +1,9 @@
 'use strict';
 
 const React = require('react');
+const ReactDOM = require('react-dom')
 const Reflux = require('reflux');
-
 const actions = require('../../actions/actions');
-const updateHeight = require('../../common/utils/updateHeight');
 const deepClone = require('../../common/utils/deepClone');
 const Sidebaritem = require('./Sidebaritem');
 
@@ -33,7 +32,10 @@ const Aside = React.createClass({
     },
     pubsub: function (type, data) {
         if (type === 'updateHeight') {
-            updateHeight(this.refs.sidebar, this.getSidebarHeight());
+            let pageContent = ReactDOM.findDOMNode(this.refs.sidebar);
+            if (pageContent) {
+                pageContent.style.height = this.getSidebarHeight() + 'px';
+            }
         }
     },
     getSidebarHeight: function () {

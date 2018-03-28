@@ -3,7 +3,7 @@
 */
 import React, { PureComponent } from 'react';
 const RModal = require('react-modal-bootstrap');
-import removeModalOpenClass from '../../../../common/utils/removeModalOpenClass';
+import {removeModalOpenClass} from '../../../../common/utils/removeModalOpenClass';
 import Close from '../../../../component/form/Close';
 import Button from '../../../../component/form/Button';
 

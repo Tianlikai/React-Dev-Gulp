@@ -10,7 +10,7 @@ import Header from '../../layout/layout/Header';
 import Aside from '../../layout/layout/Aside';
 import Footer from '../../layout/layout/Footer';
 import Mock from 'mockjs';
-import { APPS, LIST, DASHBOARDdLIST, CANVASDATA, ORIENT, INDUS, INDUSDATA } from '../../mock/Mock';
+import { API_GET_APPS, API_GET_DS_LIST, API_GET_CHART_LIST, CANVASDATA, API_GET_USER_LIST } from '../../mock/Mock';
 
 const Main = React.createClass({
     mixins: [
@@ -37,10 +37,12 @@ const Main = React.createClass({
         };
     },
     componentDidMount: function () {
-        Mock.mock('/lae/server/dashboard/list', LIST);
-        Mock.mock('/lae/org/apps', APPS);
-        Mock.mock('/lae/dashboard/chart/list?dashboard_id=412', DASHBOARDdLIST)
-        Mock.mock('/lae/cal/tasks/dashboardnew3?id=1&page=1', CANVASDATA)
+        Mock.mock('/lae/org/apps', API_GET_APPS);
+        Mock.mock('/lae/server/dashboard/list', API_GET_DS_LIST);
+        Mock.mock('/lae/dashboard/chart/list', API_GET_CHART_LIST)
+        Mock.mock('/lae/cal/tasks/dashboardnew3', CANVASDATA);
+        Mock.mock('/lae/server/dashboard/share/users', API_GET_USER_LIST);
+
         actions.getApps(); // 获取用户 的应用权限 
         let iDList = localStorage.getItem('canvasCondListID');
         let iDArray = iDList ? iDList.split(',') : null;

@@ -12,7 +12,7 @@ import Lang from '../../data/lang';
 import transitionTo from '../../common/utils/transitionTo';
 
 import Mock from 'mockjs';
-import { API_UESR } from '../../mock/Mock';
+import { API_LOGIN } from '../../mock/Mock';
 
 const Login = React.createClass({
     mixins: [
@@ -32,7 +32,7 @@ const Login = React.createClass({
         };
     },
     componentDidMount: function () {
-        Mock.mock('/lae/auth/login', API_UESR)
+        Mock.mock('/lae/auth/login', API_LOGIN)
         // 页面初次加载的时候，设置“记住用户名”是否选中
         if (this.state.isCheck) {
             this.refs.remberCheck.checked = true;

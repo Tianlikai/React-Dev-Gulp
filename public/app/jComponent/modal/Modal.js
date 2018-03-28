@@ -7,7 +7,7 @@ const RModal = require('react-modal-bootstrap');
 const Close = require('../../component/form/Close');
 const Button = require('../../component/form/Button');
 const classnames = require('classnames');
-const removeModalOpenClass = require('../../common/utils/removeModalOpenClass');
+const { removeModalOpenClass } = require('../../common/utils/removeModalOpenClass');
 const PropTypes = require('prop-types');
 
 export default class Modal extends Component {

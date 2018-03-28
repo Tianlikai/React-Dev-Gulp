@@ -4,8 +4,7 @@ const Reflux = require('reflux');
 var Echarts = require('echarts');
 const UtilStore = require('../../../stores/UtilStore');
 
-
-var EChartsObj = React.createClass({
+const EChartsObj = React.createClass({
     /**
      * option: 图表的配置项和数据
      * notMerge: 可选，是否不跟之前设置的option进行合并，默认为false，即合并
@@ -35,6 +34,15 @@ var EChartsObj = React.createClass({
     mixins: [
         Reflux.listenTo(UtilStore, 'pubsub')
     ],
+    pubsub: function (type) {
+        switch (type) {
+            case 'resizeCanvas':
+                this.handleResize();
+                break;
+            default:
+                break;
+        }
+    },
     getDefaultProps: function () {
         return {
             option: {},
@@ -128,7 +136,7 @@ var EChartsObj = React.createClass({
             let timer = null;
             // 单击
             chart.on('click', function (params) {
-                if(timer) {
+                if (timer) {
                     clearTimeout(timer);
                 }
                 timer = setTimeout(function () {
@@ -157,18 +165,6 @@ var EChartsObj = React.createClass({
         } else {
             chart.hideLoading();
             chart.setOption(props.option, props.notMerge, props.notRefreshImmediately);
-        }
-    },
-    handleClick: function (params) {
-
-    },
-    pubsub: function (type) {
-        switch (type) {
-            case 'resizeCanvas':
-                this.handleResize();
-                break;
-            default:
-                break;
         }
     },
     render: function () {

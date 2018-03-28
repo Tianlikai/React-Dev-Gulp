@@ -310,6 +310,14 @@ class GraphWrap extends PureComponent {
             data: data
         })
     }
+    setShowNumber = (isShow) => {
+        this.setState({
+            showNumber: isShow
+        })
+    }
+    getCanvasDatas = () => {
+        return this.state.data
+    }
     renderContent(chartData, type) {
 
         // hasData 0 正常 ，1 没有数据，2 数据量过大，需要添加约束条件
@@ -357,14 +365,6 @@ class GraphWrap extends PureComponent {
                 style={{ height: 466, width: '100%' }}
             />
         );
-    }
-    setShowNumber = (isShow) => {
-        this.setState({
-            showNumber: isShow
-        })
-    }
-    getCanvasDatas = () => {
-        return this.state.data
     }
     render() {
         return this.renderContent(this.state.data, this.props.type);

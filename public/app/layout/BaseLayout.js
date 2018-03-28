@@ -12,7 +12,7 @@ var BaseLayout = React.createClass({
         return (
             <div className='loginPage'>
                 <div className='bgImg'>
-                    <img src='dist/images/background.jpg' />
+                    <img src='dist/images/background.svg' />
                 </div>
                 <BaseHeader />
                 <div className='main_login'>

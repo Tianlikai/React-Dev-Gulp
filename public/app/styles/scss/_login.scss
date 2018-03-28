@@ -48,7 +48,7 @@
 .main_login {
   width: 100%;
   // min-height: 648px;
-  padding-top: 95px;
+  padding-top: 70px;
 }
 .footer_login {
   width: 100%;
@@ -66,7 +66,7 @@
   width: 100%;
 }
 .main_login .login_content_header {
-  font-size: 28px;
+  font-size: 19px;
   text-align: center;
 }
 .main_login .login_errmsg {
@@ -123,14 +123,14 @@
   height: 45px;
   color: #FFFFFF;
   border-radius: 5px;
-  background-color: $loginBtn1; // 一些不支持背景渐变的浏览器
-    background: -moz-linear-gradient(left,  $loginBtn1 0%, $loginBtn2 100%); // 火狐
+  background-color: #40a9ff; // 一些不支持背景渐变的浏览器
+    background: -moz-linear-gradient(left,  #40a9ff 0%, deepskyblue 100%); // 火狐
     /* Safari 4-5, Chrome 1-9*/
-    background: -webkit-gradient(linear, left, right, color-stop(0%,$loginBtn1), color-stop(100%,$loginBtn2));
-    background: -webkit-linear-gradient(left,  $loginBtn1 0%,$loginBtn2 100%); /*Safari5.1 Chrome 10+*/
-    background: -o-linear-gradient(left,  $loginBtn1 0%,$loginBtn2 100%); /*Opera 11.10+*/
-    background: -ms-linear-gradient(left,  $loginBtn1 0%,$loginBtn2 100%); /* IE 10 */
-    background: linear-gradient(to right,  $loginBtn1 0%,$loginBtn2 100%);
+    background: -webkit-gradient(linear, left, right, color-stop(0%,#40a9ff), color-stop(100%,deepskyblue));
+    background: -webkit-linear-gradient(left,  #40a9ff 0%,deepskyblue 100%); /*Safari5.1 Chrome 10+*/
+    background: -o-linear-gradient(left,  #40a9ff 0%,deepskyblue 100%); /*Opera 11.10+*/
+    background: -ms-linear-gradient(left,  #40a9ff 0%,deepskyblue 100%); /* IE 10 */
+    background: linear-gradient(to right,  #40a9ff 0%, deepskyblue 100%);
     /*IE 6 7 8*/
     filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='$loginBtn1', endColorstr='$loginBtn2',GradientType=1 );
 }

@@ -26,7 +26,7 @@ if (lang() === 'en') {
             email: '邮箱格式错误'
         },
         login: {
-            signin: '分析引擎',
+            signin: 'Living without an aim is like sailing without a compass',
             registeremail: '请输入注册邮箱',
             username: 'Username',
             password: 'Please enter your password',
@@ -83,7 +83,7 @@ if (lang() === 'en') {
             email: '邮箱格式错误'
         },
         login: {
-            signin: '分析引擎',
+            signin: 'Living without an aim is like sailing without a compass',
             username: '用户名',
             registeremail: '请输入注册邮箱',
             password: '请输入密码',

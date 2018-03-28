@@ -73,7 +73,6 @@ webpackJsonp([2],[
 	    getDashChartData: { children: ['success', 'fail'] },
 	    getDashChartData2: { children: ['success'] },
 	    verifyDataLength: { children: ['success'] },
-	    getDashboardShareUser: { children: ['success'] },
 	    getDashChartDetail: { children: ['success'] },
 	    checkDs: { children: ['success', 'fail'] },
 	    getDashChartCols: { children: ['success', 'fail'] },
@@ -241,7 +240,7 @@ webpackJsonp([2],[
 	    actionFunc({
 	        self: this,
 	        url: '/lae/dashboard/chart/list',
-	        type: 'GET',
+	        type: 'POST',
 	        headers: true,
 	        data: data,
 	        success: function success(resp) {
@@ -254,11 +253,11 @@ webpackJsonp([2],[
 	    var self = this;
 	    actionFunc({
 	        self: this,
-	        url: '/lae/cal/tasks/dashboardnew3?' + (0, _paramSerialize2.default)(data.urlData),
+	        url: '/lae/cal/tasks/dashboardnew3',
 	        contentType: 'application/json',
 	        type: 'POST',
 	        headers: true,
-	        data: data.postData,
+	        data: data,
 	        showloading: false,
 	        success: function success(resp) {
 	            self.success(resp, data);
@@ -268,13 +267,16 @@ webpackJsonp([2],[
 	// Dashboard-获取图表的数据
 	actions.getDashChartData.listen(function (urlData, postData, fromPage) {
 	    var self = this;
+	    var data = {
+	        urlData: urlData, postData: postData
+	    };
 	    actionFunc({
 	        self: this,
-	        url: '/lae/cal/tasks/dashboardnew3?' + (0, _paramSerialize2.default)(urlData),
+	        url: '/lae/cal/tasks/dashboardnew3',
 	        contentType: 'application/json',
 	        type: 'POST',
 	        headers: true,
-	        data: postData,
+	        data: data,
 	        showloading: false,
 	        success: function success(resp) {
 	            self.success(resp, urlData, postData, fromPage);
@@ -306,32 +308,20 @@ webpackJsonp([2],[
 	// 验证数据是否超过2000条数据
 	actions.verifyDataLength.listen(function (urlData, postData, fromPage, isChangeCondtion) {
 	    var self = this;
+	    var data = {
+	        urlData: urlData,
+	        postData: postData
+	    };
 	    actionFunc({
 	        self: this,
-	        url: '/lae/cal/tasks/dashboardnew3?' + (0, _paramSerialize2.default)(urlData),
+	        url: '/lae/cal/tasks/dashboardnew3',
 	        contentType: 'application/json',
 	        type: 'POST',
 	        headers: true,
-	        data: postData,
+	        data: data,
 	        showloading: true,
 	        success: function success(resp) {
 	            self.success(resp, urlData, postData, fromPage, isChangeCondtion);
-	        }
-	    });
-	});
-	// Dashboard 获取图表的分享用户列表
-	actions.getDashboardShareUser.listen(function (data) {
-	    var from = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : null;
-
-	    var self = this;
-	    actionFunc({
-	        self: this,
-	        url: '/lae/server/dashboard/share/users',
-	        type: 'GET',
-	        headers: true,
-	        data: data,
-	        success: function success(resp) {
-	            self.success(resp, from);
 	        }
 	    });
 	});
@@ -436,13 +426,17 @@ webpackJsonp([2],[
 	// 刷新 dashborad
 	actions.refreshDashChartData.listen(function (urlData, postData, fromPage, targetPage) {
 	    var self = this;
+	    var data = {
+	        urlData: urlData,
+	        postData: postData
+	    };
 	    actionFunc({
 	        self: this,
-	        url: '/lae/cal/tasks/dashboardnew3?' + (0, _paramSerialize2.default)(urlData),
+	        url: '/lae/cal/tasks/dashboardnew3',
 	        contentType: 'application/json',
 	        type: 'POST',
 	        headers: true,
-	        data: postData,
+	        data: data,
 	        showloading: true,
 	        success: function success(resp) {
 	            self.success(resp, urlData, postData, fromPage, targetPage);
@@ -1744,7 +1738,7 @@ webpackJsonp([2],[
 	            email: '邮箱格式错误'
 	        },
 	        login: {
-	            signin: '分析引擎',
+	            signin: 'Living without an aim is like sailing without a compass',
 	            registeremail: '请输入注册邮箱',
 	            username: 'Username',
 	            password: 'Please enter your password',
@@ -1801,7 +1795,7 @@ webpackJsonp([2],[
 	            email: '邮箱格式错误'
 	        },
 	        login: {
-	            signin: '分析引擎',
+	            signin: 'Living without an aim is like sailing without a compass',
 	            username: '用户名',
 	            registeremail: '请输入注册邮箱',
 	            password: '请输入密码',
@@ -10834,7 +10828,9 @@ webpackJsonp([2],[
 	Object.defineProperty(exports, "__esModule", {
 	    value: true
 	});
-	exports.INDUSDATA = exports.INDUS = exports.ORIENT = exports.CANVASDATA = exports.DASHBOARDdLIST = exports.LIST = exports.APPS = exports.API_UESR = undefined;
+	exports.CANVASDATA = exports.API_GET_CHART_LIST = exports.API_GET_DS_LIST = exports.API_GET_APPS = exports.API_LOGIN = undefined;
+
+	var _APPS;
 
 	var _mockjs = __webpack_require__(44);
 
@@ -10844,89 +10840,125 @@ webpackJsonp([2],[
 
 	var _qs2 = _interopRequireDefault(_qs);
 
+	var _deepClone = __webpack_require__(51);
+
+	var _deepClone2 = _interopRequireDefault(_deepClone);
+
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-	var arae = ['黑龙江', '吉林', '辽宁', '河北', '河南', '山东', '江苏', '山西', '陕西', '甘肃', '四川', '青海', '湖南', '湖北', '江西', '安徽', '浙江', '福建', '广东', '广西', '贵州', '云南', '海南', '内蒙古', '新疆维吾尔族自治区', '宁夏回族自治区', '西藏', '宁夏回族自治区', '北京', '天津', '上海', '重庆', '香港', '澳门'];
+	function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
+
+	var printParams = function printParams(req) {
+	    console.log('api : ' + req.url);
+	    console.log('type : ' + req.type);
+	    console.log('body : ' + req.body);
+	};
+	var getResultModel = function getResultModel(errcode, res) {
+	    if (!errcode) {
+	        var Ok = {
+	            errcode: 0,
+	            status: 0,
+	            result: res
+	        };
+	        console.table(Ok);
+	        return Ok;
+	    } else {
+	        var Fail = {
+	            errcode: errcode,
+	            status: 1,
+	            errmsg: res
+	        };
+	        console.table(Fail);
+	        return Fail;
+	    }
+	};
+	var USER_KEY = {
+	    0: { username: 'admin', password: 'admin' },
+	    1: { username: 'user', password: 'user' }
+	};
 	var USER = {
-	    errcode: 0,
-	    status: 0,
-	    result: {
-	        eid: '111',
-	        email: 'jason.tian@eisoo.com',
-	        ename: '田力凯-开发环境-企业',
+	    0: {
+	        email: 'admin',
 	        first_login: false,
-	        id: 550,
 	        is_active: true,
-	        lae_host: 'http:/172.20.6.42:9988',
-	        orgid: 295,
-	        token: '123',
-	        uid: 550,
-	        user_type: 2,
-	        username: 'jason.tian'
+	        token: '1',
+	        user_type: 1, // 管理員
+	        username: 'admin',
+	        ds_ids: []
+	    },
+	    1: {
+	        email: 'user',
+	        first_login: false,
+	        is_active: true,
+	        token: '1',
+	        user_type: 2, // 普通用户
+	        username: 'user',
+	        ds_ids: [0, 1, 2, 3]
 	    }
 	};
-	var LOGIN_FAILURE = {
-	    errcode: 1005,
-	    status: 1,
-	    errmsg: 'Incorrect Username or Password'
+	var USER_AUTHORITY = {
+	    1: [2, 3, 4, 5, 6],
+	    2: []
 	};
-	var APPS = {
-	    errcode: 0,
-	    status: 0,
-	    result: {
-	        list: [{ id: 5, name: '智能推荐' }, { id: 2, name: '供货预测' }, { id: 3, name: '销售线索' }, { id: 4, name: '业绩预测' }, { id: 6, name: '推荐引擎' }]
+	var APPS = (_APPS = {
+	    2: {
+	        name: '供货预测'
+	    },
+	    4: {
+	        name: '销售线索'
+	    },
+	    5: {
+	        name: '业绩预测'
+	    }
+	}, _defineProperty(_APPS, '5', {
+	    name: '智能推荐'
+	}), _defineProperty(_APPS, 6, {
+	    name: '推荐引擎'
+	}), _APPS);
+	var DASHBOARD_LIST = {
+	    0: {
+	        id: 0,
+	        name: 'AAA-JASON',
+	        USER_id: '1'
+	    },
+	    1: {
+	        id: 1,
+	        name: 'AAA-LI',
+	        USER_id: '1'
+	    },
+	    2: {
+	        id: 2,
+	        name: 'AAA-JORDAN',
+	        USER_id: '1'
+	    },
+	    3: {
+	        id: 3,
+	        name: 'AAA-JAMES',
+	        USER_id: '0'
 	    }
 	};
-	var LIST = {
-	    errcode: 0,
-	    status: 0,
-	    result: {
-	        list: [{
-	            beshared: 0,
-	            beshared_name: '',
-	            id: 412,
-	            name: 'AAA-JASON'
-	        }, {
-	            beshared: 0,
-	            beshared_name: '',
-	            id: 413,
-	            name: 'AAA-LI'
-	        }, {
-	            beshared: 0,
-	            beshared_name: '',
-	            id: 414,
-	            name: 'AAA-JORDAN'
-	        }, {
-	            beshared: 1,
-	            beshared_name: 'JAMES',
-	            id: 415,
-	            name: 'AAA-JAMES'
-	        }],
-	        total: 0
-	    }
-	};
-	var DASHBOARDdLIST = {
-	    errcode: 0,
-	    status: 0,
-	    result: {
-	        list: [{
-	            app_id: 0,
-	            beshared: 0,
-	            dashboard_id: 412,
-	            ds_id: 15,
-	            id: 1,
-	            name: '柱状堆积图',
-	            plot_type: 6,
-	            shared: 0
-	        }],
-	        total: 0
+	var DASHBOARD_SHARE_LIST = {};
+	var CANVAS_LIST = {
+	    0: {
+	        id: 0,
+	        app_id: 0,
+	        dashboard_id: 0,
+	        beshared: 0,
+	        ds_id: 15,
+	        plot_type: 6,
+	        shared: 0,
+	        name: '柱状堆积图'
 	    }
 	};
 	var CANVASDATA = {
 	    errcode: 0,
 	    status: 0,
 	    result: {
+	        id: 1,
 	        app_id: 0,
+	        name: "柱状堆积图",
+	        plot_type: 6,
+	        sum: 51,
 	        condition: [{
 	            col_desc: "职位",
 	            col_name: "job",
@@ -10975,10 +11007,7 @@ webpackJsonp([2],[
 	        groupNum: 2,
 	        group_type: ["text", "text"],
 	        hasData: 0,
-	        id: 1,
 	        legend: ["2017新品解读视频——AnyBackup 6.0 夯实高端数据保护技术", "2017新品解读视频——AnyRobot 2.0开启 IT 运营的日志云", "2017新品解读视频——AnyShare Family 6.0统一的文档云", "2017新品解读视频——AnyShare 运营服务 助力文档管理", "2017新品解读视频——AnyVM 5.0 高性能的超融合存储", "ASC新版本：多人在线编辑和强大插件功能", "b2b2c", "Proverb", "【人物专栏——武灵芝】安全新台阶，AnyShare新增安全应用场景介绍", "【医疗行业】数据中心升级整体解决方案销售指南 ? 深度解读", "【深度干货】AnyRobot 与监控产品的竞争差异", "【深度干货】企业行业——智能制造两化融合趋势下销售线索（一）", "【深度干货】企业行业——智能制造两化融合趋势下销售线索（二）", "【爱数主播】保护智慧城市政务数据，这个方案亮点足", "【讲师专栏 周杰】XX竞品分析及竞争策略", "一个10万用户规模的PB级教育云盘案例", "内容家2.2.6版本新功能介绍", "尊尚Z3第二版全新上市", "爱数云服务商合作伙伴认证通知", "蓝光归档，数据保护与归档的完美结合"],
-	        name: "柱状堆积图",
-	        plot_type: 6,
 	        slicer: {
 	            data: [{
 	                col_desc: "公司名称",
@@ -10992,181 +11021,86 @@ webpackJsonp([2],[
 	                format: ""
 	            }]
 	        },
-	        sum: 51,
 	        x: [[1, 1, 1, 1, 0, 0, 1], [1, 0, 0, 3, 0, 0, 0], [0, 1, 0, 0, 0, 0, 0], [0, 0, 0, 1, 0, 0, 1], [1, 2, 0, 0, 0, 0, 0], [0, 0, 0, 1, 0, 0, 1], [0, 0, 0, 0, 1, 0, 0], [0, 0, 0, 0, 1, 0, 0], [0, 0, 0, 1, 0, 1, 0], [0, 1, 0, 2, 0, 1, 0], [0, 0, 0, 0, 0, 0, 1], [0, 2, 0, 0, 0, 0, 0], [0, 1, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 1], [0, 0, 1, 5, 1, 2, 1], [0, 0, 0, 0, 0, 1, 0], [0, 0, 0, 1, 0, 0, 0], [1, 1, 2, 1, 1, 0, 0], [0, 1, 0, 0, 0, 0, 1], [0, 0, 0, 0, 0, 0, 1]],
 	        x_name: "总数",
 	        y: ["产品营销工程师", "区域产品经理", "售前主管", "技术经理", "系统维护工程师", "行业销售", "销售助理"],
 	        y_name: "职位,文章标题"
 	    }
 	};
-	var adminApps = {
-	    errcode: 0,
-	    status: 0,
-	    result: {
-	        list: [{ id: 6, name: '推荐引擎' }]
-	    }
-	};
-	var adminList = {
-	    errcode: 0,
-	    status: 0,
-	    result: {
-	        list: [{
-	            desc: '默认管理员',
-	            id: 0,
-	            name: '管理员'
-	        }],
-	        total: 0
-	    }
-	};
-	var permission = {
-	    errcode: 0,
-	    status: 0,
-	    result: {}
-	};
-	var admintasks = {
-	    errcode: 0,
-	    status: 0,
-	    result: {
-	        list: []
-	    }
-	};
-	var reTasks = {
-	    errcode: 0,
-	    status: 0,
-	    result: {
-	        list: [{
-	            columns: {
-	                alg: 'usercf',
-	                items: '100',
-	                model_id: 'ab',
-	                online: '0',
-	                runtime: ''
-	            },
-	            created_at: 'today',
-	            ds_id: 19,
-	            ds_name: '李佳慧',
-	            name: '212',
-	            status: 10,
-	            status_desc: '已完成',
-	            tid: 1
-	        }, {
-	            columns: {
-	                alg: 'usercf',
-	                items: '100',
-	                model_id: 'wwe',
-	                online: '0',
-	                runtime: ''
-	            },
-	            created_at: 'today',
-	            ds_id: 19,
-	            ds_name: '田力凯',
-	            name: '213',
-	            status: 10,
-	            status_desc: '已完成',
-	            tid: 2
-	        }, {
-	            columns: {
-	                alg: 'usercf',
-	                items: '100',
-	                model_id: 'dsa',
-	                online: '1',
-	                runtime: ''
-	            },
-	            created_at: 'today',
-	            ds_id: 19,
-	            ds_name: 'dalong',
-	            name: '215',
-	            status: 10,
-	            status_desc: '失败',
-	            tid: 3
-	        }, {
-	            columns: {
-	                alg: 'usercf',
-	                items: '100',
-	                model_id: 'eqweqw',
-	                online: '1',
-	                runtime: ''
-	            },
-	            created_at: 'today',
-	            ds_id: 19,
-	            ds_name: 'qweqweqweqw',
-	            name: '217',
-	            status: 10,
-	            status_desc: '失败',
-	            tid: 4
-	        }, {
-	            columns: {
-	                alg: 'usercf',
-	                items: '100',
-	                model_id: 'eqw321312eqw',
-	                online: '0',
-	                runtime: ''
-	            },
-	            created_at: 'today',
-	            ds_id: 19,
-	            ds_name: 'qweqweqweqw',
-	            name: '123',
-	            status: 10,
-	            status_desc: '运行中',
-	            tid: 5
-	        }]
-	    }
-	};
-	var ORIENT = {
-	    errcode: 0,
-	    status: 0,
-	    result: {
-	        count: 0,
-	        jobs: []
-	    }
-	};
-	var INDUS = {
-	    errcode: 0,
-	    status: 0,
-	    result: {
-	        industry: [{ id: 1069, name: "互联网金融" }, { id: 1082, name: "在线教育" }, { id: 3001, name: "普通教育" }, { id: 3002, name: "高等教育" }, { id: 3003, name: "医院" }, { id: 3004, name: "在线教育集成商" }, { id: 3005, name: "互联网金融集成商" }, { id: 3006, name: "其他集成商" }, { id: 3007, name: "游戏" }]
-	    }
-	};
-	var indusDataTemplate = {
-	    errcode: 0,
-	    status: 0,
-	    result: {
-	        date: 1511951274,
-	        'clients|20': [{
-	            'name': '@EMAIL',
-	            'arae|1': arae,
-	            'industry_id': 3012,
-	            'type': '银行',
-	            'id|1-9999999999': 1,
-	            'score|1-100': 1
-	        }],
-	        clients_count: 200,
-	        source: 'orient_recommend'
-	    }
-	};
-	var INDUSDATA = _mockjs2.default.mock(indusDataTemplate);
-
-	var API_UESR = exports.API_UESR = function API_UESR(req) {
-	    console.log('api : ' + req.url);
-	    console.log('type : ' + req.type);
-	    console.log('body : ' + req.body);
-	    console.table(USER);
+	var API_LOGIN = exports.API_LOGIN = function API_LOGIN(req) {
+	    printParams(req);
 
 	    var _QS$parse = _qs2.default.parse(req.body),
 	        user = _QS$parse.user,
 	        password = _QS$parse.password;
 
-	    if (user === 'user' && password === '123') return USER;
-	    return LOGIN_FAILURE;
+	    var User = Object.keys(USER_KEY);
+	    var check = User.findIndex(function (id) {
+	        return USER_KEY[id].username === user && USER_KEY[id].password === password;
+	    });
+	    if (check >= 0) {
+	        return getResultModel(0, USER[check]);
+	    } else {
+	        return getResultModel(1005, 'user: admin / user password: admin / user');
+	    }
 	};
+	var API_GET_APPS = exports.API_GET_APPS = function API_GET_APPS(req) {
+	    printParams(req);
+	    var userType = localStorage.getItem('userType');
+	    var userAuthority = USER_AUTHORITY[userType];
+	    var list = [];
+	    if (!userAuthority.length) return getResultModel(0, { list: list });
+	    userAuthority.forEach(function (id) {
+	        list.push({
+	            id: id,
+	            name: APPS[id]
+	        });
+	    });
+	    return getResultModel(0, { list: list });
+	};
+	var API_GET_DS_LIST = exports.API_GET_DS_LIST = function API_GET_DS_LIST(req) {
+	    printParams(req);
+	    var email = localStorage.getItem('email');
+	    var User = Object.keys(USER);
+	    var userId = User.findIndex(function (id) {
+	        return USER[id].email === email;
+	    });
+	    var list = [];
+	    var total = 0;
+	    var ds_ids = USER[userId].ds_ids;
+	    var dsList = (0, _deepClone2.default)(DASHBOARD_LIST);
+	    ds_ids.forEach(function (id) {
+	        if (dsList[id].USER_id === '' + userId) {
+	            dsList[id].beshared = 0;
+	            dsList[id].beshared_name = '';
+	        } else {
+	            dsList[id].beshared = 1;
+	            dsList[id].beshared_name = USER[dsList[id].USER_id].username;
+	        }
+	        list.push(dsList[id]);
+	    });
+	    return getResultModel(0, {
+	        list: list,
+	        total: list.length
+	    });
+	};
+	var API_GET_CHART_LIST = exports.API_GET_CHART_LIST = function API_GET_CHART_LIST(req) {
+	    printParams(req);
 
-	exports.APPS = APPS;
-	exports.LIST = LIST;
-	exports.DASHBOARDdLIST = DASHBOARDdLIST;
+	    var _QS$parse2 = _qs2.default.parse(req.body),
+	        dashboard_id = _QS$parse2.dashboard_id;
+
+	    var list = [];
+	    var total = 0;
+	    for (var i in CANVAS_LIST) {
+	        if (CANVAS_LIST[i].dashboard_id === parseInt(dashboard_id)) list.push(CANVAS_LIST[i]);
+	    }
+	    return getResultModel(0, {
+	        list: list,
+	        total: list.length
+	    });
+	};
 	exports.CANVASDATA = CANVASDATA;
-	exports.ORIENT = ORIENT;
-	exports.INDUS = INDUS;
-	exports.INDUSDATA = INDUSDATA;
 
 /***/ }),
 /* 46 */
@@ -11815,6 +11749,50 @@ webpackJsonp([2],[
 
 /***/ }),
 /* 51 */
+/***/ (function(module, exports) {
+
+	'use strict';
+
+	Object.defineProperty(exports, "__esModule", {
+	    value: true
+	});
+	var deepClone = function deepClone(obj) {
+	    function isClass(o) {
+	        if (o === null) {
+	            return 'Null';
+	        }
+	        if (o === undefined) {
+	            return 'Undefined';
+	        }
+	        return Object.prototype.toString.call(o).slice(8, -1);
+	    }
+	    var result;
+	    var oClass = isClass(obj);
+	    // 确定result的类型
+	    if (oClass === 'Object') {
+	        result = {};
+	    } else if (oClass === 'Array') {
+	        result = [];
+	    } else {
+	        return obj;
+	    }
+	    for (var key in obj) {
+	        var copy = obj[key];
+	        if (isClass(copy) === 'Object') {
+	            result[key] = deepClone(copy); // 递归调用
+	        } else if (isClass(copy) === 'Array') {
+	            result[key] = deepClone(copy);
+	        } else {
+	            result[key] = obj[key];
+	        }
+	    }
+	    return result;
+	};
+
+	exports.default = deepClone;
+
+/***/ }),
+/* 52 */
 /***/ (function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -11835,7 +11813,7 @@ webpackJsonp([2],[
 
 	var _actions2 = _interopRequireDefault(_actions);
 
-	var _asideDataStore = __webpack_require__(52);
+	var _asideDataStore = __webpack_require__(53);
 
 	var _asideDataStore2 = _interopRequireDefault(_asideDataStore);
 
@@ -11843,7 +11821,7 @@ webpackJsonp([2],[
 
 	var _transitionTo2 = _interopRequireDefault(_transitionTo);
 
-	var _AsideData = __webpack_require__(53);
+	var _AsideData = __webpack_require__(54);
 
 	var _AsideData2 = _interopRequireDefault(_AsideData);
 
@@ -11851,7 +11829,7 @@ webpackJsonp([2],[
 
 	var _SystemValue2 = _interopRequireDefault(_SystemValue);
 
-	var _PageMethod = __webpack_require__(54);
+	var _PageMethod = __webpack_require__(55);
 
 	var _PageMethod2 = _interopRequireDefault(_PageMethod);
 
@@ -11863,7 +11841,7 @@ webpackJsonp([2],[
 
 	var _Aside2 = _interopRequireDefault(_Aside);
 
-	var _Footer = __webpack_require__(62);
+	var _Footer = __webpack_require__(61);
 
 	var _Footer2 = _interopRequireDefault(_Footer);
 
@@ -11898,10 +11876,12 @@ webpackJsonp([2],[
 	        };
 	    },
 	    componentDidMount: function componentDidMount() {
-	        _mockjs2.default.mock('/lae/server/dashboard/list', _Mock.LIST);
-	        _mockjs2.default.mock('/lae/org/apps', _Mock.APPS);
-	        _mockjs2.default.mock('/lae/dashboard/chart/list?dashboard_id=412', _Mock.DASHBOARDdLIST);
-	        _mockjs2.default.mock('/lae/cal/tasks/dashboardnew3?id=1&page=1', _Mock.CANVASDATA);
+	        _mockjs2.default.mock('/lae/org/apps', _Mock.API_GET_APPS);
+	        _mockjs2.default.mock('/lae/server/dashboard/list', _Mock.API_GET_DS_LIST);
+	        _mockjs2.default.mock('/lae/dashboard/chart/list', _Mock.API_GET_CHART_LIST);
+	        _mockjs2.default.mock('/lae/cal/tasks/dashboardnew3', _Mock.CANVASDATA);
+	        _mockjs2.default.mock('/lae/server/dashboard/share/users', _Mock.API_GET_USER_LIST);
+
 	        _actions2.default.getApps(); // 获取用户 的应用权限 
 	        var iDList = localStorage.getItem('canvasCondListID');
 	        var iDArray = iDList ? iDList.split(',') : null;
@@ -11996,14 +11976,14 @@ webpackJsonp([2],[
 	exports.default = Main;
 
 /***/ }),
-/* 52 */
+/* 53 */
 /***/ (function(module, exports, __webpack_require__) {
 
 	'use strict';
 
 	var Reflux = __webpack_require__(6);
 	var actions = __webpack_require__(7);
-	var AsideData = __webpack_require__(53);
+	var AsideData = __webpack_require__(54);
 	var transitionToRoot = __webpack_require__(22);
 	var logOut = __webpack_require__(24);
 
@@ -12084,7 +12064,7 @@ webpackJsonp([2],[
 	module.exports = asideDataStore;
 
 /***/ }),
-/* 53 */
+/* 54 */
 /***/ (function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -12108,14 +12088,14 @@ webpackJsonp([2],[
 	module.exports = Data;
 
 /***/ }),
-/* 54 */
+/* 55 */
 /***/ (function(module, exports, __webpack_require__) {
 
 	'use strict';
 
 	var ReactDOM = __webpack_require__(3);
 	var Config = __webpack_require__(25);
-	var deepClone = __webpack_require__(55);
+	var deepClone = __webpack_require__(51);
 	var getLegendHeight = __webpack_require__(56);
 	var transitionToRoot = __webpack_require__(22);
 	var actions = __webpack_require__(7);
@@ -14854,50 +14834,6 @@ webpackJsonp([2],[
 	};
 
 /***/ }),
-/* 55 */
-/***/ (function(module, exports) {
-
-	'use strict';
-
-	Object.defineProperty(exports, "__esModule", {
-	    value: true
-	});
-	var deepClone = function deepClone(obj) {
-	    function isClass(o) {
-	        if (o === null) {
-	            return 'Null';
-	        }
-	        if (o === undefined) {
-	            return 'Undefined';
-	        }
-	        return Object.prototype.toString.call(o).slice(8, -1);
-	    }
-	    var result;
-	    var oClass = isClass(obj);
-	    // 确定result的类型
-	    if (oClass === 'Object') {
-	        result = {};
-	    } else if (oClass === 'Array') {
-	        result = [];
-	    } else {
-	        return obj;
-	    }
-	    for (var key in obj) {
-	        var copy = obj[key];
-	        if (isClass(copy) === 'Object') {
-	            result[key] = deepClone(copy); // 递归调用
-	        } else if (isClass(copy) === 'Array') {
-	            result[key] = deepClone(copy);
-	        } else {
-	            result[key] = obj[key];
-	        }
-	    }
-	    return result;
-	};
-
-	exports.default = deepClone;
-
-/***/ }),
 /* 56 */
 /***/ (function(module, exports) {
 
@@ -15108,15 +15044,14 @@ webpackJsonp([2],[
 	'use strict';
 
 	var React = __webpack_require__(1);
+	var ReactDOM = __webpack_require__(3);
 	var Reflux = __webpack_require__(6);
-
 	var actions = __webpack_require__(7);
-	var updateHeight = __webpack_require__(59);
-	var deepClone = __webpack_require__(55);
-	var Sidebaritem = __webpack_require__(60);
+	var deepClone = __webpack_require__(51);
+	var Sidebaritem = __webpack_require__(59);
 
-	var AsideDataStore = __webpack_require__(52);
-	var UtilStore = __webpack_require__(61);
+	var AsideDataStore = __webpack_require__(53);
+	var UtilStore = __webpack_require__(60);
 
 	var Aside = React.createClass({
 	    displayName: 'Aside',
@@ -15140,7 +15075,10 @@ webpackJsonp([2],[
 	    },
 	    pubsub: function pubsub(type, data) {
 	        if (type === 'updateHeight') {
-	            updateHeight(this.refs.sidebar, this.getSidebarHeight());
+	            var pageContent = ReactDOM.findDOMNode(this.refs.sidebar);
+	            if (pageContent) {
+	                pageContent.style.height = this.getSidebarHeight() + 'px';
+	            }
 	        }
 	    },
 	    getSidebarHeight: function getSidebarHeight() {
@@ -15215,25 +15153,6 @@ webpackJsonp([2],[
 
 /***/ }),
 /* 59 */
-/***/ (function(module, exports) {
-
-	'use strict';
-
-	Object.defineProperty(exports, "__esModule", {
-	    value: true
-	});
-	// 当浏览器大小改变时，触发
-	var updateHeight = function updateHeight(obj, height) {
-	    var pageContent = ReactDOM.findDOMNode(obj);
-	    if (pageContent) {
-	        pageContent.style.height = height + 'px';
-	    }
-	};
-
-	exports.default = updateHeight;
-
-/***/ }),
-/* 60 */
 /***/ (function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -15323,7 +15242,7 @@ webpackJsonp([2],[
 	module.exports = Sidebaritem;
 
 /***/ }),
-/* 61 */
+/* 60 */
 /***/ (function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -15380,7 +15299,7 @@ webpackJsonp([2],[
 	module.exports = UtilStore;
 
 /***/ }),
-/* 62 */
+/* 61 */
 /***/ (function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -15400,13 +15319,12 @@ webpackJsonp([2],[
 	            { className: 'main-footer' },
 	            React.createElement(
 	                'strong',
-	                null,
-	                '\u4E0A\u6D77\u51E1\u54CD\u7F51\u7EDC\u79D1\u6280\u6709\u9650\u516C\u53F8\xA0\xA0\u7248\u6743\u6240\u6709\xA0\xA9\xA02017'
-	            ),
-	            React.createElement(
-	                'strong',
 	                { className: 'pull-right' },
-	                '\u6570\u4E2D\u6570\u5206\u6790\u5F15\u64CE\xA02.1.0'
+	                React.createElement(
+	                    'a',
+	                    { href: 'https://github.com/Tianlikai/React-Dev-Gulp' },
+	                    'Github\xA0@\xA0React-Dev-Gulp'
+	                )
 	            )
 	        );
 	    }

@@ -7,7 +7,7 @@ const RModal = require('react-modal-bootstrap');
 const Close = require('../../../../component/form/Close');
 const Button = require('../../../../component/form/Button');
 
-const removeModalOpenClass = require('../../../../common/utils/removeModalOpenClass');
+const {removeModalOpenClass} = require('../../../../common/utils/removeModalOpenClass');
 
 const PublishToUser = require('./PublishToUser');
 const SelectedItem = require('./SelectedItem');

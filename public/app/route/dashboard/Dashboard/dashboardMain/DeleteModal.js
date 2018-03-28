@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 const RModal = require('react-modal-bootstrap');
 
-const removeModalOpenClass = require('../../../../common/utils/removeModalOpenClass');
+const {removeModalOpenClass} = require('../../../../common/utils/removeModalOpenClass');
 
 const Close = require('../../../../component/form/Close');
 const Button = require('../../../../component/form/Button');

@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 const RModal = require('react-modal-bootstrap');
 
-const removeModalOpenClass = require('../../../../common/utils/removeModalOpenClass');
+const {removeModalOpenClass} = require('../../../../common/utils/removeModalOpenClass');
 const Config = require('../../../../common/Config');
 
 const Table = require('../../../../component/Elements/Table');

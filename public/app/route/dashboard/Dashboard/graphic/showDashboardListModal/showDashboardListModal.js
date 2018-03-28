@@ -1,6 +1,6 @@
 import React, { PureComponent } from 'react';
 import RModal from 'react-modal-bootstrap';
-import removeModalOpenClass from '../../../../../common/utils/removeModalOpenClass';
+import {removeModalOpenClass} from '../../../../../common/utils/removeModalOpenClass';
 import actions from '../../../../../actions/actions';
 import Close from '../../../../../component/form/Close';
 import Button from '../../../../../component/form/Button';

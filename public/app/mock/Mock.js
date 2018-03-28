@@ -1,135 +1,120 @@
 import Mock from 'mockjs';
 import QS from 'qs';
+import deepClone from '../common/utils/deepClone';
 
-const arae = [
-    '黑龙江',
-    '吉林',
-    '辽宁',
-    '河北',
-    '河南',
-    '山东',
-    '江苏',
-    '山西',
-    '陕西',
-    '甘肃',
-    '四川',
-    '青海',
-    '湖南',
-    '湖北',
-    '江西',
-    '安徽',
-    '浙江',
-    '福建',
-    '广东',
-    '广西',
-    '贵州',
-    '云南',
-    '海南',
-    '内蒙古',
-    '新疆维吾尔族自治区',
-    '宁夏回族自治区',
-    '西藏',
-    '宁夏回族自治区',
-    '北京',
-    '天津',
-    '上海',
-    '重庆',
-    '香港',
-    '澳门'
-]
-const USER = {
-    errcode: 0,
-    status: 0,
-    result: {
-        eid: '111',
-        email: 'jason.tian@eisoo.com',
-        ename: '田力凯-开发环境-企业',
+const printParams = (req) => {
+    console.log(`api : ${req.url}`);
+    console.log(`type : ${req.type}`);
+    console.log(`body : ${req.body}`);
+}
+const getResultModel = (errcode, res) => {
+    if (!errcode) {
+        let Ok = {
+            errcode: 0,
+            status: 0,
+            result: res
+        }
+        console.table(Ok)
+        return Ok
+    } else {
+        let Fail = {
+            errcode: errcode,
+            status: 1,
+            errmsg: res
+        }
+        console.table(Fail)
+        return Fail;
+    }
+}
+let USER_KEY = {
+    0: { username: 'admin', password: 'admin' },
+    1: { username: 'user', password: 'user' }
+}
+let USER = {
+    0: {
+        email: 'admin',
         first_login: false,
-        id: 550,
         is_active: true,
-        lae_host: 'http:/172.20.6.42:9988',
-        orgid: 295,
-        token: '123',
-        uid: 550,
-        user_type: 2,
-        username: 'jason.tian'
+        token: '1',
+        user_type: 1, // 管理員
+        username: 'admin',
+        ds_ids: []
+    },
+    1: {
+        email: 'user',
+        first_login: false,
+        is_active: true,
+        token: '1',
+        user_type: 2, // 普通用户
+        username: 'user',
+        ds_ids: [0, 1, 2, 3]
     }
 }
-const LOGIN_FAILURE = {
-    errcode: 1005,
-    status: 1,
-    errmsg: 'Incorrect Username or Password'
+let USER_AUTHORITY = {
+    1: [2, 3, 4, 5, 6],
+    2: []
 }
-const APPS = {
-    errcode: 0,
-    status: 0,
-    result: {
-        list: [
-            { id: 5, name: '智能推荐' },
-            { id: 2, name: '供货预测' },
-            { id: 3, name: '销售线索' },
-            { id: 4, name: '业绩预测' },
-            { id: 6, name: '推荐引擎' }
-        ]
+let APPS = {
+    2: {
+        name: '供货预测'
+    },
+    4: {
+        name: '销售线索'
+    },
+    5: {
+        name: '业绩预测'
+    },
+    5: {
+        name: '智能推荐'
+    },
+    6: {
+        name: '推荐引擎'
     }
 }
-const LIST = {
-    errcode: 0,
-    status: 0,
-    result: {
-        list: [
-            {
-                beshared: 0,
-                beshared_name: '',
-                id: 412,
-                name: 'AAA-JASON'
-            },
-            {
-                beshared: 0,
-                beshared_name: '',
-                id: 413,
-                name: 'AAA-LI'
-            },
-            {
-                beshared: 0,
-                beshared_name: '',
-                id: 414,
-                name: 'AAA-JORDAN'
-            },
-            {
-                beshared: 1,
-                beshared_name: 'JAMES',
-                id: 415,
-                name: 'AAA-JAMES'
-            }
-        ],
-        total: 0
-    }
+let DASHBOARD_LIST = {
+    0: {
+        id: 0,
+        name: 'AAA-JASON',
+        USER_id: '1'
+    },
+    1: {
+        id: 1,
+        name: 'AAA-LI',
+        USER_id: '1'
+    },
+    2: {
+        id: 2,
+        name: 'AAA-JORDAN',
+        USER_id: '1'
+    },
+    3: {
+        id: 3,
+        name: 'AAA-JAMES',
+        USER_id: '0'
+    },
 }
-const DASHBOARDdLIST = {
-    errcode: 0,
-    status: 0,
-    result: {
-        list: [
-            {
-                app_id: 0,
-                beshared: 0,
-                dashboard_id: 412,
-                ds_id: 15,
-                id: 1,
-                name: '柱状堆积图',
-                plot_type: 6,
-                shared: 0
-            }
-        ],
-        total: 0
-    }
-}
-const CANVASDATA = {
-    errcode: 0,
-    status: 0,
-    result: {
+let DASHBOARD_SHARE_LIST = {}
+let CANVAS_LIST = {
+    0: {
+        id: 0,
         app_id: 0,
+        dashboard_id: 0,
+        beshared: 0,
+        ds_id: 15,
+        plot_type: 6,
+        shared: 0,
+        name: '柱状堆积图',
+    }
+}
+let CANVASDATA = {
+    errcode: 0,
+    status: 0,
+    result: {
+        id: 1,
+        app_id: 0,
+        name: "柱状堆积图",
+        plot_type: 6,
+        sum: 51,
         condition: [{
             col_desc: "职位",
             col_name: "job",
@@ -183,7 +168,6 @@ const CANVASDATA = {
         groupNum: 2,
         group_type: ["text", "text"],
         hasData: 0,
-        id: 1,
         legend: [
             "2017新品解读视频——AnyBackup 6.0 夯实高端数据保护技术",
             "2017新品解读视频——AnyRobot 2.0开启 IT 运营的日志云",
@@ -206,8 +190,6 @@ const CANVASDATA = {
             "爱数云服务商合作伙伴认证通知",
             "蓝光归档，数据保护与归档的完美结合"
         ],
-        name: "柱状堆积图",
-        plot_type: 6,
         slicer: {
             data: [
                 {
@@ -223,7 +205,6 @@ const CANVASDATA = {
                     format: ""
                 }]
         },
-        sum: 51,
         x: [
             [1, 1, 1, 1, 0, 0, 1],
             [1, 0, 0, 3, 0, 0, 0],
@@ -259,190 +240,76 @@ const CANVASDATA = {
         y_name: "职位,文章标题",
     }
 }
-const adminApps = {
-    errcode: 0,
-    status: 0,
-    result: {
-        list: [
-            { id: 6, name: '推荐引擎' }
-        ]
-    }
-}
-const adminList = {
-    errcode: 0,
-    status: 0,
-    result: {
-        list: [
-            {
-                desc: '默认管理员',
-                id: 0,
-                name: '管理员'
-            }
-        ],
-        total: 0
-    }
-}
-const permission = {
-    errcode: 0,
-    status: 0,
-    result: {}
-}
-const admintasks = {
-    errcode: 0,
-    status: 0,
-    result: {
-        list: []
-    }
-}
-const reTasks = {
-    errcode: 0,
-    status: 0,
-    result: {
-        list: [
-            {
-                columns: {
-                    alg: 'usercf',
-                    items: '100',
-                    model_id: 'ab',
-                    online: '0',
-                    runtime: ''
-                },
-                created_at: 'today',
-                ds_id: 19,
-                ds_name: '李佳慧',
-                name: '212',
-                status: 10,
-                status_desc: '已完成',
-                tid: 1
-            },
-            {
-                columns: {
-                    alg: 'usercf',
-                    items: '100',
-                    model_id: 'wwe',
-                    online: '0',
-                    runtime: ''
-                },
-                created_at: 'today',
-                ds_id: 19,
-                ds_name: '田力凯',
-                name: '213',
-                status: 10,
-                status_desc: '已完成',
-                tid: 2
-            },
-            {
-                columns: {
-                    alg: 'usercf',
-                    items: '100',
-                    model_id: 'dsa',
-                    online: '1',
-                    runtime: ''
-                },
-                created_at: 'today',
-                ds_id: 19,
-                ds_name: 'dalong',
-                name: '215',
-                status: 10,
-                status_desc: '失败',
-                tid: 3
-            },
-            {
-                columns: {
-                    alg: 'usercf',
-                    items: '100',
-                    model_id: 'eqweqw',
-                    online: '1',
-                    runtime: ''
-                },
-                created_at: 'today',
-                ds_id: 19,
-                ds_name: 'qweqweqweqw',
-                name: '217',
-                status: 10,
-                status_desc: '失败',
-                tid: 4
-            },
-            {
-                columns: {
-                    alg: 'usercf',
-                    items: '100',
-                    model_id: 'eqw321312eqw',
-                    online: '0',
-                    runtime: ''
-                },
-                created_at: 'today',
-                ds_id: 19,
-                ds_name: 'qweqweqweqw',
-                name: '123',
-                status: 10,
-                status_desc: '运行中',
-                tid: 5
-            }
-        ]
-    }
-}
-const ORIENT = {
-    errcode: 0,
-    status: 0,
-    result: {
-        count: 0,
-        jobs: []
-    }
-}
-const INDUS = {
-    errcode: 0,
-    status: 0,
-    result: {
-        industry: [
-            { id: 1069, name: "互联网金融" },
-            { id: 1082, name: "在线教育" },
-            { id: 3001, name: "普通教育" },
-            { id: 3002, name: "高等教育" },
-            { id: 3003, name: "医院" },
-            { id: 3004, name: "在线教育集成商" },
-            { id: 3005, name: "互联网金融集成商" },
-            { id: 3006, name: "其他集成商" },
-            { id: 3007, name: "游戏" }
-        ]
-    }
-}
-let indusDataTemplate = {
-    errcode: 0,
-    status: 0,
-    result: {
-        date: 1511951274,
-        'clients|20': [{
-            'name': '@EMAIL',
-            'arae|1': arae,
-            'industry_id': 3012,
-            'type': '银行',
-            'id|1-9999999999': 1,
-            'score|1-100': 1,
-        }],
-        clients_count: 200,
-        source: 'orient_recommend'
-    }
-}
-let INDUSDATA = Mock.mock(indusDataTemplate);
-
-export const API_UESR = (req) => {
-    console.log(`api : ${req.url}`);
-    console.log(`type : ${req.type}`);
-    console.log(`body : ${req.body}`);
-    console.table(USER)
+export const API_LOGIN = (req) => {
+    printParams(req);
     let { user, password } = QS.parse(req.body);
-    if (user === 'user' && password === '123') return USER;
-    return LOGIN_FAILURE;
-}
 
+    let User = Object.keys(USER_KEY);
+    let check = User.findIndex((id) => {
+        return USER_KEY[id].username === user && USER_KEY[id].password === password;
+    });
+    if (check >= 0) {
+        return getResultModel(0, USER[check])
+    } else {
+        return getResultModel(1005, 'user: admin / user password: admin / user')
+    }
+}
+export const API_GET_APPS = (req) => {
+    printParams(req);
+    let userType = localStorage.getItem('userType');
+    let userAuthority = USER_AUTHORITY[userType];
+    let list = [];
+    if (!userAuthority.length) return getResultModel(0, { list });
+    userAuthority.forEach((id) => {
+        list.push(
+            {
+                id: id,
+                name: APPS[id]
+            }
+        )
+    });
+    return getResultModel(0, { list })
+}
+export const API_GET_DS_LIST = (req) => {
+    printParams(req);
+    let email = localStorage.getItem('email');
+    let User = Object.keys(USER);
+    let userId = User.findIndex((id) => {
+        return USER[id].email === email;
+    });
+    let list = [];
+    let total = 0;
+    let ds_ids = USER[userId].ds_ids;
+    let dsList = deepClone(DASHBOARD_LIST);
+    ds_ids.forEach((id) => {
+        if (dsList[id].USER_id === `${userId}`) {
+            dsList[id].beshared = 0;
+            dsList[id].beshared_name = '';
+        } else {
+            dsList[id].beshared = 1;
+            dsList[id].beshared_name = USER[dsList[id].USER_id].username;
+        }
+        list.push(dsList[id]);
+    })
+    return getResultModel(0, {
+        list,
+        total: list.length
+    })
+}
+export const API_GET_CHART_LIST = (req) => {
+    printParams(req);
+    let { dashboard_id } = QS.parse(req.body);
+    let list = [];
+    let total = 0;
+    for (let i in CANVAS_LIST) {
+        if (CANVAS_LIST[i].dashboard_id === parseInt(dashboard_id)) list.push(CANVAS_LIST[i]);
+    }
+    return getResultModel(0, {
+        list,
+        total: list.length
+    })
+}
 export {
-    APPS,
-    LIST,
-    DASHBOARDdLIST,
-    CANVASDATA,
-    ORIENT,
-    INDUS,
-    INDUSDATA
+    CANVASDATA
 }
 

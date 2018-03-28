@@ -27,7 +27,6 @@ const actions = Reflux.createActions({
     getDashChartData: { children: ['success', 'fail'] },
     getDashChartData2: { children: ['success'] },
     verifyDataLength: { children: ['success'] },
-    getDashboardShareUser: { children: ['success'] },
     getDashChartDetail: { children: ['success'] },
     checkDs: { children: ['success', 'fail'] },
     getDashChartCols: { children: ['success', 'fail'] },
@@ -187,7 +186,7 @@ actions.getDashList.listen(function (fromPage = '', data, formShareUserName) {
     actionFunc({
         self: this,
         url: '/lae/dashboard/chart/list',
-        type: 'GET',
+        type: 'POST',
         headers: true,
         data: data,
         success: function (resp) {
@@ -200,11 +199,11 @@ actions.getChartDetailData.listen(function (data) {
     let self = this;
     actionFunc({
         self: this,
-        url: '/lae/cal/tasks/dashboardnew3?' + paramSerialize(data.urlData),
+        url: '/lae/cal/tasks/dashboardnew3',
         contentType: 'application/json',
         type: 'POST',
         headers: true,
-        data: data.postData,
+        data: data,
         showloading: false,
         success: function (resp) {
             self.success(resp, data);
@@ -214,13 +213,16 @@ actions.getChartDetailData.listen(function (data) {
 // Dashboard-获取图表的数据
 actions.getDashChartData.listen(function (urlData, postData, fromPage) {
     let self = this;
+    let data = {
+        urlData, postData,
+    }
     actionFunc({
         self: this,
-        url: '/lae/cal/tasks/dashboardnew3?' + paramSerialize(urlData),
+        url: '/lae/cal/tasks/dashboardnew3',
         contentType: 'application/json',
         type: 'POST',
         headers: true,
-        data: postData,
+        data: data,
         showloading: false,
         success: function (resp) {
             self.success(resp, urlData, postData, fromPage);
@@ -252,30 +254,20 @@ actions.getDashChartData2.listen(function (urlData, postData, fromPage) {
 // 验证数据是否超过2000条数据
 actions.verifyDataLength.listen(function (urlData, postData, fromPage, isChangeCondtion) {
     let self = this;
+    let data = {
+        urlData,
+        postData
+    }
     actionFunc({
         self: this,
-        url: '/lae/cal/tasks/dashboardnew3?' + paramSerialize(urlData),
+        url: '/lae/cal/tasks/dashboardnew3',
         contentType: 'application/json',
         type: 'POST',
         headers: true,
-        data: postData,
+        data: data,
         showloading: true,
         success: function (resp) {
             self.success(resp, urlData, postData, fromPage, isChangeCondtion);
-        }
-    });
-});
-// Dashboard 获取图表的分享用户列表
-actions.getDashboardShareUser.listen(function (data, from = null) {
-    let self = this;
-    actionFunc({
-        self: this,
-        url: '/lae/server/dashboard/share/users',
-        type: 'GET',
-        headers: true,
-        data: data,
-        success: function (resp) {
-            self.success(resp, from);
         }
     });
 });
@@ -378,13 +370,17 @@ actions.getAppColValues.listen(function (data, from = '') {
 // 刷新 dashborad
 actions.refreshDashChartData.listen(function (urlData, postData, fromPage, targetPage) {
     let self = this;
+    let data = {
+        urlData,
+        postData
+    }
     actionFunc({
         self: this,
-        url: '/lae/cal/tasks/dashboardnew3?' + paramSerialize(urlData),
+        url: '/lae/cal/tasks/dashboardnew3',
         contentType: 'application/json',
         type: 'POST',
         headers: true,
-        data: postData,
+        data: data,
         showloading: true,
         success: function (resp) {
             self.success(resp, urlData, postData, fromPage, targetPage);

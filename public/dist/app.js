@@ -75,7 +75,7 @@
 /******/ 			script.charset = 'utf-8';
 /******/ 			script.async = true;
 
-/******/ 			script.src = __webpack_require__.p + "" + ({"1":"Login","2":"Main","3":"Dashboard"}[chunkId]||chunkId) + "." + {"1":"0b09c","2":"6c59c","3":"bd411"}[chunkId] + ".chunk.js";
+/******/ 			script.src = __webpack_require__.p + "" + ({"1":"Login","2":"Main","3":"Dashboard"}[chunkId]||chunkId) + "." + {"1":"95d08","2":"8a412","3":"b158d"}[chunkId] + ".chunk.js";
 /******/ 			head.appendChild(script);
 /******/ 		}
 /******/ 	};
@@ -121,14 +121,14 @@
 	/* 普通用户平台  start */
 	var Main = function Main(location, cb) {
 	    __webpack_require__.e/* nsure */(2, function (require) {
-	        cb(null, __webpack_require__(51).default);
+	        cb(null, __webpack_require__(52).default);
 	    });
 	};
 
 	// 仪表盘
 	var Dashboard = function Dashboard(location, cb) {
 	    __webpack_require__.e/* nsure */(3, function (require) {
-	        cb(null, __webpack_require__(63).default);
+	        cb(null, __webpack_require__(62).default);
 	    });
 	};
 

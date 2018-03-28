@@ -1,7 +1,7 @@
 import React, { PureComponent } from 'react';
+import ReactDOM from 'react-dom'
 import PropTypes from 'prop-types';
 
-import updateHeight from '../../../../common/utils/updateHeight';
 import deepClone from '../../../../common/utils/deepClone';
 import SystemValue from '../../../../data/SystemValue';
 import PageMethod from '../../../../common/PageMethod';
@@ -70,53 +70,70 @@ class DashboardMain extends PureComponent {
         switch (type) {
             // 高度变化：更新界面
             case 'updateHeight':
-                updateHeight(this.refs.dashboardManageChildPage, PageMethod.getInnerHeight1());
-                updateHeight(this.refs.dashboardContentWrap, PageMethod.getInnerHeight2());
-                let minheights2 = PageMethod.getInnerHeight2();
-                let wid = document.body.clientWidth;
-                if (!wid) wid = document.documentElement.clientWidth;
-                let top = document.body.scrollTop;
-                if (!top) top = document.documentElement.scrollTop;
-                let dashboardBox = this.refs.dashboardContentWrap;
-                if (!dashboardBox) return null;
-                let dashboardBoxLeft = dashboardBox.firstChild;
-                let dashboardBoxRight = dashboardBox.firstChild.nextSibling;
-                let styleDashboardGroupSide = `height:${minheights2}px;`;
-                if (top >= 100) {
-                    styleDashboardGroupSide = `position:fixed;top:60px;height:${minheights2 + 99}px; width: ${dashboardBox.clientWidth * 0.1666666667}px;`;
-                    if (wid <= 768) {
-                        dashboardBoxLeft.setAttribute('style', `position:inherit`);
-                        dashboardBoxRight.setAttribute('style', `position:inherit`);
+                {
+                    this.updateHeight(this.refs.dashboardManageChildPage, PageMethod.getInnerHeight1());
+                    this.updateHeight(this.refs.dashboardContentWrap, PageMethod.getInnerHeight2());
+                    let minheights2 = PageMethod.getInnerHeight2();
+                    let wid = document.body.clientWidth;
+                    if (!wid) wid = document.documentElement.clientWidth;
+                    let top = document.body.scrollTop;
+                    if (!top) top = document.documentElement.scrollTop;
+                    let dashboardBox = this.refs.dashboardContentWrap;
+                    if (!dashboardBox) return null;
+                    let dashboardBoxLeft = dashboardBox.firstChild;
+                    let dashboardBoxRight = dashboardBox.firstChild.nextSibling;
+                    let styleDashboardGroupSide = `height:${minheights2}px;`;
+                    if (top >= 100) {
+                        styleDashboardGroupSide = `position:fixed;top:60px;height:${minheights2 + 99}px; width: ${dashboardBox.clientWidth * 0.1666666667}px;`;
+                        if (wid <= 768) {
+                            dashboardBoxLeft.setAttribute('style', `position:inherit`);
+                            dashboardBoxRight.setAttribute('style', `position:inherit`);
+                        }
                     }
+                    dashboardBoxLeft.setAttribute('style', styleDashboardGroupSide)
+                    break;
                 }
-                dashboardBoxLeft.setAttribute('style', styleDashboardGroupSide)
-                break;
+
             // 添加、编辑 仪表盘
             case 'addDashboardSuccess':
             case 'editDashboardSuccess':
-                let activeDashboard = this.props.mainData.activeDashboard;
-                let fromData = null;
-                if (activeDashboard && activeDashboard.id) fromData = activeDashboard.id;
-                if (type === 'addDashboardSuccess') {
-                    this.refs.nameFilter.reset();
+                {
+                    let activeDashboard = this.props.mainData.activeDashboard;
+                    let fromData = null;
+                    if (activeDashboard && activeDashboard.id) fromData = activeDashboard.id;
+                    if (type === 'addDashboardSuccess') {
+                        this.refs.nameFilter.reset();
+                    }
+                    actions.getDashboardList(fromData, {}, 'addDashboard');
+                    break;
                 }
-                actions.getDashboardList(fromData, {}, 'addDashboard');
-                break;
             // 删除仪表盘
             case 'delDashboardSuccess':
-                actions.getDashboardList(null, oData);
-                break;
+                {
+                    actions.getDashboardList(null, oData);
+                    break;
+                }
             // 获取分享列表成功
             // 此时打开分享模态框
             case 'getDashboardShareUserSuccess':
-                this.refs.shareModal.openModal(from.id, data);
-                break;
+                {
+                    this.refs.shareModal.openModal(from.id, data);
+                    break;
+                }
             // 分享失败
             case 'shareChartFail':
-                if (from.fromPage === this.props.name) PopInfo.showinfo(data.errmsg, 'danger');
-                break;
+                {
+                    if (from.fromPage === this.props.name) PopInfo.showinfo(data.errmsg, 'danger');
+                    break;
+                }
             default:
                 break;
+        }
+    }
+    updateHeight(obj, height) {
+        let pageContent = ReactDOM.findDOMNode(obj);
+        if (pageContent) {
+            pageContent.style.height = height + 'px';
         }
     }
     /**

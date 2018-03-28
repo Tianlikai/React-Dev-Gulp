@@ -6,7 +6,7 @@ import Reflux from 'reflux';
 const RModal = require('react-modal-bootstrap');
 import classnames from 'classnames';
 
-import removeModalOpenClass from '../../../../common/utils/removeModalOpenClass';
+import {removeModalOpenClass} from '../../../../common/utils/removeModalOpenClass';
 import validationIputStrType1 from '../../../../common/utils/validationIputStrType1';
 import PageMethod from '../../../../common/PageMethod';
 import Config from '../../../../common/Config';

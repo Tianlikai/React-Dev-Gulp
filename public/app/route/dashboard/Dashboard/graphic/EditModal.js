@@ -7,7 +7,7 @@ const RModal = require('react-modal-bootstrap');
 
 import getNameById from '../../../../common/utils/getNameById';
 import removePopinfo from '../../../../common/utils/removePopinfo';
-import removeModalOpenClass from '../../../../common/utils/removeModalOpenClass';
+import {removeModalOpenClass} from '../../../../common/utils/removeModalOpenClass';
 import validationIputStrType1 from '../../../../common/utils/validationIputStrType1';
 import onInputChangeValidate2 from '../../../../common/utils/onInputChangeValidate2';
 

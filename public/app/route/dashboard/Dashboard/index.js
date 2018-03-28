@@ -160,7 +160,7 @@ class DashboardManageChild extends PureComponent {
                     let postData = {
                         condition: SwitchingData.slicerCondition,
                         drill_values: SwitchingData.drill_values,
-                        filter_value: SwitchingData.name,                        
+                        filter_value: SwitchingData.name,
                     }
                     actions.getChartDetailData({
                         urlData: urlData,

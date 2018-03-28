@@ -2388,7 +2388,7 @@ button.add > span {
 
 .main_login {
   width: 100%;
-  padding-top: 95px; }
+  padding-top: 70px; }
 
 .footer_login {
   width: 100%;
@@ -2406,7 +2406,7 @@ button.add > span {
   width: 100%; }
 
 .main_login .login_content_header {
-  font-size: 28px;
+  font-size: 19px;
   text-align: center; }
 
 .main_login .login_errmsg {
@@ -2463,12 +2463,12 @@ button.add > span {
   height: 45px;
   color: #FFFFFF;
   border-radius: 5px;
-  background-color: #fb3174;
+  background-color: #40a9ff;
   /* Safari 4-5, Chrome 1-9*/
   /*Safari5.1 Chrome 10+*/
   /*Opera 11.10+*/
   /* IE 10 */
-  background: linear-gradient(to right, #fb3174 0%, #ed501e 100%);
+  background: linear-gradient(to right, #40a9ff 0%, deepskyblue 100%);
   /*IE 6 7 8*/
   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='$loginBtn1', endColorstr='$loginBtn2',GradientType=1 ); }
 
