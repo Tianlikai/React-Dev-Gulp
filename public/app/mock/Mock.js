@@ -74,22 +74,22 @@ let APPS = {
 let DASHBOARD_LIST = {
     0: {
         id: 0,
-        name: 'AAA-JASON',
+        name: 'JORDAN',
         USER_id: '1'
     },
     1: {
         id: 1,
-        name: 'AAA-LI',
+        name: '预期销售',
         USER_id: '1'
     },
     2: {
         id: 2,
-        name: 'AAA-JORDAN',
+        name: '供货预测',
         USER_id: '1'
     },
     3: {
         id: 3,
-        name: 'AAA-JAMES',
+        name: 'NIKE',
         USER_id: '0'
     },
 }

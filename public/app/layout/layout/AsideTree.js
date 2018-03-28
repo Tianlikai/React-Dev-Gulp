@@ -67,7 +67,7 @@ class AsideTree extends Component {
         return (
             <div className='main-sidebar'>
                 <div className='main-logo'>
-                    <img src='./dist/images/51DESK.png' />
+                    {/* <img src='./dist/images/51DESK.png' /> */}
                 </div>
                 <div className='sidebar-menu'>{items}</div>
             </div>

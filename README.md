@@ -1,8 +1,25 @@
-##编译说明
+# React Dev redux
+
+一个简单完整的前端开发脚手架
+
+![](./print.png)
+
+## 写在前面
+该项目我一接手代码就已经写得很糟糕啦，但是项目架构还是容易理解的，适合新人快速学习前端项目架构，并发现项目中的不足，然后在此基础上进行调整与自我提升。以下我先列出部分需要改进的地方。
+* css代码统一放在style文件中而且没有使用import导入，项目过大有时很难找到对应的文件。(推荐按功能模块组织)
+* 代码经过不同程序员编写，代码风格没有统一。(eslint)
+* 开发环境在项目体积变大时，重新编译会很慢。(webpack编译代码时没有做热更新)
+* 项目路由没有做全面，很多页面刷新就会出现跳转，而且会造成组件过于复杂。
+* reflux框架没有做到真正的状态管理仅仅充当了发布和订阅的功能，不适合于复杂应用。(推荐redux)
+* 封装了Ajax，但是没有考虑真实的网络情况。
+
+更现代的前端开发脚手架@[React-Dev](https://github.com/Tianlikai/React-Dev)
+
+## 编译说明
 > 新版本我们开始使用dll的方式加载第三方组件
 > 在编译流程上会有些许变化
 
-##文件目录
+## 文件目录
 ```
 ├── node_modules:               模块文件夹
 |   └── ...
@@ -13,28 +30,15 @@
 ├── public:                     开发环境
 |   ├── app:                    app文件夹
 |   |   ├── actions:            API请求
-|   |   ├── bsComponents      
 |   |   ├── common:             公共文件
-|   |   ├── components:         页面组件
-|   |   |   ├── base_layout     通用布局组件文件夹
-|   |   |   ├── layout          布局组件文件夹
-|   |   |   ├── pages           所有子页面文件夹
-|   |   |   ├── AdminMain       管理员界面
-|   |   |   ├── LoginClass      登陆界面
-|   |   |   ├── Main            主页面
-|   |   |   ├── NotFound        404页面
-|   |   |   └── Other           其他页面
+|   |   ├── component:          页面组件
 |   |   ├── data:               配置数据信息
-|   |   ├── images:             图片
-|   |   ├── jComponent  
+|   |   ├── jComponent          页面组件
 |   |   ├── lang:               国际化 
 |   |   ├── mock:               模拟数据
 |   |   ├── styles:             样式
-|   |   ├── uiComponents      
 |   |   └── app.js:             项目入口、路由组件
 |   ├── dist:                   开发环境打包文件
-|   ├── help:                   帮助文档
-|   ├── .eslintrc:              代码规范
 |   └── index.html:             开发环境html
 ├── .babelrc                    babel配置文件 
 ├── dll.config.JS               DLLPlugin config 文件
@@ -47,7 +51,7 @@
 ├── vendor-manifest.json     
 └── webpack.config.js           webpack配置文件
 ```
-##技术栈
+## 技术栈
 * react
 * react-dom
 * react-router ^2.5.2
@@ -57,16 +61,16 @@
 * ESLint 代码规范 
 * mockjs 模拟接口数据
 
-##公共插件
+## 公共插件
 * echarts ^3.7.1
 * react-table ^6.5.3
 * react-modal-bootstrap 1.0.0
 
-##开发环境
+## 开发环境
 * 下载nginx
 * 更改nginx.conf文件 指向当前文件
 
-##编译步骤
+## 编译步骤
 * npm install 所有的依赖包
 * gulp clean_vendor 清除vendor文件 公共依赖库变更执行命令
 * webpack --config ./dll.config 生成vendor-manifest.json文件和app.vendor.js文件
